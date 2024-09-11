@@ -1,0 +1,12 @@
+terrain.cfg
+volumeTrrain/*
+thumbnails/*
+RTShaderLib/*
+PCZAppMedia/*
+PBR/*
+particle/*
+packs/*
+models/*
+materials/*
+HLMS/*
+DeferredShadingMedia/*
