@@ -28,6 +28,7 @@ protected:
     
     
     Ogre::SceneNode* mSinbadNode = nullptr;
+    Ogre::SceneNode* mDragonNode = nullptr;
       
     Ogre::SceneManager* mSM = nullptr;
     OgreBites::TrayManager* mTrayMgr = nullptr;

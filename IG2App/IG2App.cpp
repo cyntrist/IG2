@@ -106,6 +106,27 @@ void IG2App::setupScene(void){
     
     //mSinbadNode->yaw(Ogre::Degree(-45));
     //mSinbadNode->setVisible(false);    
+
+
+
+     //------------------------------------------------------------------------
+    // Creating dragon
+
+    Ogre::Entity* ent2 = mSM->createEntity("dragon.mesh");
+    mDragonNode = mSM->getRootSceneNode()->createChildSceneNode("nDragon");
+    mDragonNode->attachObject(ent2);
+
+    // Show bounding box
+    mDragonNode->showBoundingBox(false);
+
+    // Set position of Sinbad
+    mDragonNode->setPosition(90, 180, 270);
+
+    // Set scale of Sinbad
+    mDragonNode->setScale(1, 1, 1);
+
+    mDragonNode->yaw(Ogre::Degree(-180));
+    //mSinbadNode->setVisible(false);
 }
 
 
