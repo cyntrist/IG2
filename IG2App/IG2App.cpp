@@ -1,5 +1,7 @@
 #include "IG2App.h"
 
+#include <OgreBitesConfigDialog.h>
+
 using namespace Ogre;
 using namespace std;
 
@@ -67,7 +69,8 @@ void IG2App::setupScene(void){
     
     // and tell it to render into the main window
     Viewport* vp = getRenderWindow()->addViewport(cam);
-    
+    vp->setBackgroundColour(ColourValue(0.7, 0.8, 0.9));
+
     mCamMgr = new OgreBites::CameraMan(mCamNode);
     addInputListener(mCamMgr);
     mCamMgr->setStyle(OgreBites::CS_ORBIT);
@@ -76,7 +79,7 @@ void IG2App::setupScene(void){
     //------------------------------------------------------------------------
     // Creating the light
     
-    //mSM->setAmbientLight(ColourValue(0.5, 0.5, 0.5));
+    mSM->setAmbientLight(ColourValue(0.7, 0.8, 0.9));
     Light* luz = mSM->createLight("Luz");
     luz->setType(Ogre::Light::LT_DIRECTIONAL);
     luz->setDiffuseColour(0.75, 0.75, 0.75);
@@ -84,7 +87,7 @@ void IG2App::setupScene(void){
     mLightNode = mSM->getRootSceneNode()->createChildSceneNode("nLuz");
     //mLightNode = mCamNode->createChildSceneNode("nLuz");
     mLightNode->attachObject(luz);
-    mLightNode->setDirection(Ogre::Vector3(0, 0, -1));
+    mLightNode->setDirection(Ogre::Vector3(-1, 0, -1));
     
 
     
@@ -127,6 +130,72 @@ void IG2App::setupScene(void){
 
     mDragonNode->yaw(Ogre::Degree(-180));
     //mSinbadNode->setVisible(false);
+
+         //------------------------------------------------------------------------
+    // Creating sword
+	Entity* ent3 = mSM->createEntity("Sword.mesh");
+    mSwordNode = mSM->getRootSceneNode()->createChildSceneNode("nSword");
+    mSwordNode->attachObject(ent3);
+    mSwordNode->showBoundingBox(false);
+    mSwordNode->setPosition(-10,155,140);
+    mSwordNode->setScale(20, 20, 20);
+    mSwordNode->yaw(Ogre::Degree(90));
+    mSwordNode->roll(Ogre::Degree(-90));
+
+             //------------------------------------------------------------------------
+    // Creating sword
+	Entity* ent4 = mSM->createEntity("DamagedHelmet.mesh");
+    mSwordNode = mSM->getRootSceneNode()->createChildSceneNode("nHelmet");
+    mSwordNode->attachObject(ent4);
+    mSwordNode->showBoundingBox(false);
+    mSwordNode->setPosition(-100,-50,0);
+    mSwordNode->setScale(20, 20, 20);
+    mSwordNode->yaw(Ogre::Degree(180));
+
+        // Creating sword
+	Entity* ent5 = mSM->createEntity("ogrehead.mesh");
+    mSwordNode = mSM->getRootSceneNode()->createChildSceneNode("nHead");
+    mSwordNode->attachObject(ent5);
+    mSwordNode->showBoundingBox(false);
+    mSwordNode->setPosition(-100,-100,0);
+    mSwordNode->setScale(1,1,1);
+    mSwordNode->yaw(Ogre::Degree(0));
+
+            // Creating sword
+	Entity* ent6 = mSM->createEntity("facial.mesh");
+    mSwordNode = mSM->getRootSceneNode()->createChildSceneNode("nFace");
+    mSwordNode->attachObject(ent6);
+    mSwordNode->showBoundingBox(false);
+    mSwordNode->setPosition(200,-100,0);
+    mSwordNode->setScale(5,5,5);
+    mSwordNode->yaw(Ogre::Degree(0));
+
+                // Creating sword
+	Entity* ent7 = mSM->createEntity("RomanBathUpper.mesh");
+    mSwordNode = mSM->getRootSceneNode()->createChildSceneNode("nRoman");
+    mSwordNode->attachObject(ent7);
+    mSwordNode->showBoundingBox(false);
+    mSwordNode->setPosition(0,0,0);
+    mSwordNode->setScale(2,2,2);
+    mSwordNode->yaw(Ogre::Degree(0));
+
+    // Creating sword
+	Entity* ent8 = mSM->createEntity("RomanBathLower.mesh");
+    mSwordNode = mSM->getRootSceneNode()->createChildSceneNode("nLower");
+    mSwordNode->attachObject(ent8);
+    mSwordNode->showBoundingBox(false);
+    mSwordNode->setPosition(0,0,0);
+    mSwordNode->setScale(2,2,2);
+    mSwordNode->yaw(Ogre::Degree(0));
+
+    // Creating sword
+	Entity* ent9 = mSM->createEntity("Columns.mesh");
+    mSwordNode = mSM->getRootSceneNode()->createChildSceneNode("nColumn");
+    mSwordNode->attachObject(ent9);
+    mSwordNode->showBoundingBox(false);
+    mSwordNode->setPosition(0,0,0);
+    mSwordNode->setScale(2,2,2);
+    mSwordNode->yaw(Ogre::Degree(0));
 }
 
 
