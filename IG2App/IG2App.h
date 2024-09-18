@@ -30,6 +30,11 @@ protected:
     Ogre::SceneNode* mSinbadNode = nullptr;
     Ogre::SceneNode* mDragonNode = nullptr;
     Ogre::SceneNode* mSwordNode = nullptr;
+    Ogre::SceneNode* mHelmetNode = nullptr;
+    Ogre::SceneNode* mHeadNode = nullptr;
+    Ogre::SceneNode* mBustNode = nullptr;
+    Ogre::SceneNode* mRomanNode = nullptr;
+    Ogre::SceneNode* mSnowmanNode = nullptr;
       
     Ogre::SceneManager* mSM = nullptr;
     OgreBites::TrayManager* mTrayMgr = nullptr;
