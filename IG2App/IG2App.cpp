@@ -226,7 +226,7 @@ void IG2App::setupScene(void)
 	int altOjos = 50;
 	int profOjos = 100;
 	int sepOjos = 20;
-	int sS = 1;
+	double sS = 0.5;
 	Entity* ojo1 = mSM->createEntity("sphere.mesh");
 	eye1->attachObject(ojo1);
 	eye1->setPosition(sepOjos,altOjos,profOjos);
