@@ -9,8 +9,8 @@ IG2Object::IG2Object() : mNode(nullptr), mSM(nullptr)
 	this->initialPosition = Vector3::ZERO;
 }
 
-IG2Object::IG2Object(Vector3 initPos, SceneNode* node, SceneManager* sceneMng) : mNode(node), mSM(sceneMng),
-	initialPosition(initPos)
+IG2Object::IG2Object(Vector3 initPos, SceneNode* node, SceneManager* sceneMng)
+	: mNode(node), mSM(sceneMng), initialPosition(initPos)
 {
 	this->setPosition(initialPosition);
 }

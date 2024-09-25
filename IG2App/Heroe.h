@@ -2,6 +2,7 @@
 
 #include "IG2Object.h"
 
+class Heroe;
 using Chelo = Heroe;
 
 // clase heroe (chelo) 
