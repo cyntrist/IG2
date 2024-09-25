@@ -7,5 +7,7 @@ class Muro : public IG2Object
 {
 
 
+
+
 };
 
