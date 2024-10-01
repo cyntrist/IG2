@@ -124,7 +124,7 @@
     <ClInclude Include="IG2ApplicationContext.h" />
     <ClInclude Include="IG2App.h" />
     <ClInclude Include="IG2Object.h" />
-    <ClInclude Include="Laberinto.h" />
+    <ClInclude Include="Labyrinth.h" />
     <ClInclude Include="Muro.h" />
     <ClInclude Include="Perla.h" />
     <ClInclude Include="Villano.h" />
@@ -135,7 +135,7 @@
     <ClCompile Include="IG2Main.cpp" />
     <ClCompile Include="IG2App.cpp" />
     <ClCompile Include="IG2Object.cpp" />
-    <ClCompile Include="Laberinto.cpp" />
+    <ClCompile Include="Labyrinth.cpp" />
     <ClCompile Include="Muro.cpp" />
     <ClCompile Include="Perla.cpp" />
     <ClCompile Include="Villano.cpp" />
