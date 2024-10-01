@@ -13,12 +13,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Archivos de código fuente\Objetos">
-      <UniqueIdentifier>{d9eb9f55-b187-4fa0-9852-3717f5e9cd3e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Archivos de encabezado\Objetos">
-      <UniqueIdentifier>{8061273a-b62f-49dc-8b9b-7b8917ac55b8}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IG2ApplicationContext.h">
@@ -29,24 +23,6 @@
     </ClInclude>
     <ClInclude Include="IG2Object.h">
       <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Config.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Heroe.h">
-      <Filter>Archivos de encabezado\Objetos</Filter>
-    </ClInclude>
-    <ClInclude Include="Labyrinth.h">
-      <Filter>Archivos de encabezado\Objetos</Filter>
-    </ClInclude>
-    <ClInclude Include="Perla.h">
-      <Filter>Archivos de encabezado\Objetos</Filter>
-    </ClInclude>
-    <ClInclude Include="Muro.h">
-      <Filter>Archivos de encabezado\Objetos</Filter>
-    </ClInclude>
-    <ClInclude Include="Villano.h">
-      <Filter>Archivos de encabezado\Objetos</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -61,21 +37,6 @@
     </ClCompile>
     <ClCompile Include="IG2Object.cpp">
       <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="Heroe.cpp">
-      <Filter>Archivos de código fuente\Objetos</Filter>
-    </ClCompile>
-    <ClCompile Include="Labyrinth.cpp">
-      <Filter>Archivos de código fuente\Objetos</Filter>
-    </ClCompile>
-    <ClCompile Include="Perla.cpp">
-      <Filter>Archivos de código fuente\Objetos</Filter>
-    </ClCompile>
-    <ClCompile Include="Muro.cpp">
-      <Filter>Archivos de código fuente\Objetos</Filter>
-    </ClCompile>
-    <ClCompile Include="Villano.cpp">
-      <Filter>Archivos de código fuente\Objetos</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
