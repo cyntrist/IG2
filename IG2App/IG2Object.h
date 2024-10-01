@@ -131,7 +131,7 @@ class IG2Object : public OgreBites::InputListener {
     
         // Scene node representing this element in the scene
         SceneNode *mNode = nullptr;
-    
+
         // Scene manager
         SceneManager* mSM = nullptr;
     
