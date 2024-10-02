@@ -14,6 +14,6 @@ constexpr int H_DEPTH = -1500;
 constexpr int H_XSET = 0;
 constexpr int H_YSET = 0;
 
-Ogre::Vector3 sWallSize = {0,0,0};
-double sLabWidth = 0;
-double sLabHeight = 0;
+static Ogre::Vector3 sWallSize = {WALL_LENGTH,WALL_LENGTH,WALL_LENGTH};
+static double sLabWidth = 0;
+static double sLabHeight = 0;
