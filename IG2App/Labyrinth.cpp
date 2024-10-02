@@ -45,10 +45,10 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
 					WALL_NAME + to_string(i * nc + j)
 				);
 
-				box_size = w->calculateBoxSize();
+				sWallSize = w->calculateBoxSize();
 				w->setPosition({
-					LAB_XSET + box_size.x * i,
-					LAB_YSET + box_size.y * j,
+					LAB_XSET + sWallSize.x * i,
+					LAB_YSET + sWallSize.y * j,
 					LAB_DEPTH
 				});
 				walls.push_back(w);
@@ -63,8 +63,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
 				);
 
 				p->setPosition({
-					LAB_XSET + box_size.x * i,
-					LAB_YSET + box_size.y * j,
+					LAB_XSET + sWallSize.x * i,
+					LAB_YSET + sWallSize.y * j,
 					LAB_DEPTH
 				});
 				p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});

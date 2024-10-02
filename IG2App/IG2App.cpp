@@ -109,8 +109,9 @@ void IG2App::setupScene(void)
 	//mSinbadNode->setScale(20, 20, 20);
 	//------------------------------------------------------------------------
 
+	mLabNode = mSM->getRootSceneNode()->createChildSceneNode("nLabyrinth");
 	mLabyrinth = new Labyrinth(
-		mSM->getRootSceneNode()->createChildSceneNode("nLabyrinth"), 
+		mLabNode,
 		mSM
 	);
 
@@ -125,8 +126,21 @@ void IG2App::setupScene(void)
 	mHeroe->setScale({10, 10, 10});
 	mHeroe->setRotation({0,90,0});
 
-	// añade como listener al heroe
+	// anade como listener al heroe
 	addInputListener(mHeroe);
 
 
+	/// PLANO
+	MeshManager::getSingleton().createPlane(
+		"plane", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+		Plane(Vector3(0, 0, 1), 0),
+		500,
+		500
+	);
+
+	Entity* planeEnt = mSM->createEntity("suelo", "plane");
+	SceneNode* planeNode = mLabNode->createChildSceneNode("sueloNode");
+	//entPlano->setMaterialName("");
+	planeNode->setPosition(0,0,LAB_DEPTH - sWallSize.z * 2.5);
+	planeNode->attachObject(planeEnt);
 }
