@@ -73,22 +73,15 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 			}
 			else if (grid[j][i] == 'h')
 			{
-
-				/*auto h = new Heroe(
+				Vector3 vecH = { 0, 0, H_DEPTH };
+				Heroe* h = new Heroe(
 					vecH,
-					mSM->getRootSceneNode()->createChildSceneNode("nHeroe"),
-					mSM,
+					sm->getRootSceneNode()->createChildSceneNode("nHeroe"),
+					sm,
 					"Sinbad.mesh");
 				h->setScale({ 10, 10, 10 });
 				h->setRotation({ 0,90,0 });
-
-				h->setPosition({
-					LAB_XSET + sWallSize.x * i,
-					LAB_YSET + sWallSize.y * j,
-					LAB_DEPTH
-					});
-				h->setScale({ PEARL_SIZE, PEARL_SIZE, PEARL_SIZE });
-				hero.push_back(h);*/
+				hero.push_back(h);
 			}
 		}
 	}

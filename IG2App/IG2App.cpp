@@ -117,17 +117,19 @@ void IG2App::setupScene(void)
 
 
 	// --------- Crea al HEROE ---------------
-	//Vector3 vecH = {0, 0, H_DEPTH };
-	//mHeroe = new Heroe(
-	//	vecH, 
-	//	mSM->getRootSceneNode()->createChildSceneNode("nHeroe"), 
-	//	mSM, 
-	//	"Sinbad.mesh");
-	//mHeroe->setScale({10, 10, 10});
-	//mHeroe->setRotation({0,90,0});
+	/*Vector3 vecH = {0, 0, H_DEPTH };
+	mHeroe = new Heroe(
+		vecH, 
+		mSM->getRootSceneNode()->createChildSceneNode("nHeroe"), 
+		mSM, 
+		"Sinbad.mesh");
+	mHeroe->setScale({10, 10, 10});
+	mHeroe->setRotation({0,90,0});*/
 
-	//// anade como listener al heroe
-	//addInputListener(mHeroe);
+
+
+	//mHeroe = mLabyrinth->getHero();
+	addInputListener(mLabyrinth->getHero());
 
 
 	/// PLANO
