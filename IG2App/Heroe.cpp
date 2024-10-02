@@ -14,9 +14,9 @@ void Heroe::setScale(Vector3 s)
 
 void Heroe::setRotation(Vector3 r)
 {
-	mNode->yaw(Ogre::Degree(r.z));
 	mNode->roll(Ogre::Degree(r.x));
 	mNode->pitch(Ogre::Degree(r.y));
+	mNode->yaw(Ogre::Degree(r.z));
 }
 
 bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
