@@ -10,4 +10,7 @@ const std::string LAB_PATH = "../media/labyrinths/stage1.txt";
 constexpr int LAB_DEPTH = -1500;
 constexpr int LAB_XSET = -800;
 constexpr int LAB_YSET = -900;
+constexpr int H_DEPTH = -1500;
+constexpr int H_XSET = 0;
+constexpr int H_YSET = 0;
 

@@ -49,6 +49,9 @@ public:
 
 	void init();
 
+	void setScale(Vector3 s);
+	void setRotation(Vector3 r);
+
 // ------------------- METODOS ------------------------
 
 	// 
