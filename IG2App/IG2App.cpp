@@ -136,13 +136,13 @@ void IG2App::setupScene(void)
 	MeshManager::getSingleton().createPlane(
 		"plane", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
 		Plane(Vector3(0, 0, 1), 0),
-		500,
-		500
+		mLabyrinth->getLabSize().x,
+		mLabyrinth->getLabSize().y
 	);
 
 	Entity* planeEnt = mSM->createEntity("suelo", "plane");
 	SceneNode* planeNode = mLabNode->createChildSceneNode("sueloNode");
 	//entPlano->setMaterialName("");
-	planeNode->setPosition(0,0,LAB_DEPTH - sWallSize.z * 2.5);
+	planeNode->setPosition(0,0,LAB_DEPTH - mLabyrinth->getWallSize().z);
 	planeNode->attachObject(planeEnt);
 }
