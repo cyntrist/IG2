@@ -9,7 +9,7 @@ xooooxoooxoooxoooox
 xxxxoxxxoxoxxxoxxxx
 xxxxoxoooxoooxoxxxx
 xxxxoooxxxxxoooxxxx
-xxxxoxoooooooxoxxxx
+xxxxoxooohoooxoxxxx
 xxxxoxoxxxxxoxoxxxx
 xooooooooxoooooooox
 xoxxoxxxoxoxxxoxxox
@@ -18,4 +18,4 @@ xxoxoxoxxxxxoxoxoxx
 xooooxoooxoooxoooox
 xoxxxxxxoxoxxxxxxox
 xooooooooxoooooooox
-xxxxxxxxxxxxxxxxxxh
+xxxxxxxxxxxxxxxxxxx
