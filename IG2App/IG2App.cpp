@@ -117,30 +117,30 @@ void IG2App::setupScene(void)
 
 
 	// --------- Crea al HEROE ---------------
-	Vector3 vecH = {0, 0, H_DEPTH };
-	mHeroe = new Heroe(
-		vecH, 
-		mSM->getRootSceneNode()->createChildSceneNode("nHeroe"), 
-		mSM, 
-		"Sinbad.mesh");
-	mHeroe->setScale({10, 10, 10});
-	mHeroe->setRotation({0,90,0});
+	//Vector3 vecH = {0, 0, H_DEPTH };
+	//mHeroe = new Heroe(
+	//	vecH, 
+	//	mSM->getRootSceneNode()->createChildSceneNode("nHeroe"), 
+	//	mSM, 
+	//	"Sinbad.mesh");
+	//mHeroe->setScale({10, 10, 10});
+	//mHeroe->setRotation({0,90,0});
 
-	// anade como listener al heroe
-	addInputListener(mHeroe);
+	//// anade como listener al heroe
+	//addInputListener(mHeroe);
 
 
 	/// PLANO
 	MeshManager::getSingleton().createPlane(
 		"plane", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
 		Plane(Vector3(0, 0, 1), 0),
-		sLabWidth,
-		sLabHeight
+		mLabyrinth->getLabSize().x,
+		mLabyrinth->getLabSize().y
 	);
 
 	Entity* planeEnt = mSM->createEntity("suelo", "plane");
 	SceneNode* planeNode = mLabNode->createChildSceneNode("sueloNode");
 	//entPlano->setMaterialName("");
-	planeNode->setPosition(0,0,LAB_DEPTH - sWallSize.z * 2.5);
+	planeNode->setPosition(0,0,LAB_DEPTH - mLabyrinth->getWallSize().z);
 	planeNode->attachObject(planeEnt);
 }

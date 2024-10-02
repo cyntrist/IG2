@@ -9,7 +9,7 @@
 #include <iomanip>
 #include <fstream>
 
-Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
+Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node(nullptr)
 {
 	// opening stream
 	ifstream file(path);
@@ -46,10 +46,10 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
 					WALL_NAME + to_string(i * nc + j)
 				);
 
-				sWallSize = w->calculateBoxSize();
+				wallSize = w->calculateBoxSize();
 				w->setPosition({
-					LAB_XSET + sWallSize.x * i,
-					LAB_YSET + sWallSize.y * j,
+					wallSize.x * i,
+					wallSize.y * j,
 					LAB_DEPTH
 				});
 				walls.push_back(w);
@@ -64,8 +64,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
 				);
 
 				p->setPosition({
-					LAB_XSET + sWallSize.x * i,
-					LAB_YSET + sWallSize.y * j,
+					wallSize.x * i,
+					wallSize.y * j,
 					LAB_DEPTH
 				});
 				p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
@@ -73,18 +73,12 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
 			}
 			else if (grid[j][i] == 'h')
 			{
-				auto h = new Heroe(
-					{ 0, 0, 0 },
-					sn,
-					sm,
-					PEARL_NAME + to_string(i * nc + j)
-				);
-				Vector3 vecH = { 0, 0, H_DEPTH };
+
 				/*auto h = new Heroe(
 					vecH,
 					mSM->getRootSceneNode()->createChildSceneNode("nHeroe"),
 					mSM,
-					"Sinbad.mesh");*/
+					"Sinbad.mesh");
 				h->setScale({ 10, 10, 10 });
 				h->setRotation({ 0,90,0 });
 
@@ -94,13 +88,27 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
 					LAB_DEPTH
 					});
 				h->setScale({ PEARL_SIZE, PEARL_SIZE, PEARL_SIZE });
-				hero.push_back(h);
+				hero.push_back(h);*/
 			}
 		}
 	}
 
-	sLabWidth = sWallSize.x * nf;
-	sLabHeight = sWallSize.y * nc;
+	labSize = { wallSize.x * nf, wallSize.y * nc };
+
+	for (auto w : walls)
+		w->setPosition(
+			w->getPosition().x - labSize.x/2 + wallSize.x/2,
+			w->getPosition().y - labSize.y/2 + wallSize.y/2,
+			w->getPosition().z
+		);
+
+	
+	for (auto p : pearls)
+		p->setPosition(
+			p->getPosition().x - labSize.x/2 + wallSize.x/2,
+			p->getPosition().y - labSize.y/2 + wallSize.y/2,
+			p->getPosition().z
+		);
 
 	file.close();
 }

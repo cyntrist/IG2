@@ -53,6 +53,11 @@ void IG2Object::setPosition(Vector3 v)
 	mNode->setPosition(v);
 }
 
+void IG2Object::setPosition(Real x, Real y, Real z)
+{
+	mNode->setPosition(Vector3(x,y,z));
+}
+
 Vector3 IG2Object::getPosition()
 {
 	return mNode->getPosition();

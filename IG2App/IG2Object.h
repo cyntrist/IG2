@@ -67,6 +67,11 @@ class IG2Object : public OgreBites::InputListener {
          * @param v Vector representing the position of this element.
          */
         void setPosition(Vector3 v);
+
+	/**
+         * Sets a position for this element
+         */
+        void setPosition(Real x, Real y, Real z);
     
         /**
          * Gets the position of this element.
