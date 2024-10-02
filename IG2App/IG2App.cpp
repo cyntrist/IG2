@@ -3,6 +3,7 @@
 #include <OgreBitesConfigDialog.h>
 
 #include "Labyrinth.h"
+#include "Heroe.h"
 
 using namespace Ogre;
 using namespace std;
@@ -112,4 +113,18 @@ void IG2App::setupScene(void)
 		mSM->getRootSceneNode()->createChildSceneNode("nLabyrinth"), 
 		mSM
 	);
+
+
+	// --------- Crea al HEROE ---------------
+	Vector3 vecH = {0, 0, 0};
+	mHeroe = new Heroe(
+		vecH, 
+		mSM->getRootSceneNode()->createChildSceneNode("nHeroe"), 
+		mSM, 
+		"Sinbad.mesh");
+
+	// añade como listener al heroe
+	addInputListener(mHeroe);
+
+
 }

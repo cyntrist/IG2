@@ -15,6 +15,7 @@
 #include <string>
 
 class Labyrinth;
+class Heroe;
 
 class IG2App : public  OgreBites::IG2ApplicationContext, OgreBites::InputListener{
 
@@ -49,6 +50,7 @@ protected:
     OgreBites::CameraMan* mCamMgr = nullptr;
 
     Labyrinth* mLabyrinth = nullptr;
+    Heroe* mHeroe = nullptr;
 };
 
 #endif

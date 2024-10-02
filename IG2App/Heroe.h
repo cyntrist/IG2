@@ -47,11 +47,13 @@ public:
 		: IG2Object(initPos, node, sceneMng, mesh), vidas(vidas_), puntos(puntos_) { }
 
 
+	void init();
+
 // ------------------- METODOS ------------------------
 
 	// 
 	// addInputListener()
-	void keypressed(const OgreBites::KeyboardEvent& evt);
+	bool keyPressed(const OgreBites::KeyboardEvent& evt);
 
 	// ---------- MOVIMIENTO -------------
 	//
