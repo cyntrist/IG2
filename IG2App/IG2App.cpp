@@ -141,6 +141,6 @@ void IG2App::setupScene(void)
 	Entity* planeEnt = mSM->createEntity("suelo", "plane");
 	SceneNode* planeNode = mLabNode->createChildSceneNode("sueloNode");
 	//entPlano->setMaterialName("");
-	planeNode->setPosition(0,0,LAB_DEPTH - mLabyrinth->getWallSize().z);
+	planeNode->setPosition(0,0,LAB_DEPTH - mLabyrinth->getWallSize().z/2);
 	planeNode->attachObject(planeEnt);
 }
