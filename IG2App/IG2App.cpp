@@ -134,8 +134,8 @@ void IG2App::setupScene(void)
 	MeshManager::getSingleton().createPlane(
 		"plane", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
 		Plane(Vector3(0, 0, 1), 0),
-		500,
-		500
+		sLabWidth,
+		sLabHeight
 	);
 
 	Entity* planeEnt = mSM->createEntity("suelo", "plane");

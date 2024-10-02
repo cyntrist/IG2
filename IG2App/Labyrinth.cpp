@@ -99,6 +99,9 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
 		}
 	}
 
+	sLabWidth = sWallSize.x * nf;
+	sLabHeight = sWallSize.y * nc;
+
 	file.close();
 }
 
