@@ -89,8 +89,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path)
 				h->setRotation({ 0,90,0 });
 
 				h->setPosition({
-					LAB_XSET + box_size.x * i,
-					LAB_YSET + box_size.y * j,
+					LAB_XSET + sWallSize.x * i,
+					LAB_YSET + sWallSize.y * j,
 					LAB_DEPTH
 					});
 				h->setScale({ PEARL_SIZE, PEARL_SIZE, PEARL_SIZE });
