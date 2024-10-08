@@ -28,7 +28,6 @@ void Heroe::frameRendered(const Ogre::FrameEvent& evt)
 {
 	updateMovement(dir);
 
-
 }
 
 bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
@@ -93,6 +92,7 @@ bool Heroe::checkCollision()
 {
 	// mirar vector direccion del hero, multiplicar por el tamaño del bloque y pedirle al laberinto que te
 	// de el objeto de esa posicion, si es una pared no se mueve, si no pues jijij
+	Vector3 direc = dir * 50;
 
 	return false;
 }

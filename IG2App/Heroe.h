@@ -8,10 +8,11 @@ using Chelo = Heroe;
 
 /// TO DO LIST:
 ///
-/// 1. input (OgreBites::Keycode)
-/// 2. leerlo en el parseo (on hold)
-/// 3. listener
-/// 4. colisiones
+/// 1. input (OgreBites::Keycode)		HECHO
+/// 2. leerlo en el parseo (on hold)	HECHO ¿?
+/// 3. listener							HECHO
+/// 4. movimiento						HECHO
+/// 5. colisiones
 
 // clase heroe (chelo) 
 class Heroe : public IG2Object
