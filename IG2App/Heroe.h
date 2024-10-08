@@ -54,6 +54,8 @@ public:
 
 // ------------------- METODOS ------------------------
 
+	void frameRendered(const Ogre::FrameEvent& evt) override;
+
 	// 
 	// addInputListener()
 	bool keyPressed(const OgreBites::KeyboardEvent& evt);
