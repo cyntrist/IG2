@@ -52,6 +52,8 @@ public:
 	void setScale(Vector3 s);
 	void setRotation(Vector3 r);
 
+	void setOrientation(Vector3 vec);
+
 // ------------------- METODOS ------------------------
 
 	void frameRendered(const Ogre::FrameEvent& evt) override;

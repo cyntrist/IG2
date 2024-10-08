@@ -19,6 +19,11 @@ void Heroe::setRotation(Vector3 r)
 	mNode->yaw(Ogre::Degree(r.z));
 }
 
+void Heroe::setOrientation(Vector3 vec)
+{
+	mNode->setDirection(vec.x, vec.y, vec.z, Node::TS_WORLD);
+}
+
 void Heroe::frameRendered(const Ogre::FrameEvent& evt)
 {
 	updateMovement(dir);
@@ -30,20 +35,32 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 {
 	if (evt.keysym.sym == SDLK_UP) {
 		std::cout << "UP " << std::endl;
-		//updateRotation();
+		setOrientation({0, -1, 0});
 
 		newdir = dir = { 0, 1, 0 };
 	}
 	else if (evt.keysym.sym == SDLK_RIGHT) {
 		std::cout << "RIGHT " << std::endl;
+		setOrientation({ -1, 0, 0 });
+
+
+		newdir = dir = { 1, 0, 0 };
 
 	}	
 	else if (evt.keysym.sym == SDLK_DOWN) {
 		std::cout << "DOWN " << std::endl;
 
+		setOrientation({ 0, 1,0 });
+
+
+		newdir = dir = { 0, -1, 0 };
+
 	}	
 	else if (evt.keysym.sym == SDLK_LEFT) {
 		std::cout << "LEFT " << std::endl;
+		setOrientation({ 1, 0, 0 });
+
+		newdir = dir = { -1, 0, 0 };
 
 	}
 
@@ -62,6 +79,7 @@ void Heroe::updateMovement(Vector3 vec)
 void Heroe::updateRotation(int degree)
 {
 	// cambia la rotacion
+	mNode->yaw(Ogre::Degree(degree));
 
 	// actualiza la direccion actual
 }
