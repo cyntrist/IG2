@@ -14,9 +14,6 @@
 #include <iostream>
 #include <string>
 
-class Labyrinth;
-class Heroe;
-
 class IG2App : public  OgreBites::IG2ApplicationContext, OgreBites::InputListener{
 
 public:
@@ -30,28 +27,23 @@ protected:
     virtual void setupScene();
     
     
-    Ogre::SceneNode* mSinbadNode = nullptr;
-    Ogre::SceneNode* mDragonNode = nullptr;
-    Ogre::SceneNode* mSwordNode = nullptr;
-    Ogre::SceneNode* mHelmetNode = nullptr;
-    Ogre::SceneNode* mHeadNode = nullptr;
-    Ogre::SceneNode* mBustNode = nullptr;
-    Ogre::SceneNode* mRomanNode = nullptr;
-    Ogre::SceneNode* mSnowmanNode = nullptr;
+    Ogre::SceneNode* mOgreheadNode = nullptr;
+    
+    // Nodes
+    Ogre::SceneNode* nodePoint = nullptr;
+    Ogre::SceneNode* nodeSpot1 = nullptr;
+    Ogre::SceneNode* nodeSpot2 = nullptr;
+    Ogre::SceneNode* nodeDir = nullptr;
       
     Ogre::SceneManager* mSM = nullptr;
     OgreBites::TrayManager* mTrayMgr = nullptr;
     
-    Ogre::Light* light = nullptr;
-    Ogre::SceneNode* mLightParent = nullptr;
-    Ogre::SceneNode* mLightNode = nullptr;
+//    Ogre::Light* light = nullptr;
+//    Ogre::SceneNode* mLightParent = nullptr;
+//    Ogre::SceneNode* mLightNode = nullptr;
     
     Ogre::SceneNode* mCamNode = nullptr;
     OgreBites::CameraMan* mCamMgr = nullptr;
-
-    Labyrinth* mLabyrinth = nullptr;
-    Ogre::SceneNode* mLabNode = nullptr;
-    Heroe* mHeroe = nullptr;
 };
 
 #endif
