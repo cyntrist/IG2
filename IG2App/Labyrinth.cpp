@@ -4,6 +4,7 @@
 #include "Wall.h"
 #include "Pearl.h"
 #include "Heroe.h"
+#include "Block.h"
 
 #include <iostream>
 #include <iomanip>
@@ -22,6 +23,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	// init params
 	int nf = 0, nc = 0; // number rows number cols
 	file >> nf >> nc;
+	
+	std::vector<Block*> auxX(nc);
 
 	// reading file
 	std::vector<string> grid;
@@ -43,7 +46,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					{0, 0, 0},
 					sn,
 					sm,
-					WALL_NAME + to_string(i * nc + j)
+					WALL_NAME + to_string(i * nc + j),
+					Block::TYPE::WALL
 				);
 
 				wallSize = w->calculateBoxSize();
@@ -53,6 +57,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					LAB_DEPTH
 				});
 				walls.push_back(w);
+				//auxX.push_back(w);
 			}
 			else if (grid[j][i] == 'o')
 			{
@@ -60,7 +65,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					{0, 0, 0},
 					sn,
 					sm,
-					PEARL_NAME + to_string(i * nc + j)
+					PEARL_NAME + to_string(i * nc + j),
+					Block::TYPE::PEARL
 				);
 
 				p->setPosition({
@@ -70,6 +76,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				});
 				p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
 				pearls.push_back(p);
+				//auxX.push_back(p);
+
 			}
 			else if (grid[j][i] == 'h')
 			{
@@ -78,7 +86,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					vecH,
 					sm->getRootSceneNode()->createChildSceneNode("nHeroe"),
 					sm,
-					"Sinbad.mesh");
+					"Sinbad.mesh", 
+					this);
 				h->setScale({ 10, 10, 10 });
 				h->setRotation({ 0,90,0 });
 				hero.push_back(h);

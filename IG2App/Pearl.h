@@ -1,16 +1,18 @@
 #pragma once
 
 #include "IG2Object.h"
+#include "Block.h"
 
-class Pearl : public IG2Object
+
+class Pearl : public Block
 {
 	void init() override
 	{
 	};
 
 public:
-	Pearl(const Vector3& initPos, SceneNode* node, SceneManager* sceneMng, std::string name)
-		: IG2Object(initPos, node->createChildSceneNode(name), sceneMng, PEARL_MESH)
+	Pearl(const Vector3& initPos, SceneNode* node, SceneManager* sceneMng, std::string name, Block::TYPE t_)
+		: Block(initPos, node->createChildSceneNode(name), sceneMng, PEARL_MESH, t_)
 	{
 	}
 	~Pearl() override = default;
