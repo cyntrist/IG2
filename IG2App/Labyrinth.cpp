@@ -80,7 +80,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					vecH,
 					sm->getRootSceneNode()->createChildSceneNode("nHeroe"),
 					sm,
-					"Sinbad.mesh");
+					"Sinbad.mesh",
+					this);
 				h->setScale({ 10, 10, 10 });
 				h->setRotation({ 0,90,0 });
 				hero.push_back(h);

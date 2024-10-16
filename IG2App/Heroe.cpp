@@ -1,4 +1,5 @@
 #include "Heroe.h"
+#include "Block.h"
 
 void Heroe::init()
 {
@@ -69,10 +70,11 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 
 void Heroe::updateMovement(Vector3 vec)
 {
-	if (canMove(vec)) {
-		mNode->translate(dir);
+	if (checkMiddle() && !checkCollision()) {
 
 	}
+	mNode->translate(dir);
+
 }
 
 void Heroe::updateRotation(int degree)
@@ -85,16 +87,31 @@ void Heroe::updateRotation(int degree)
 
 bool Heroe::canMove(Vector3 vec)
 {
-	return true;
+	return checkCollision();
 }
 
-bool Heroe::checkCollision()
+Block* Heroe::checkCollision()
 {
-	// mirar vector direccion del hero, multiplicar por el tamaño del bloque y pedirle al laberinto que te
-	// de el objeto de esa posicion, si es una pared no se mueve, si no pues jijij
-	Vector3 direc = dir * 50;
+	int i;	// indice del bloque con el que se pega
 
-	return false;
+	i = trunc(getPosition().x) * lab->getLabSize().x + trunc(getPosition().y);
+	Vector3 orientation = getOrientation();
+
+	// devuelve el propio bloque
+	return lab->getLabyrinth()[i];
+}
+
+bool Heroe::checkMiddle()
+{
+	int x, y, z;
+	x = mNode->getPosition().x;
+	y = mNode->getPosition().y;
+	z = mNode->getPosition().z;
+
+	Vector3 centro(x % 100, y % 100, z % 100);
+
+	//Si todos los numeros son multiplos de 100 esta en un centro
+	return centro == Vector3().ZERO;
 }
 
 void Heroe::addPoint(int i)

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "IG2Object.h"
+#include "Labyrinth.h"
 
 class Heroe;
 using Chelo = Heroe;
@@ -28,6 +29,9 @@ private:
 	// direccion nueva
 	Vector3 newdir;
 
+	// laberinto
+	Labyrinth* lab;
+
 public:
 
 	// constructora basica, genera el objeto en el origen
@@ -37,15 +41,15 @@ public:
 	};
 
 	// constructora
-	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh)
-		: IG2Object(initPos, node, sceneMng, mesh) {
+	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab_)
+		: IG2Object(initPos, node, sceneMng, mesh), lab(lab_) {
 	
 		vidas = 3;
 		puntos = 0;
 	}
 
-	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, int vidas_, int puntos_)
-		: IG2Object(initPos, node, sceneMng, mesh), vidas(vidas_), puntos(puntos_) { }
+	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, int vidas_, int puntos_, Labyrinth* lab_)
+		: IG2Object(initPos, node, sceneMng, mesh), vidas(vidas_), puntos(puntos_), lab(lab_) { }
 
 
 	void init();
@@ -75,7 +79,8 @@ public:
 	bool canMove(Vector3 vec);
 
 	// detecta las colisiones
-	bool checkCollision();
+	Block* checkCollision();
+	bool checkMiddle();
 
 	// come una perla
 	void eatPearl();
