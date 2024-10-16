@@ -1,18 +1,17 @@
 #pragma once
 
 #include "IG2Object.h"
+#include "Block.h"
 
-class Wall : public IG2Object
+class Wall : public Block
 {
+
+public:
 	void init() override
 	{
 	};
 
-public:
-	Wall(const Vector3& initPos, SceneNode* node, SceneManager* sceneMng, std::string name)
-		: IG2Object(initPos, node->createChildSceneNode(name), sceneMng, WALL_MESH)
-	{
-	}
+	Wall(const Vector3& initPos, SceneNode* node, SceneManager* sceneMng, std::string name);
 	~Wall() override = default;
 };
 

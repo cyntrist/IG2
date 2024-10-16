@@ -3,12 +3,14 @@
 #include "IG2Object.h"
 #include "string"
 #include <vector>
+#include "Block.h"
 
 class Labyrinth
 {
 	std::vector<IG2Object*> walls;
 	std::vector<IG2Object*> pearls;
 	std::vector<IG2Object*> hero;
+	std::vector<Block*> blocks;
 	SceneNode node;
 
 	Vector3 wallSize;

@@ -39,7 +39,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		{
 			if (grid[j][i] == 'x')
 			{
-				auto w = new Wall(
+				Block* w = new Wall(
 					{0, 0, 0},
 					sn,
 					sm,
@@ -52,7 +52,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					wallSize.y * j,
 					LAB_DEPTH
 				});
-				walls.push_back(w);
+
+				blocks.push_back(w);
 			}
 			else if (grid[j][i] == 'o')
 			{
@@ -69,7 +70,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					LAB_DEPTH
 				});
 				p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
-				pearls.push_back(p);
+				blocks.push_back(p);
+
 			}
 			else if (grid[j][i] == 'h')
 			{
@@ -88,21 +90,14 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 	labSize = { wallSize.x * nf, wallSize.y * nc };
 
-	for (auto w : walls)
-		w->setPosition(
-			w->getPosition().x - labSize.x/2 + wallSize.x/2,
-			w->getPosition().y - labSize.y/2 + wallSize.y/2,
-			w->getPosition().z
+	// recoloca el laberinto
+	for (auto b : blocks)
+		b->setPosition(
+			b->getPosition().x - labSize.x/2 + wallSize.x/2,
+			b->getPosition().y - labSize.y/2 + wallSize.y/2,
+			b->getPosition().z
 		);
-
 	
-	for (auto p : pearls)
-		p->setPosition(
-			p->getPosition().x - labSize.x/2 + wallSize.x/2,
-			p->getPosition().y - labSize.y/2 + wallSize.y/2,
-			p->getPosition().z
-		);
-
 	file.close();
 }
 
