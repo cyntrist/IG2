@@ -8,12 +8,30 @@
 using namespace Ogre;
 using namespace std;
 
+void IG2App::frameRendered(const FrameEvent& evt)
+{
+	//InputListener::frameRendered(evt);
+	levelLabel->setCaption("STAGE: " + StringConverter::toString(game->getStage()));
+	levelInfo->clearText();
+	levelInfo->appendText("Lives: ");
+	levelInfo->appendText(StringConverter::toString(game->getLives()));
+	levelInfo->appendText("\nPoints: ");
+	levelInfo->appendText(StringConverter::toString(game->getPoints()));
+}
+
 bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt)
 {
 	// ESC key finished the rendering...
 	if (evt.keysym.sym == SDLK_ESCAPE)
 	{
 		getRoot()->queueEndRendering();
+	}
+
+	if (evt.keysym.sym == SDLK_q)
+	{
+		game->changeStage(game->getStage() + 1);
+		game->addLives(1);
+		game->addPoints(10);
 	}
 
 	// caca culo pedo pis
@@ -36,6 +54,13 @@ void IG2App::shutdown()
 	delete mLabyrinth;
 	mLabyrinth = nullptr;
 
+	delete mHeroe;
+	mHeroe = nullptr;
+
+	delete game;
+	game = nullptr;
+
+
 	// do not forget to call the base 
 	IG2ApplicationContext::shutdown();
 }
@@ -52,16 +77,26 @@ void IG2App::setup(void)
 	mShaderGenerator->addSceneManager(mSM);
 
 	mSM->addRenderQueueListener(mOverlaySystem);
+	/// GUI ejemplo:
 	mTrayMgr = new OgreBites::TrayManager("TrayGUISystem", mWindow.render);
 	mTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
 	addInputListener(mTrayMgr);
+
+	levelLabel = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, 
+		"InfoCap", "Stage: ", 100); 
+	levelInfo = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMRIGHT,
+		"LevelInfo","GameInfo" , 250, 100);
+
+	// Game:
+	game = new Game();
+
 
 	// Adds the listener for this object
 	addInputListener(this);
 	setupScene();
 }
 
-void IG2App::setupScene(void)
+void IG2App::setupScene()
 {
 	//------------------------------------------------------------------------
 	// Creating the camera

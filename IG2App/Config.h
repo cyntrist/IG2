@@ -12,4 +12,7 @@ constexpr int H_DEPTH = -1500;
 constexpr int H_XSET = 0;
 constexpr int H_YSET = 0;
 
+constexpr int INI_LIVES = 3;
+constexpr int INI_STAGE = 0;
+
 

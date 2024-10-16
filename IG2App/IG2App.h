@@ -14,6 +14,8 @@
 #include <iostream>
 #include <string>
 
+#include "Game.h"
+
 class Labyrinth;
 class Heroe;
 
@@ -24,6 +26,7 @@ public:
     virtual ~IG2App() { };                                    // delete -> shutdown()
  
 protected:
+    void frameRendered(const Ogre::FrameEvent& evt) override;
     virtual bool keyPressed(const OgreBites::KeyboardEvent& evt);  // InputListener
     virtual void setup();
     virtual void shutdown();
@@ -52,6 +55,9 @@ protected:
     Labyrinth* mLabyrinth = nullptr;
     Ogre::SceneNode* mLabNode = nullptr;
     Heroe* mHeroe = nullptr;
+    OgreBites::TextBox* levelInfo = nullptr;
+    OgreBites::Label* levelLabel = nullptr;
+    Game* game = nullptr;
 };
 
 #endif
