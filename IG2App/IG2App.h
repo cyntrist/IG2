@@ -10,54 +10,67 @@
 #include <OgreInput.h>
 #include <SDL_keycode.h>
 #include <OgreMeshManager.h>
+#include <OgreEntity.h>
+#include <OgreSkeletonInstance.h>
+#include <OgreBone.h>
+#include <OgreKeyFrame.h>
 #include <sstream>
 #include <iostream>
 #include <string>
 
-#include "Game.h"
-
-class Labyrinth;
-class Heroe;
-
 class IG2App : public  OgreBites::IG2ApplicationContext, OgreBites::InputListener{
 
 public:
-    explicit IG2App() : IG2ApplicationContext("IG2App") { };  // new -> setup()
-    virtual ~IG2App() { };                                    // delete -> shutdown()
+    explicit IG2App() : IG2ApplicationContext("IG2App") { };
+    virtual ~IG2App() { };
  
 protected:
-    void frameRendered(const Ogre::FrameEvent& evt) override;
-    virtual bool keyPressed(const OgreBites::KeyboardEvent& evt);  // InputListener
+    virtual bool keyPressed(const OgreBites::KeyboardEvent& evt);
     virtual void setup();
     virtual void shutdown();
     virtual void setupScene();
+    virtual void frameRendered(const Ogre::FrameEvent& evt);
+
+
     
+private:
     
-    Ogre::SceneNode* mSinbadNode = nullptr;
-    Ogre::SceneNode* mDragonNode = nullptr;
-    Ogre::SceneNode* mSwordNode = nullptr;
-    Ogre::SceneNode* mHelmetNode = nullptr;
-    Ogre::SceneNode* mHeadNode = nullptr;
-    Ogre::SceneNode* mBustNode = nullptr;
-    Ogre::SceneNode* mRomanNode = nullptr;
-    Ogre::SceneNode* mSnowmanNode = nullptr;
-      
+    // Sinbad and swords
+    Ogre::SceneNode* sinbadNode = nullptr;
+    Ogre::Entity * sinbadEnt;
+    Ogre::Entity * swordLeftEnt;
+    Ogre::Entity * swordRightEnt;
+    
+    // Flags to control the attached swords
+    bool attachedLeftSword = false;
+    bool attachedRightSword = false;
+    
+    // Lights
+    Ogre::Light* spotLight1;
+    Ogre::Light* spotLight2;
+    Ogre::SceneNode* nodeSpot1 = nullptr;
+    Ogre::SceneNode* nodeSpot2 = nullptr;
+    int dynamicComponent = 0;
+    
+    // Animation state
+    Ogre::AnimationState * animationState;
+    
+    // Animation states for Sinbad
+    Ogre::AnimationState* animationStateDance;
+    Ogre::AnimationState* animationStateRunBase;
+    Ogre::AnimationState* animationStateRunTop;
+    
+    // Flags to control the animations
+    bool isDancing = false;
+    bool isRunning = false;
+    
+    // Scene manager and tray system
     Ogre::SceneManager* mSM = nullptr;
     OgreBites::TrayManager* mTrayMgr = nullptr;
-    
-    Ogre::Light* light = nullptr;
-    Ogre::SceneNode* mLightParent = nullptr;
-    Ogre::SceneNode* mLightNode = nullptr;
-    
+   
+    // Camera
     Ogre::SceneNode* mCamNode = nullptr;
     OgreBites::CameraMan* mCamMgr = nullptr;
-
-    Labyrinth* mLabyrinth = nullptr;
-    Ogre::SceneNode* mLabNode = nullptr;
-    Heroe* mHeroe = nullptr;
-    OgreBites::TextBox* levelInfo = nullptr;
-    OgreBites::Label* levelLabel = nullptr;
-    Game* game = nullptr;
 };
 
 #endif
