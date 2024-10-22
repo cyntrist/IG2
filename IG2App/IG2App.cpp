@@ -11,22 +11,29 @@ bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt){
     }
         
     // Running animation
-    // TODO...
+    if (evt.keysym.sym == SDLK_c) {
+        isDancing = false;
+
+        if (!isRunning)
+            isRunning = true;
+        else
+            isRunning = false;
+
+        animationStateRunBase->setEnabled(isRunning);
+        animationStateRunBase->setLoop(isRunning);
+        animationStateRunTop->setEnabled(isRunning);
+        animationStateRunTop->setLoop(isRunning);
+
+    }
     
     // Dancing animation
     if (evt.keysym.sym == SDLK_d) {
-        animationState = sinbadEnt->getAnimationState("Dance");
-        if (!isDancing) {
-            animationState->setEnabled(true);
-            animationState->setLoop(true);
+        if (!isDancing) 
             isDancing = true;
-        }
-        else {
-            animationState->setEnabled(false);
-            animationState->setLoop(false);
+        else
             isDancing = false;
-        }
-
+        animationStateDance->setEnabled(isDancing);
+        animationStateDance->setLoop(isDancing);
     }
     
     // Attach/Dettach right sword
@@ -217,7 +224,9 @@ void IG2App::setupScene(void){
     // TODO...
     
     // Animations for running and dancing...
-    // TODO...
+    animationStateDance = sinbadEnt->getAnimationState("Dance");
+    animationStateRunTop = sinbadEnt->getAnimationState("RunTop");
+    animationStateRunBase = sinbadEnt->getAnimationState("RunBase");
 }
 
 void IG2App::frameRendered(const Ogre::FrameEvent& evt){
@@ -244,8 +253,17 @@ void IG2App::frameRendered(const Ogre::FrameEvent& evt){
     //------------------------------------------------------------------------
     //sinbadEnt->getAnimationState("Dance")->addTime(evt.timeSinceLastFrame);
 
-    if(animationState != nullptr)
+  /*  if(animationState != nullptr)
         animationState->addTime(evt.timeSinceLastFrame);
+*/
+
+    if (isDancing)
+        animationStateDance->addTime(evt.timeSinceLastFrame);
     
+    if (isRunning) {
+        animationStateRunTop->addTime(evt.timeSinceLastFrame);
+        animationStateRunBase->addTime(evt.timeSinceLastFrame);
+    }
+
 }
 
