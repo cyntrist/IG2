@@ -14,7 +14,20 @@ bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt){
     // TODO...
     
     // Dancing animation
-    // TODO...
+    if (evt.keysym.sym == SDLK_d) {
+        animationState = sinbadEnt->getAnimationState("Dance");
+        if (!isDancing) {
+            animationState->setEnabled(true);
+            animationState->setLoop(true);
+            isDancing = true;
+        }
+        else {
+            animationState->setEnabled(false);
+            animationState->setLoop(false);
+            isDancing = false;
+        }
+
+    }
     
     // Attach/Dettach right sword
     if (evt.keysym.sym == SDLK_r) {
@@ -229,7 +242,10 @@ void IG2App::frameRendered(const Ogre::FrameEvent& evt){
     
     // Example of Sinbad's animation (running and dancing)
     //------------------------------------------------------------------------
-    // TODO...
+    //sinbadEnt->getAnimationState("Dance")->addTime(evt.timeSinceLastFrame);
+
+    if(animationState != nullptr)
+        animationState->addTime(evt.timeSinceLastFrame);
     
 }
 
