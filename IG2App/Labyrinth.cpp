@@ -52,6 +52,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					wallSize.y * j,
 					LAB_DEPTH
 				});
+				w->setType(Block::TYPE::WALL);
+				w->setPass(false);
 
 				blocks.push_back(w);
 			}
@@ -70,12 +72,15 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					LAB_DEPTH
 				});
 				p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
+				p->setType(Block::TYPE::PEARL);
+				p->setPass(true);
 				blocks.push_back(p);
 
 			}
 			else if (grid[j][i] == 'h')
 			{
 				Vector3 vecH = { 0, 0, H_DEPTH };
+
 				Heroe* h = new Heroe(
 					vecH,
 					sm->getRootSceneNode()->createChildSceneNode("nHeroe"),
@@ -85,6 +90,12 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				h->setScale({ 10, 10, 10 });
 				h->setRotation({ 0,90,0 });
 				hero.push_back(h);
+			}
+			else {
+
+				Block* b = nullptr;
+				blocks.push_back(b);
+
 			}
 		}
 	}
@@ -110,4 +121,12 @@ Labyrinth::~Labyrinth()
 	//	delete i;
 	walls.clear();
 	pearls.clear();
+}
+
+Block* Labyrinth::getBlock(Vector3 pos)
+{
+	// ¿?¿?¿?¿
+
+
+	return nullptr;
 }

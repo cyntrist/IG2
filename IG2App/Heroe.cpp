@@ -37,14 +37,14 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 		std::cout << "UP " << std::endl;
 		setOrientation({0, -1, 0});
 
-		newdir = dir = { 0, 1, 0 };
+		newdir = { 0, 1, 0 };
 	}
 	else if (evt.keysym.sym == SDLK_RIGHT) {
 		std::cout << "RIGHT " << std::endl;
 		setOrientation({ -1, 0, 0 });
 
 
-		newdir = dir = { 1, 0, 0 };
+		newdir = { 1, 0, 0 };
 
 	}	
 	else if (evt.keysym.sym == SDLK_DOWN) {
@@ -53,14 +53,14 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 		setOrientation({ 0, 1,0 });
 
 
-		newdir = dir = { 0, -1, 0 };
+		newdir = { 0, -1, 0 };
 
 	}	
 	else if (evt.keysym.sym == SDLK_LEFT) {
 		std::cout << "LEFT " << std::endl;
 		setOrientation({ 1, 0, 0 });
 
-		newdir = dir = { -1, 0, 0 };
+		newdir = { -1, 0, 0 };
 
 	}
 
@@ -70,10 +70,31 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 
 void Heroe::updateMovement(Vector3 vec)
 {
-	if (checkMiddle() && !checkCollision()) {
+	if (checkMiddle() && newdir != dir) {	
+
+		
+		//std::cout << "passable block? " << checkCollision(newdir) << std::endl;
+
+		// si no se choca
+		if (checkCollision(newdir)) {
+
+			std::cout << "CAMBIA DIRECCION真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
+
+
+			dir = newdir;
+		}
+
+	}
+
+
+	//std::cout << "IS COLLISIONING? " << checkCollision(dir) << std::endl;
+	if (checkCollision(dir))
+	{
+		std::cout << "SE MUEVE真真 真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
 
 	}
 	mNode->translate(dir);
+	
 
 }
 
@@ -87,18 +108,68 @@ void Heroe::updateRotation(int degree)
 
 bool Heroe::canMove(Vector3 vec)
 {
-	return checkCollision();
+	return checkCollision(vec);
 }
 
-Block* Heroe::checkCollision()
+bool Heroe::checkCollision(Vector3 dir)
 {
-	int i;	// indice del bloque con el que se pega
+	//Vector3 coord = getPosition() + (dir * 100);
 
-	i = trunc(getPosition().x) * lab->getLabSize().x + trunc(getPosition().y);
-	Vector3 orientation = getOrientation();
+	std::cout << "la posicion del player es: " << getPosition() << std::endl;
 
-	// devuelve el propio bloque
-	return lab->getLabyrinth()[i];
+	std::cout << "trunc: " << trunc(1) << std::endl;
+
+	int id = (trunc(getPosition().x/WALL_LENGTH) * lab->getLabSize().x) + (trunc(getPosition().y/ WALL_LENGTH)) + 180;
+	std::cout << "el id de el player es " << id << std::endl;
+
+	//if (dir == Vector3(1, 0, 0) || dir == Vector3(0, 0, 1))
+	//	posHero += dir;
+
+	//cout << "Check Direction" << endl;
+	if (lab->getLabyrinth()[id] == nullptr) return true; // Para cuando pase por la poscion donde aparece el personaje.
+
+	if (lab->getLabyrinth()[id]->Type() != Block::TYPE::WALL)
+		return false;
+	return true;
+
+
+/*
+//int i;	// indice del bloque con el que se pega
+
+	//Vector3 posHero = (getPosition()) / WALL_LENGTH; // Posicion en el laberinto normalizado.
+	//int id;
+
+	//
+
+	//i = trunc(getPosition().x) * WALL_LENGTH + trunc(getPosition().y);
+	//Vector3 orientation = getOrientation();
+
+	//std::cout << "this block index is: " << i << std::endl;
+
+	//auto* a = lab->getLabyrinth()[i];
+
+
+
+
+	//if (a == nullptr) {
+	//	return true;
+	//}
+
+	//std::cout << "this block is: " << (int)a->Type() << std::endl;
+
+
+	//std::cout << "this block type is: " << (int)a->Type() << std::endl;
+	//std::cout << "direction is: " << dir << std::endl;
+
+
+	//if (a->Type() == Block::TYPE::WALL) return false;
+	//else if (a->Type() == Block::TYPE::PEARL) return true;
+	//else return true;
+
+*/
+
+	return true;
+
 }
 
 bool Heroe::checkMiddle()

@@ -25,5 +25,7 @@ public:
 	IG2Object* getHero() { return hero[0]; }
 	Vector2 getLabSize() const { return labSize; }
 	Vector3 getWallSize() const { return wallSize; }
+
+	Block* getBlock(Vector3 pos);
 };
 

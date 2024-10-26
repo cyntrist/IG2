@@ -79,7 +79,7 @@ public:
 	bool canMove(Vector3 vec);
 
 	// detecta las colisiones
-	Block* checkCollision();
+	bool checkCollision(Vector3 dir);
 	bool checkMiddle();
 
 	// come una perla

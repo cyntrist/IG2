@@ -4,11 +4,19 @@
 
 
 class Block : public IG2Object {
-	
+public:
 
+	enum TYPE { NONE, WALL, PEARL };
+
+
+private:
 	void init() override
 	{
 	};
+
+	bool p = false;
+	TYPE t = TYPE::NONE;
+
 public:
 
 	Block() {};
@@ -16,5 +24,12 @@ public:
 		: IG2Object(initPos, node, sceneMng, name) {}
 
 	~Block() override = default;
+
+
+	void setPass(bool a) { p = a; }
+	bool isPass() { return p; }
+
+	void setType(TYPE  a) { t = a; }
+	TYPE Type() { return t; }
 
 };
