@@ -80,7 +80,6 @@ void Heroe::updateMovement(Vector3 vec)
 
 			std::cout << "CAMBIA DIRECCION真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
 
-
 			dir = newdir;
 		}
 
@@ -113,24 +112,29 @@ bool Heroe::canMove(Vector3 vec)
 
 bool Heroe::checkCollision(Vector3 dir)
 {
-	//Vector3 coord = getPosition() + (dir * 100);
-
-	std::cout << "la posicion del player es: " << getPosition() << std::endl;
-
-	//std::cout << "trunc: " << getPosition().x / WALL_LENGTH << std::endl;
+	
 
 	int id = (trunc(getPosition().x/WALL_LENGTH)) + (trunc(getPosition().y/ WALL_LENGTH)) + 180;
+	std::cout << "dir " << dir << std::endl;
+
+	if (dir.x == 1) id++;
+	else if (dir.x == -1) id--;
+	else if (dir.y == 1) id += 19;
+	else if (dir.y == -1) id -= 19;
 	std::cout << "el id de el player es " << id << std::endl;
 
-	//if (dir == Vector3(1, 0, 0) || dir == Vector3(0, 0, 1))
-	//	posHero += dir;
 
-	//cout << "Check Direction" << endl;
 	if (lab->getLabyrinth()[id] == nullptr) return true; // Para cuando pase por la poscion donde aparece el personaje.
 
-	if (lab->getLabyrinth()[id]->Type() != Block::TYPE::WALL)
+	std::cout << "el tipo del bloque es: " << (int)lab->getLabyrinth()[id]->Type() << std::endl;
+
+
+	if (lab->getLabyrinth()[id]->Type() == Block::TYPE::WALL)
+		return true;
+	else if (lab->getLabyrinth()[id]->Type() == Block::TYPE::PEARL)
 		return false;
-	return true;
+	else
+		return true;
 
 
 /*
@@ -167,9 +171,6 @@ bool Heroe::checkCollision(Vector3 dir)
 	//else return true;
 
 */
-
-	return true;
-
 }
 
 bool Heroe::checkMiddle()
