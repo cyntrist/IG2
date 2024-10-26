@@ -117,9 +117,9 @@ bool Heroe::checkCollision(Vector3 dir)
 
 	std::cout << "la posicion del player es: " << getPosition() << std::endl;
 
-	std::cout << "trunc: " << trunc(1) << std::endl;
+	//std::cout << "trunc: " << getPosition().x / WALL_LENGTH << std::endl;
 
-	int id = (trunc(getPosition().x/WALL_LENGTH) * lab->getLabSize().x) + (trunc(getPosition().y/ WALL_LENGTH)) + 180;
+	int id = (trunc(getPosition().x/WALL_LENGTH)) + (trunc(getPosition().y/ WALL_LENGTH)) + 180;
 	std::cout << "el id de el player es " << id << std::endl;
 
 	//if (dir == Vector3(1, 0, 0) || dir == Vector3(0, 0, 1))
