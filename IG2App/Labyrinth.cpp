@@ -101,14 +101,19 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	}
 
 	labSize = { wallSize.x * nf, wallSize.y * nc };
+	int i = 0;
 
 	// recoloca el laberinto
-	for (auto b : blocks)
+	for (auto b : blocks) {
 		b->setPosition(
-			b->getPosition().x - labSize.x/2 + wallSize.x/2,
-			b->getPosition().y - labSize.y/2 + wallSize.y/2,
+			b->getPosition().x - labSize.x / 2 + wallSize.x / 2,
+			b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
 			b->getPosition().z
 		);
+
+		//std::cout << i << " " << b->Type() << std::endl;
+		//i++;
+	}
 	
 	file.close();
 }
@@ -123,10 +128,9 @@ Labyrinth::~Labyrinth()
 	pearls.clear();
 }
 
-Block* Labyrinth::getBlock(Vector3 pos)
+Block* Labyrinth::getBlock(int id)
 {
 	// ¿?¿?¿?¿
 
-
-	return nullptr;
+	return blocks[id];
 }

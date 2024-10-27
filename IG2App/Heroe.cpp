@@ -112,9 +112,8 @@ bool Heroe::canMove(Vector3 vec)
 
 bool Heroe::checkCollision(Vector3 dir)
 {
-	
-
-	int id = (trunc(getPosition().x/WALL_LENGTH)) + (trunc(getPosition().y/ WALL_LENGTH)) + 180;
+	int id = ((trunc(getPosition().x/WALL_LENGTH)) + (trunc(getPosition().y/ WALL_LENGTH)))/5 ;
+	id += 180;
 	std::cout << "dir " << dir << std::endl;
 
 	if (dir.x == 1) id++;
@@ -123,11 +122,10 @@ bool Heroe::checkCollision(Vector3 dir)
 	else if (dir.y == -1) id -= 19;
 	std::cout << "el id de el player es " << id << std::endl;
 
+	if (lab->getLabyrinth()[id] == nullptr) return true;
 
-	if (lab->getLabyrinth()[id] == nullptr) return true; // Para cuando pase por la poscion donde aparece el personaje.
-
-	std::cout << "el tipo del bloque es: " << (int)lab->getLabyrinth()[id]->Type() << std::endl;
-
+	//std::cout << "el tipo del bloque es: " << (int)lab->getLabyrinth()[id]->Type() << std::endl;
+	std::cout << "el tipo del bloque es: " << (int)lab->getBlock(id)->Type() << std::endl;
 
 	if (lab->getLabyrinth()[id]->Type() == Block::TYPE::WALL)
 		return true;
