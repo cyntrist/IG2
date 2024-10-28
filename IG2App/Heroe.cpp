@@ -78,7 +78,7 @@ void Heroe::updateMovement(Vector3 vec)
 		// si no se choca
 		if (checkCollision(newdir)) {
 
-			std::cout << "CAMBIA DIRECCION真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
+			//std::cout << "CAMBIA DIRECCION真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
 
 			dir = newdir;
 		}
@@ -89,7 +89,7 @@ void Heroe::updateMovement(Vector3 vec)
 	//std::cout << "IS COLLISIONING? " << checkCollision(dir) << std::endl;
 	if (checkCollision(dir))
 	{
-		std::cout << "SE MUEVE真真 真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
+		//std::cout << "SE MUEVE真真 真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
 
 	}
 	mNode->translate(dir);
@@ -114,18 +114,18 @@ bool Heroe::checkCollision(Vector3 dir)
 {
 	int id = ((trunc(getPosition().x/WALL_LENGTH)) + (trunc(getPosition().y/ WALL_LENGTH)))/5 ;
 	id += 180;
-	std::cout << "dir " << dir << std::endl;
+	//std::cout << "dir " << dir << std::endl;
 
 	if (dir.x == 1) id++;
 	else if (dir.x == -1) id--;
 	else if (dir.y == 1) id += 19;
 	else if (dir.y == -1) id -= 19;
-	std::cout << "el id de el player es " << id << std::endl;
+	//std::cout << "el id de el player es " << id << std::endl;
 
 	if (lab->getLabyrinth()[id] == nullptr) return true;
 
 	//std::cout << "el tipo del bloque es: " << (int)lab->getLabyrinth()[id]->Type() << std::endl;
-	std::cout << "el tipo del bloque es: " << (int)lab->getBlock(id)->Type() << std::endl;
+	//std::cout << "el tipo del bloque es: " << (int)lab->getBlock(id)->Type() << std::endl;
 
 	if (lab->getLabyrinth()[id]->Type() == Block::TYPE::WALL)
 		return true;
