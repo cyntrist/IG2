@@ -100,7 +100,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				break;
 			case 'v': // ogrehead
 				{
-					std::cout << "x" << i << "j" << j << std::endl;
 					auto pos = Vector3(i, j, H_DEPTH);
 					auto v = new Ogrehead(
 						pos,
@@ -109,6 +108,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						"ogrehead.mesh",
 						this);
 					villains.push_back(v);
+					v->setRotation({0, 90, 0});
 					break;
 				}
 			case 's': // spider
@@ -121,6 +121,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						"ogrehead.mesh",
 						this);
 					villains.push_back(v);
+					v->setRotation({0, 90, 0});
 					break;
 				}
 			default:

@@ -55,7 +55,7 @@ void IG2Object::setPosition(Vector3 v)
 
 void IG2Object::setPosition(Real x, Real y, Real z)
 {
-	mNode->setPosition(Vector3(x,y,z));
+	mNode->setPosition(Vector3(x, y, z));
 }
 
 Vector3 IG2Object::getPosition()
@@ -72,6 +72,27 @@ void IG2Object::setVisible(bool visible)
 {
 	mNode->setVisible(visible);
 }
+
+void IG2Object::setOrientation(Vector3 vec)
+{
+	mNode->setDirection(vec.x, vec.y, vec.z, Node::TS_WORLD);
+}
+
+void IG2Object::setRotation(Vector3 r)
+{
+	mNode->roll(Degree(r.x));
+	mNode->pitch(Degree(r.y));
+	mNode->yaw(Degree(r.z));
+}
+
+void IG2Object::updateRotation(int degree)
+{
+	// cambia la rotacion
+	mNode->yaw(Degree(degree));
+
+	// actualiza la direccion actual
+}
+
 
 Vector3 IG2Object::getOrientation()
 {

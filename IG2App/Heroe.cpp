@@ -13,17 +13,6 @@ void Heroe::setScale(Vector3 s)
 	this->mNode->setScale(s);
 }
 
-void Heroe::setRotation(Vector3 r)
-{
-	mNode->roll(Ogre::Degree(r.x));
-	mNode->pitch(Ogre::Degree(r.y));
-	mNode->yaw(Ogre::Degree(r.z));
-}
-
-void Heroe::setOrientation(Vector3 vec)
-{
-	mNode->setDirection(vec.x, vec.y, vec.z, Node::TS_WORLD);
-}
 
 void Heroe::frameRendered(const Ogre::FrameEvent& evt)
 {
@@ -95,14 +84,6 @@ void Heroe::updateMovement(Vector3 vec)
 	mNode->translate(dir);
 	
 
-}
-
-void Heroe::updateRotation(int degree)
-{
-	// cambia la rotacion
-	mNode->yaw(Ogre::Degree(degree));
-
-	// actualiza la direccion actual
 }
 
 bool Heroe::canMove(Vector3 vec)

@@ -55,9 +55,6 @@ public:
 	void init();
 
 	void setScale(Vector3 s);
-	void setRotation(Vector3 r);
-
-	void setOrientation(Vector3 vec);
 
 // ------------------- METODOS ------------------------
 
@@ -73,7 +70,6 @@ public:
 
 	// de momento solo en un eje
 	// mDragonNode->yaw(Degree(-180));
-	void updateRotation(int degree);
 
 	// devuelve si se puede mover en esa direccion (si no hay muro con el que colisiona)
 	bool canMove(Vector3 vec);

@@ -90,7 +90,14 @@ class IG2Object : public OgreBites::InputListener {
          * @param visible If true, the element is visible. The element is not visible otherwise.
          */
         void setVisible (bool visible);
-    
+
+        void setOrientation(Vector3 vec);
+
+		void setRotation(Vector3 r);
+
+    	void updateRotation(int degree);
+
+
         /**
          * Gets the AABB for this element.
          * @return AABB of this element.
