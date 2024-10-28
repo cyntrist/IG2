@@ -9,6 +9,9 @@
 #include <iomanip>
 #include <fstream>
 
+#include "Ogrehead.h"
+#include "Spider.h"
+
 Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node(nullptr)
 {
 	// opening stream
@@ -95,6 +98,31 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					hero.push_back(h);
 				}
 				break;
+			case 'v': // ogrehead
+				{
+					auto pos = Vector3(0, 0, H_DEPTH);
+					auto v = new Ogrehead(
+						pos,
+						sm->getRootSceneNode()->createChildSceneNode("nOgre" + std::to_string(j + i)),
+						sm,
+						"ogrehead.mesh",
+						this);
+					villains.push_back(v);
+
+					break;
+				}
+			case 's': // spider
+				{
+					auto pos = Vector3(0, 0, H_DEPTH);
+					auto v = new Spider(
+						pos,
+						sm->getRootSceneNode()->createChildSceneNode("nSpider" + std::to_string(j + i)),
+						sm,
+						"ogrehead.mesh",
+						this);
+					villains.push_back(v);
+					break;
+				}
 			default:
 				{
 					Block* b = nullptr;
@@ -120,6 +148,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		//std::cout << i << " " << b->Type() << std::endl;
 		//i++;
 	}
+
 
 	file.close();
 }
