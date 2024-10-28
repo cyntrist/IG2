@@ -35,6 +35,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		grid.push_back(row);
 	}
 
+	std::vector<Block*> aux;
+
 	// parsing data into objects
 	for (int i = 0; i < nf; i++)
 	{
@@ -60,7 +62,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					w->setType(Block::TYPE::WALL);
 					w->setPass(false);
 
-					blocks.push_back(w);
+					aux.push_back(w);
 					break;
 				}
 			case 'o':
@@ -80,7 +82,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
 					p->setType(Block::TYPE::PEARL);
 					p->setPass(true);
-					blocks.push_back(p);
+					aux.push_back(p);
 				}
 				break;
 			case 'h':
@@ -96,6 +98,17 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					h->setScale({10, 10, 10});
 					h->setRotation({0, 90, 0});
 					hero.push_back(h);
+
+					auto p = new Pearl(
+						{ 0, 0, 0 },
+						sn,
+						sm,
+						PEARL_NAME + to_string(i * nc + j)
+					);
+
+					p->setType(Block::TYPE::NONE);
+					p->setPass(true);
+					aux.push_back(p);
 				}
 				break;
 			case 'v': // ogrehead
@@ -127,19 +140,23 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 			default:
 				{
 					Block* b = nullptr;
-					blocks.push_back(b);
+					aux.push_back(b);
 					break;
 				}
 			}
 		}
+
+		blocks.push_back(aux);
+		aux.clear();
 	}
 
 	labSize = {wallSize.x * nf, wallSize.y * nc};
 	int i = 0;
 
 	// recoloca el laberinto
-	for (auto b : blocks)
+	for (auto a : blocks)
 	{
+		for(auto b : a)
 		b->setPosition(
 			b->getPosition().x - labSize.x / 2 + wallSize.x / 2,
 			b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
@@ -177,5 +194,5 @@ Block* Labyrinth::getBlock(int id)
 {
 	// ¿?¿?¿?¿
 
-	return blocks[id];
+	return nullptr;
 }

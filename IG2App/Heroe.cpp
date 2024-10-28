@@ -59,28 +59,24 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 
 void Heroe::updateMovement(Vector3 vec)
 {
+	std::cout << "colisiona?? " << checkCollision(dir) << std::endl;
+
+
 	if (checkMiddle() && newdir != dir) {	
 
-		
-		//std::cout << "passable block? " << checkCollision(newdir) << std::endl;
-
 		// si no se choca
-		if (checkCollision(newdir)) {
-
+		if (!checkCollision(newdir)) {
 			//std::cout << "CAMBIA DIRECCION真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
-
 			dir = newdir;
 		}
-
 	}
 
-
-	//std::cout << "IS COLLISIONING? " << checkCollision(dir) << std::endl;
-	if (checkCollision(dir))
+	if (checkCollision(dir) && checkMiddle())
 	{
+		dir = { 0,0,0 };
 		//std::cout << "SE MUEVE真真 真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
-
 	}
+
 	mNode->translate(dir);
 	
 
@@ -93,29 +89,30 @@ bool Heroe::canMove(Vector3 vec)
 
 bool Heroe::checkCollision(Vector3 dir)
 {
-	int id = ((trunc(getPosition().x/WALL_LENGTH)) + (trunc(getPosition().y/ WALL_LENGTH)))/5 ;
-	id += 180;
-	//std::cout << "dir " << dir << std::endl;
-
-	if (dir.x == 1) id++;
-	else if (dir.x == -1) id--;
-	else if (dir.y == 1) id += 19;
-	else if (dir.y == -1) id -= 19;
-	//std::cout << "el id de el player es " << id << std::endl;
-
-	if (lab->getLabyrinth()[id] == nullptr) return true;
-
-	//std::cout << "el tipo del bloque es: " << (int)lab->getLabyrinth()[id]->Type() << std::endl;
-	//std::cout << "el tipo del bloque es: " << (int)lab->getBlock(id)->Type() << std::endl;
-
-	if (lab->getLabyrinth()[id]->Type() == Block::TYPE::WALL)
-		return true;
-	else if (lab->getLabyrinth()[id]->Type() == Block::TYPE::PEARL)
-		return false;
-	else
-		return true;
+	bool colisiona = false;
+	int offsetx = lab->getLabSize().x / lab->getWallSize().x/2;
+	int offsety = lab->getLabSize().y / lab->getWallSize().y/2;
 
 
+	int x = offsetx + 1 + ((trunc((getPosition().x) / WALL_LENGTH))) / 5;
+	int y = offsety + 1 + ((trunc((getPosition().y) / WALL_LENGTH))) / 5;
+
+	y = lab->getLabSize().x / lab->getWallSize().x - y;
+	std::cout << "x " << x << "y " << y << std::endl;
+
+	y += dir.y;
+	x += dir.x;
+
+
+	if (lab->getLabyrinth()[x][y] == nullptr) colisiona = true;
+	else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL)
+		colisiona = true;
+	else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::PEARL)
+		colisiona =  false;	
+	else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE)
+		colisiona =  false;
+
+	return colisiona;
 /*
 //int i;	// indice del bloque con el que se pega
 

@@ -10,7 +10,8 @@ class Labyrinth
 	std::vector<IG2Object*> walls;
 	std::vector<IG2Object*> pearls;
 	std::vector<IG2Object*> hero;
-	std::vector<Block*> blocks;
+	//std::vector<Block*> blocks;
+	std::vector<std::vector<Block*>> blocks;
 	std::vector<IG2Object*> villains;
 	SceneNode node;
 
@@ -22,7 +23,7 @@ public:
 	~Labyrinth();
 
 
-	std::vector<Block*> getLabyrinth() { return blocks; }
+	std::vector<std::vector<Block*>> getLabyrinth() { return blocks; }
 	IG2Object* getHero() const { return hero[0]; }
 	Vector2 getLabSize() const { return labSize; }
 	Vector3 getWallSize() const { return wallSize; }
