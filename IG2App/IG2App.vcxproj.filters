@@ -13,6 +13,12 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Archivos de código fuente\Villanos">
+      <UniqueIdentifier>{80bbdb8c-f295-4f65-a2e2-53f9d905114f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Villanos">
+      <UniqueIdentifier>{466638d5-a2ae-4628-aae4-8d4fa51bee0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IG2ApplicationContext.h">
@@ -39,11 +45,20 @@
     <ClInclude Include="Pearl.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Villano.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Villain.h">
+      <Filter>Archivos de encabezado\Villanos</Filter>
+    </ClInclude>
+    <ClInclude Include="Ogrehead.h">
+      <Filter>Archivos de encabezado\Villanos</Filter>
+    </ClInclude>
+    <ClInclude Include="Spider.h">
+      <Filter>Archivos de encabezado\Villanos</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,11 +86,17 @@
     <ClCompile Include="Pearl.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
-    <ClCompile Include="Villano.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="Villain.cpp">
+      <Filter>Archivos de código fuente\Villanos</Filter>
+    </ClCompile>
+    <ClCompile Include="Ogrehead.cpp">
+      <Filter>Archivos de código fuente\Villanos</Filter>
+    </ClCompile>
+    <ClCompile Include="Spider.cpp">
+      <Filter>Archivos de código fuente\Villanos</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

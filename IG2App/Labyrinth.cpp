@@ -37,74 +37,80 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	{
 		for (int j = 0; j < nc; j++)
 		{
-			if (grid[j][i] == 'x')
+			switch (grid[j][i])
 			{
-				Block* w = new Wall(
-					{0, 0, 0},
-					sn,
-					sm,
-					WALL_NAME + to_string(i * nc + j)
-				);
+			case 'x':
+				{
+					Block* w = new Wall(
+						{0, 0, 0},
+						sn,
+						sm,
+						WALL_NAME + to_string(i * nc + j)
+					);
 
-				wallSize = w->calculateBoxSize();
-				w->setPosition({
-					wallSize.x * i,
-					wallSize.y * j,
-					LAB_DEPTH
-				});
-				w->setType(Block::TYPE::WALL);
-				w->setPass(false);
+					wallSize = w->calculateBoxSize();
+					w->setPosition({
+						wallSize.x * i,
+						wallSize.y * j,
+						LAB_DEPTH
+					});
+					w->setType(Block::TYPE::WALL);
+					w->setPass(false);
 
-				blocks.push_back(w);
-			}
-			else if (grid[j][i] == 'o')
-			{
-				auto p = new Pearl(
-					{0, 0, 0},
-					sn,
-					sm,
-					PEARL_NAME + to_string(i * nc + j)
-				);
+					blocks.push_back(w);
+					break;
+				}
+			case 'o':
+				{
+					auto p = new Pearl(
+						{0, 0, 0},
+						sn,
+						sm,
+						PEARL_NAME + to_string(i * nc + j)
+					);
 
-				p->setPosition({
-					wallSize.x * i,
-					wallSize.y * j,
-					LAB_DEPTH
-				});
-				p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
-				p->setType(Block::TYPE::PEARL);
-				p->setPass(true);
-				blocks.push_back(p);
+					p->setPosition({
+						wallSize.x * i,
+						wallSize.y * j,
+						LAB_DEPTH
+					});
+					p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
+					p->setType(Block::TYPE::PEARL);
+					p->setPass(true);
+					blocks.push_back(p);
+				}
+				break;
+			case 'h':
+				{
+					Vector3 vecH = {0, 0, H_DEPTH};
 
-			}
-			else if (grid[j][i] == 'h')
-			{
-				Vector3 vecH = { 0, 0, H_DEPTH };
-
-				Heroe* h = new Heroe(
-					vecH,
-					sm->getRootSceneNode()->createChildSceneNode("nHeroe"),
-					sm,
-					"Sinbad.mesh",
-					this);
-				h->setScale({ 10, 10, 10 });
-				h->setRotation({ 0,90,0 });
-				hero.push_back(h);
-			}
-			else {
-
-				Block* b = nullptr;
-				blocks.push_back(b);
-
+					auto h = new Heroe(
+						vecH,
+						sm->getRootSceneNode()->createChildSceneNode("nHeroe"),
+						sm,
+						"Sinbad.mesh",
+						this);
+					h->setScale({10, 10, 10});
+					h->setRotation({0, 90, 0});
+					hero.push_back(h);
+				}
+				break;
+			default:
+				{
+					Block* b = nullptr;
+					blocks.push_back(b);
+					break;
+				}
 			}
 		}
 	}
 
-	labSize = { wallSize.x * nf, wallSize.y * nc };
+	labSize = {wallSize.x * nf, wallSize.y * nc};
 	int i = 0;
 
 	// recoloca el laberinto
-	for (auto b : blocks) {
+	for (auto b : blocks)
+	{
 		b->setPosition(
 			b->getPosition().x - labSize.x / 2 + wallSize.x / 2,
 			b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
@@ -114,7 +120,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		//std::cout << i << " " << b->Type() << std::endl;
 		//i++;
 	}
-	
+
 	file.close();
 }
 
