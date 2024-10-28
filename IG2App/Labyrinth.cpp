@@ -100,7 +100,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				break;
 			case 'v': // ogrehead
 				{
-					auto pos = Vector3(0, 0, H_DEPTH);
+					std::cout << "x" << i << "j" << j << std::endl;
+					auto pos = Vector3(i, j, H_DEPTH);
 					auto v = new Ogrehead(
 						pos,
 						sm->getRootSceneNode()->createChildSceneNode("nOgre" + std::to_string(j + i)),
@@ -108,12 +109,11 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						"ogrehead.mesh",
 						this);
 					villains.push_back(v);
-
 					break;
 				}
 			case 's': // spider
 				{
-					auto pos = Vector3(0, 0, H_DEPTH);
+					auto pos = Vector3(i, j, H_DEPTH);
 					auto v = new Spider(
 						pos,
 						sm->getRootSceneNode()->createChildSceneNode("nSpider" + std::to_string(j + i)),
@@ -147,6 +147,15 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 		//std::cout << i << " " << b->Type() << std::endl;
 		//i++;
+	}
+
+	for (auto v : villains)
+	{
+		v->setPosition(
+			v->getPosition().x * wallSize.x - labSize.x / 2 + OGREHEAD_SIZE/2,
+			v->getPosition().y * wallSize.y - labSize.y / 2 + OGREHEAD_SIZE/2,
+			v->getPosition().z
+		);
 	}
 
 

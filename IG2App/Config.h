@@ -1,6 +1,7 @@
 #pragma once
 
 constexpr float WALL_LENGTH = 20;
+constexpr float OGREHEAD_SIZE= 100;
 constexpr double PEARL_SIZE = 0.15;
 const std::string WALL_NAME = "wall";
 const std::string PEARL_NAME = "pearl";
