@@ -105,12 +105,15 @@ bool Heroe::checkCollision(Vector3 dir)
 
 
 	if (lab->getLabyrinth()[x][y] == nullptr) colisiona = true;
-	else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL)
+	if (lab->getLabyrinth()[x][y]->isPass()) colisiona = false;
+	if (!lab->getLabyrinth()[x][y]->isPass()) colisiona = true;
+
+	/*else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL)
 		colisiona = true;
 	else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::PEARL)
 		colisiona =  false;	
 	else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE)
-		colisiona =  false;
+		colisiona =  false;*/
 
 	return colisiona;
 /*
