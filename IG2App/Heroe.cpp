@@ -81,7 +81,12 @@ void Heroe::updateMovement(Vector3 vec)
 		dir = newdir;
 	}
 
-	checkCollision(dir);
+	if (checkCollision(dir)) {
+		dir = { 0,0,0 };
+	}
+
+	std::cout << "COLISIONA OMFG????? " << checkCollision(dir) << std::endl;
+	std::cout << "MIDDLEEEEEEE " << checkMiddle() << std::endl;
 
 	mNode->translate(dir);
 	
@@ -110,6 +115,9 @@ bool Heroe::checkCollision(Vector3 dir)
 	int y = offsety + trunc(auxy / 5);
 
 	//y = lab->getLabSize().x / lab->getWallSize().x - y;
+
+	std::cout << "dir x " << dir.x << "dir y " << dir.y << std::endl;
+
 
 	y += dir.y;
 	x += dir.x;
