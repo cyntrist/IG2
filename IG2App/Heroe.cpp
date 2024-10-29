@@ -78,10 +78,11 @@ void Heroe::updateMovement(Vector3 vec)
 
 	if (checkMiddle() && newdir != dir) {
 
-		dir = newdir;
+		if(!checkCollision(newdir))
+			dir = newdir;
 	}
 
-	if (checkCollision(dir)) {
+	if (checkCollision(dir) && checkMiddle()) {
 		dir = { 0,0,0 };
 	}
 
