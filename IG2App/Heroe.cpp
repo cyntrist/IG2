@@ -1,5 +1,6 @@
 #include "Heroe.h"
 #include "Block.h"
+#include "Pearl.h"
 
 void Heroe::init()
 {
@@ -59,15 +60,24 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 
 void Heroe::updateMovement(Vector3 vec)
 {
-	if (checkMiddle() && newdir != dir) {
+	if (checkMiddle()) {
 
-		if(!checkCollision(newdir))
-			dir = newdir;
-	}
+		/*Block* aux = getBlock(dir);
+		if (aux->Type() == Block::TYPE::PEARL) eatPearl(aux);*/
+		if (newdir != dir) {
 
-	if (checkCollision(dir) && checkMiddle()) {
-		dir = { 0,0,0 };
+			if (!checkCollision(newdir))
+				dir = newdir;
+		}
+
+		if (checkCollision(dir)) {
+			dir = { 0,0,0 };
+		}
+
 	}
+	
+
+	
 
 	mNode->translate(dir);
 }
@@ -77,11 +87,10 @@ bool Heroe::canMove(Vector3 vec)
 	return checkCollision(vec);
 }
 
-bool Heroe::checkCollision(Vector3 dir)
+Block* Heroe::getBlock(Vector3 dir)
 {
-	bool colisiona = false;
-	int offsetx = lab->getLabSize().x / lab->getWallSize().x/2;
-	int offsety = lab->getLabSize().y / lab->getWallSize().y/2;
+	int offsetx = lab->getLabSize().x / lab->getWallSize().x / 2;
+	int offsety = lab->getLabSize().y / lab->getWallSize().y / 2;
 
 	int auxx = (getPosition().x) / WALL_LENGTH;
 	int auxy = (getPosition().y) / WALL_LENGTH;
@@ -94,8 +103,6 @@ bool Heroe::checkCollision(Vector3 dir)
 	y += dir.y;
 	x += dir.x;
 
-	//std::cout << "x " << x << "y " << y << std::endl;
-
 	//string auxt = "NONE";
 	//auxt = lab->getLabyrinth()[x][y]->Type();
 	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL) auxt = "WALL";
@@ -103,10 +110,19 @@ bool Heroe::checkCollision(Vector3 dir)
 	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE) auxt = "NONE";
 	//std::cout << " TYPE " << auxt << std::endl << std::endl << std::endl;
 
+	return lab->getLabyrinth()[x][y];
+}
 
-	if (lab->getLabyrinth()[x][y] == nullptr) colisiona = true;
-	if (lab->getLabyrinth()[x][y]->isPass()) colisiona = false;
-	if (!lab->getLabyrinth()[x][y]->isPass()) colisiona = true;
+bool Heroe::checkCollision(Vector3 dir)
+{
+	bool colisiona = false;
+
+	Block* aux = getBlock(dir);
+	if (aux->Type() == Block::TYPE::PEARL) eatPearl(aux);
+
+	if (aux == nullptr) colisiona = true;
+	if (aux->isPass()) colisiona = false;
+	if (!aux->isPass()) colisiona = true;
 
 	return colisiona;
 }
@@ -122,6 +138,20 @@ bool Heroe::checkMiddle()
 
 	//Si todos los numeros son multiplos de 100 esta en un centro
 	return centro == Vector3().ZERO;
+}
+
+void Heroe::eatPearl(Block* p)
+{
+	if (!p->isDead()) {
+		// 'borra la perla'
+		p->setVisible(false);
+		p->setDead(true);
+		// puntos
+		//
+		addPoint(10);
+	}
+	
+
 }
 
 void Heroe::addPoint(int i)

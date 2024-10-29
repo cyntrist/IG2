@@ -15,6 +15,7 @@ private:
 	};
 
 	bool p = false;
+	bool isDead_ = false;
 	TYPE t = TYPE::NONE;
 
 public:
@@ -31,5 +32,9 @@ public:
 
 	void setType(TYPE  a) { t = a; }
 	TYPE Type() { return t; }
+
+
+	bool isDead();
+	void setDead(bool a);
 
 };

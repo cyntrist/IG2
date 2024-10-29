@@ -134,6 +134,7 @@
     <ClInclude Include="Villain.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Block.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Heroe.cpp" />
     <ClCompile Include="IG2ApplicationContext.cpp" />

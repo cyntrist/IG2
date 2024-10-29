@@ -75,11 +75,12 @@ public:
 	bool canMove(Vector3 vec);
 
 	// detecta las colisiones
+	Block* getBlock(Vector3 dir);
 	bool checkCollision(Vector3 dir);
 	bool checkMiddle();
 
 	// come una perla
-	void eatPearl();
+	void eatPearl(Block* p);
 
 	// añade puntos al score
 	void addPoint(int i);

@@ -98,5 +98,8 @@
     <ClCompile Include="Spider.cpp">
       <Filter>Archivos de código fuente\Villanos</Filter>
     </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
