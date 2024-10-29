@@ -37,6 +37,14 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 	std::vector<Block*> aux;
 
+	// DEBUGGING PARA VER EL MODELO
+	auto h = new Spider(
+		Vector3(0, 50, 50),
+		sm->getRootSceneNode()->createChildSceneNode(),
+		sm,
+		this);
+	h->setScale({10, 10, 10});
+
 	// parsing data into objects
 	for (int i = 0; i < nf; i++)
 	{
@@ -100,7 +108,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					hero.push_back(h);
 
 					auto p = new Pearl(
-						{ 0, 0, 0 },
+						{0, 0, 0},
 						sn,
 						sm,
 						PEARL_NAME + to_string(i * nc + j)
@@ -123,7 +131,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					v->setRotation({0, 90, 0});
 
 					auto p = new Pearl(
-						{ 0, 0, 0 },
+						{0, 0, 0},
 						sn,
 						sm,
 						PEARL_NAME + to_string(i * nc + j)
@@ -146,7 +154,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					v->setRotation({0, 90, 0});
 
 					auto p = new Pearl(
-						{ 0, 0, 0 },
+						{0, 0, 0},
 						sn,
 						sm,
 						PEARL_NAME + to_string(i * nc + j)
@@ -159,16 +167,16 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				}
 			default:
 				{
-				auto p = new Pearl(
-					{ 0, 0, 0 },
-					sn,
-					sm,
-					PEARL_NAME + to_string(i * nc + j)
-				);
+					auto p = new Pearl(
+						{0, 0, 0},
+						sn,
+						sm,
+						PEARL_NAME + to_string(i * nc + j)
+					);
 
-				p->setType(Block::TYPE::NONE);
-				p->setPass(true);
-				aux.push_back(p);
+					p->setType(Block::TYPE::NONE);
+					p->setPass(true);
+					aux.push_back(p);
 					break;
 				}
 			}
@@ -184,8 +192,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	// recoloca el laberinto
 	for (auto a : blocks)
 	{
-		for (auto b : a) {
-
+		for (auto b : a)
+		{
 			b->setPosition(
 				b->getPosition().x - labSize.x / 2 + wallSize.x / 2,
 				b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
@@ -197,8 +205,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	for (auto v : villains)
 	{
 		v->setPosition(
-			v->getPosition().x * wallSize.x - labSize.x / 2 + OGREHEAD_SIZE/2,
-			v->getPosition().y * wallSize.y - labSize.y / 2 + OGREHEAD_SIZE/2,
+			v->getPosition().x * wallSize.x - labSize.x / 2 + OGREHEAD_SIZE / 2,
+			v->getPosition().y * wallSize.y - labSize.y / 2 + OGREHEAD_SIZE / 2,
 			v->getPosition().z
 		);
 	}
