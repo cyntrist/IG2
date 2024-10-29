@@ -59,23 +59,6 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 
 void Heroe::updateMovement(Vector3 vec)
 {
-	//std::cout << "colisiona?? " << checkCollision(dir) << std::endl;
-
-	//if (checkMiddle() && newdir != dir) {	
-
-	//	// si no se choca
-	//	if (!checkCollision(newdir)) {
-	//		//::cout << "CAMBIA DIRECCION真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
-	//		dir = newdir;
-	//	}
-	//}
-
-	//if (checkMiddle() && checkCollision(dir))
-	//{
-	//	dir = { 0,0,0 };
-	//	//std::cout << "SE MUEVE真真 真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真真" << std::endl;
-	//}
-
 	if (checkMiddle() && newdir != dir) {
 
 		if(!checkCollision(newdir))
@@ -86,8 +69,6 @@ void Heroe::updateMovement(Vector3 vec)
 		dir = { 0,0,0 };
 	}
 
-	std::cout << "COLISIONA OMFG????? " << checkCollision(dir) << std::endl;
-	std::cout << "MIDDLEEEEEEE " << checkMiddle() << std::endl;
 
 	mNode->translate(dir);
 	
