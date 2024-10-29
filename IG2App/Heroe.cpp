@@ -158,3 +158,43 @@ void Heroe::addPoint(int i)
 {
 	puntos += i;
 }
+
+void Heroe::setLight(Ogre::Light* l)
+{
+	light = l;
+}
+
+Ogre::Light* Heroe::getLight(Ogre::Light l)
+{
+	return light;
+}
+
+void Heroe::initLight(int type)
+{
+
+	// UNA TIENE QUE SER SPOTLIGHT Y LA OTRA DIRECTIONAL
+	if (type == 0) {
+		light = mSM->createLight("SpotLight");;
+		light->setType(Light::LT_SPOTLIGHT);
+		light->setSpotlightInnerAngle(Ogre::Degree(5.0f));
+		light->setSpotlightOuterAngle(Ogre::Degree(45.0f));
+		light->setSpotlightFalloff(0.0f);
+		light->setDiffuseColour(1.0f, 1.0f, 1.0f);
+		light->setDiffuseColour(1.0f, 0.0f, 0.0f);
+		light->setDiffuseColour(1.0f, 0.0f, 0.0f);
+
+	}
+	else if (type == 1) {
+		light = mSM->createLight("SpotLight");;
+		light->setType(Light::LT_SPOTLIGHT);
+		light->setSpotlightInnerAngle(Ogre::Degree(5.0f));
+		light->setSpotlightOuterAngle(Ogre::Degree(45.0f));
+		light->setSpotlightFalloff(0.0f);
+		light->setDiffuseColour(1.0f, 1.0f, 1.0f);
+		light->setDiffuseColour(1.0f, 0.0f, 0.0f);
+		light->setDiffuseColour(1.0f, 0.0f, 0.0f);
+
+	}
+
+
+}

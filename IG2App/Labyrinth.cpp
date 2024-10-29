@@ -26,6 +26,18 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	int nf = 0, nc = 0; // number rows number cols
 	file >> nf >> nc;
 
+	// ------------------------- LUCES
+	string light;
+	file >> light;
+	if (light == "directional") {
+
+	}
+	if (light == "spotlight") {
+
+	}
+
+
+
 	// reading file
 	std::vector<string> grid;
 	string row;

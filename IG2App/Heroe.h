@@ -32,6 +32,11 @@ private:
 	// laberinto
 	Labyrinth* lab;
 
+	//
+	Ogre::Light* light;
+
+//
+
 public:
 
 	// constructora basica, genera el objeto en el origen
@@ -86,6 +91,10 @@ public:
 	void addPoint(int i);
 
 	//
+	void setLight(Ogre::Light* l);
+	Ogre::Light* getLight(Ogre::Light l);
+
+	void initLight(int type);
 
 
 };
