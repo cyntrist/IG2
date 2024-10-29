@@ -118,7 +118,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						pos,
 						sm->getRootSceneNode()->createChildSceneNode("nOgre" + std::to_string(j + i)),
 						sm,
-						"ogrehead.mesh",
 						this);
 					villains.push_back(v);
 					v->setRotation({0, 90, 0});
@@ -142,7 +141,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						pos,
 						sm->getRootSceneNode()->createChildSceneNode("nSpider" + std::to_string(j + i)),
 						sm,
-						"ogrehead.mesh",
 						this);
 					villains.push_back(v);
 					v->setRotation({0, 90, 0});

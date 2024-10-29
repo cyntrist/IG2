@@ -4,8 +4,8 @@
 class Spider : public Villain
 {
 public:
-	Spider(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab)
-		: Villain(initPos, node, sceneMng, mesh, lab)
+	Spider(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, Labyrinth* lab)
+		: Villain(initPos, node, sceneMng, OGRE_MESH, lab)
 	{
 		
 	}
