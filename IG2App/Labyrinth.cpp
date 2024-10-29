@@ -122,6 +122,17 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						this);
 					villains.push_back(v);
 					v->setRotation({0, 90, 0});
+
+					auto p = new Pearl(
+						{ 0, 0, 0 },
+						sn,
+						sm,
+						PEARL_NAME + to_string(i * nc + j)
+					);
+
+					p->setType(Block::TYPE::NONE);
+					p->setPass(true);
+					aux.push_back(p);
 					break;
 				}
 			case 's': // spider
@@ -135,12 +146,31 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						this);
 					villains.push_back(v);
 					v->setRotation({0, 90, 0});
+
+					auto p = new Pearl(
+						{ 0, 0, 0 },
+						sn,
+						sm,
+						PEARL_NAME + to_string(i * nc + j)
+					);
+
+					p->setType(Block::TYPE::NONE);
+					p->setPass(true);
+					aux.push_back(p);
 					break;
 				}
 			default:
 				{
-					Block* b = nullptr;
-					aux.push_back(b);
+				auto p = new Pearl(
+					{ 0, 0, 0 },
+					sn,
+					sm,
+					PEARL_NAME + to_string(i * nc + j)
+				);
+
+				p->setType(Block::TYPE::NONE);
+				p->setPass(true);
+				aux.push_back(p);
 					break;
 				}
 			}
@@ -156,13 +186,21 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	// recoloca el laberinto
 	for (auto a : blocks)
 	{
-		for(auto b : a)
-		b->setPosition(
-			b->getPosition().x - labSize.x / 2 + wallSize.x / 2,
-			b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
-			b->getPosition().z
-		);
+		for (auto b : a) {
 
+			b->setPosition(
+				b->getPosition().x - labSize.x / 2 + wallSize.x / 2,
+				b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
+				b->getPosition().z
+			);
+			char typ = 'u';
+			if (b->Type() == 1) typ = 'x';
+			if (b->Type() == 2) typ = 'o';
+
+			std::cout << typ;
+		}
+
+		std::cout << std::endl;
 		//std::cout << i << " " << b->Type() << std::endl;
 		//i++;
 	}
