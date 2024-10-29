@@ -69,10 +69,7 @@ void Heroe::updateMovement(Vector3 vec)
 		dir = { 0,0,0 };
 	}
 
-
 	mNode->translate(dir);
-	
-
 }
 
 bool Heroe::canMove(Vector3 vec)
@@ -86,80 +83,32 @@ bool Heroe::checkCollision(Vector3 dir)
 	int offsetx = lab->getLabSize().x / lab->getWallSize().x/2;
 	int offsety = lab->getLabSize().y / lab->getWallSize().y/2;
 
-
 	int auxx = (getPosition().x) / WALL_LENGTH;
 	int auxy = (getPosition().y) / WALL_LENGTH;
 
-	//std::cout << "auxx " << trunc(auxx/5) << "auxy " <<trunc(auxy/5) << std::endl;
-
-
 	int x = offsetx + trunc(auxx / 5);
 	int y = offsety + trunc(auxy / 5);
-
-	//y = lab->getLabSize().x / lab->getWallSize().x - y;
-
-	std::cout << "dir x " << dir.x << "dir y " << dir.y << std::endl;
+	//std::cout << "dir x " << dir.x << "dir y " << dir.y << std::endl;
 
 
 	y += dir.y;
 	x += dir.x;
 
-	std::cout << "x " << x << "y " << y << std::endl;
+	//std::cout << "x " << x << "y " << y << std::endl;
 
-	string auxt = "NONE";
-	auxt = lab->getLabyrinth()[x][y]->Type();
-	if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL) auxt = "WALL";
-	if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::PEARL) auxt = "PEARL";
-	if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE) auxt = "NONE";
-	std::cout << " TYPE " << auxt << std::endl << std::endl << std::endl;
+	//string auxt = "NONE";
+	//auxt = lab->getLabyrinth()[x][y]->Type();
+	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL) auxt = "WALL";
+	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::PEARL) auxt = "PEARL";
+	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE) auxt = "NONE";
+	//std::cout << " TYPE " << auxt << std::endl << std::endl << std::endl;
 
 
 	if (lab->getLabyrinth()[x][y] == nullptr) colisiona = true;
 	if (lab->getLabyrinth()[x][y]->isPass()) colisiona = false;
 	if (!lab->getLabyrinth()[x][y]->isPass()) colisiona = true;
 
-	/*else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL)
-		colisiona = true;
-	else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::PEARL)
-		colisiona =  false;	
-	else if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE)
-		colisiona =  false;*/
-
 	return colisiona;
-/*
-//int i;	// indice del bloque con el que se pega
-
-	//Vector3 posHero = (getPosition()) / WALL_LENGTH; // Posicion en el laberinto normalizado.
-	//int id;
-
-	//
-
-	//i = trunc(getPosition().x) * WALL_LENGTH + trunc(getPosition().y);
-	//Vector3 orientation = getOrientation();
-
-	//std::cout << "this block index is: " << i << std::endl;
-
-	//auto* a = lab->getLabyrinth()[i];
-
-
-
-
-	//if (a == nullptr) {
-	//	return true;
-	//}
-
-	//std::cout << "this block is: " << (int)a->Type() << std::endl;
-
-
-	//std::cout << "this block type is: " << (int)a->Type() << std::endl;
-	//std::cout << "direction is: " << dir << std::endl;
-
-
-	//if (a->Type() == Block::TYPE::WALL) return false;
-	//else if (a->Type() == Block::TYPE::PEARL) return true;
-	//else return true;
-
-*/
 }
 
 bool Heroe::checkMiddle()

@@ -193,16 +193,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
 				b->getPosition().z
 			);
-			char typ = 'u';
-			if (b->Type() == 1) typ = 'x';
-			if (b->Type() == 2) typ = 'o';
-
-			std::cout << typ;
 		}
-
-		std::cout << std::endl;
-		//std::cout << i << " " << b->Type() << std::endl;
-		//i++;
 	}
 
 	for (auto v : villains)
