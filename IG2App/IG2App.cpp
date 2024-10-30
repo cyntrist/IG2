@@ -172,4 +172,5 @@ void IG2App::setupScene()
 	//entPlano->setMaterialName("");
 	planeNode->setPosition(0,0,LAB_DEPTH - mLabyrinth->getWallSize().z/2);
 	planeNode->attachObject(planeEnt);
+	planeEnt->setMaterialName("plane");
 }

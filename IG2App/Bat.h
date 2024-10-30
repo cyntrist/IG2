@@ -41,6 +41,10 @@ public:
 		eye1->setPosition(-75, 5, 80);
 		eye2->setPosition(75, 5, 80);
 
+		cabeza->setMaterialName("bat/body");
+		ojo1->setMaterialName("bat/eye");
+		ojo2->setMaterialName("bat/eye");
+
 		Entity* colm1 = mSM->createEntity("RZR-002.mesh");
 		Entity* colm2 = mSM->createEntity("RZR-002.mesh");
 		fang1->attachObject(colm1);
