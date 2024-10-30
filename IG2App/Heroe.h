@@ -13,7 +13,7 @@ using Chelo = Heroe;
 /// 2. leerlo en el parseo (on hold)	HECHO ¿?
 /// 3. listener							HECHO
 /// 4. movimiento						HECHO
-/// 5. colisiones
+/// 5. colisiones						hechoooooooooooooooooooo
 
 // clase heroe (chelo) 
 class Heroe : public IG2Object
@@ -34,6 +34,7 @@ private:
 
 	//
 	Ogre::Light* light;
+	Ogre::SceneNode* lightNode;
 
 //
 

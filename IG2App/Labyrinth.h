@@ -29,5 +29,8 @@ public:
 	Vector3 getWallSize() const { return wallSize; }
 
 	Block* getBlock(int id);
+
+
+	void initLight();
 };
 

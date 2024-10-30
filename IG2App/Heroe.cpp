@@ -170,21 +170,25 @@ Ogre::Light* Heroe::getLight(Ogre::Light l)
 
 void Heroe::initLight(int type)
 {
+	// crea un nodo hijo del heroe
+	light = mSM->createLight("light");
+	light->setDiffuseColour(1.0f, 1.0f, 1.0f);
+
+	lightNode = mNode->createChildSceneNode();
+	lightNode->attachObject(light);
+
 
 	// UNA TIENE QUE SER SPOTLIGHT Y LA OTRA DIRECTIONAL
 	if (type == 0) {
-		light = mSM->createLight("SpotLight");;
 		light->setType(Light::LT_SPOTLIGHT);
 		light->setSpotlightInnerAngle(Ogre::Degree(5.0f));
 		light->setSpotlightOuterAngle(Ogre::Degree(45.0f));
-		light->setSpotlightFalloff(0.0f);
-		light->setDiffuseColour(1.0f, 1.0f, 1.0f);
-		light->setDiffuseColour(1.0f, 0.0f, 0.0f);
-		light->setDiffuseColour(1.0f, 0.0f, 0.0f);
+		light->setSpotlightFalloff(1.0f);
+		light->setDirection(0,-1,0);
 
 	}
 	else if (type == 1) {
-		light = mSM->createLight("SpotLight");;
+		light = mSM->createLight("light");;
 		light->setType(Light::LT_SPOTLIGHT);
 		light->setSpotlightInnerAngle(Ogre::Degree(5.0f));
 		light->setSpotlightOuterAngle(Ogre::Degree(45.0f));
@@ -195,5 +199,18 @@ void Heroe::initLight(int type)
 
 	}
 
+	//  ------------- debug
+	//Block* aux;
+	//aux = new Block({ 0,50,0 }, mNode->createChildSceneNode("debugblock"), IG2Object::mSM, PEARL_MESH);
+	
+	// te amo pinguino debug
 
+	//------------------
+
+
+
+
+	// mete la luz en el nodo
+	lightNode->setPosition(0,50,0);
+	//lightNode->setDirection(Ogre::Vector3(0,0,-1));
 }

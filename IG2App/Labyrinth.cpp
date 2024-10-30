@@ -30,10 +30,10 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	string light;
 	int lighttype = 0;
 	file >> light;
-	if (light == "directional") {
+	if (light == "spotlight") {
 		lighttype = 0;
 	}
-	if (light == "spotlight") {
+	if (light == "directional") {
 		lighttype = 1;
 	}
 
@@ -245,4 +245,10 @@ Block* Labyrinth::getBlock(int id)
 	// ¿?¿?¿?¿
 
 	return nullptr;
+}
+
+void Labyrinth::initLight()
+{
+
+
 }
