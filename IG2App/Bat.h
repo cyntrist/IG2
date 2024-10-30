@@ -23,10 +23,6 @@ public:
 		timer = new Timer();
 
 		/// CREACION
-		mNode = mSM->getRootSceneNode()->createChildSceneNode();
-		mNode->setPosition(0, 0, 0);
-		mNode->setScale(1, 1, 1);
-
 		auto head = mNode->createChildSceneNode();
 		auto eye1 = head->createChildSceneNode();
 		auto eye2 = head->createChildSceneNode();
