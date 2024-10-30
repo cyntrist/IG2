@@ -168,7 +168,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						this);
 					villains.push_back(v);
 					v->setRotation({0, 90, 0});
-					v->setScale(Vector3(2,2,2));ç
+					v->setScale(Vector3(2,2,2));
 
 					auto p = new Pearl(
 						{0, 0, 0},
