@@ -4,6 +4,7 @@
 constexpr Real BODY_FACTOR = 0.1;
 constexpr Real EYE_FACTOR = 0.3;
 constexpr Real CAZA_FACTOR = 1.5;
+constexpr Real BARREL_FACTOR = 1.5;
 
 class Spider : public Villain
 {
@@ -15,7 +16,7 @@ public:
 
 		/// CREACION
 		mNode = mSM->getRootSceneNode()->createChildSceneNode();
-		mNode->setPosition(0,0, 0);
+		mNode->setPosition(0, 0, 0);
 		mNode->setScale(1, 1, 1);
 
 		auto head = mNode->createChildSceneNode();
@@ -26,7 +27,7 @@ public:
 
 		Entity* cabeza = mSM->createEntity("sphere.mesh");
 		head->attachObject(cabeza);
-		head->setScale(BODY_FACTOR,BODY_FACTOR,BODY_FACTOR);
+		head->setScale(BODY_FACTOR, BODY_FACTOR, BODY_FACTOR);
 		Entity* ojo1 = mSM->createEntity("sphere.mesh");
 		Entity* ojo2 = mSM->createEntity("sphere.mesh");
 		eye1->attachObject(ojo1);
@@ -42,67 +43,56 @@ public:
 		fang2->attachObject(colm2);
 		fang1->setScale(CAZA_FACTOR, CAZA_FACTOR, CAZA_FACTOR);
 		fang2->setScale(CAZA_FACTOR, CAZA_FACTOR, CAZA_FACTOR);
-		fang1->setPosition(-40,-50,90);
-		fang2->setPosition(40,-50,90);
-		auto axis = Vector3(1,0,0);
-		auto axis2 = Vector3(0,1,0);
+		fang1->setPosition(-40, -50, 90);
+		fang2->setPosition(40, -50, 90);
+
+		auto axis = Vector3(1, 0, 0);
+		auto axis2 = Vector3(0, 1, 0);
 		fang1->rotate(Quaternion(Radian(-80), axis));
 		fang2->rotate(Quaternion(Radian(-80), axis));
 		fang1->rotate(Quaternion(Radian(-1), axis2));
 		fang2->rotate(Quaternion(Radian(1), axis2));
 
 
-		mNode->setPosition(100,0, 0);
+		auto brazo1 = mNode->createChildSceneNode();
+		auto brazo2 = mNode->createChildSceneNode();
+		auto b1seg1 = brazo1->createChildSceneNode();
+		auto b1seg2 = b1seg1->createChildSceneNode();
+		auto b1seg3 = b1seg2->createChildSceneNode();
+		auto b2seg1 = brazo2->createChildSceneNode();
+		auto b2seg2 = b2seg1->createChildSceneNode();
+		auto b2seg3 = b2seg2->createChildSceneNode();
+
+		Entity* b1s1 = mSM->createEntity("Barrel.mesh");
+		Entity* b1s2 = mSM->createEntity("Barrel.mesh");
+		Entity* b2s1 = mSM->createEntity("Barrel.mesh");
+		Entity* b2s2 = mSM->createEntity("Barrel.mesh");
+		Entity* b1s3 = mSM->createEntity("RZR-002.mesh");
+		Entity* b2s3 = mSM->createEntity("RZR-002.mesh");
+		b1seg1->attachObject(b1s1);
+		b1seg2->attachObject(b1s2);
+		b1seg3->attachObject(b1s3);
+		b2seg1->attachObject(b2s1);
+		b2seg2->attachObject(b2s2);
+		b2seg3->attachObject(b2s3);
 
 
-
-		//auto brazo1 = mNode->createChildSceneNode();
-		//auto brazo2 = mNode->createChildSceneNode();
-		//auto b1seg1 = brazo1->createChildSceneNode();
-		//auto b1seg2 = brazo1->createChildSceneNode();
-		//auto b1seg3 = brazo1->createChildSceneNode();
-		//auto b2seg1 = brazo2->createChildSceneNode();
-		//auto b2seg2 = brazo2->createChildSceneNode();
-		//auto b2seg3 = brazo2->createChildSceneNode();
+		b1seg1->setPosition(10, 5, 0);
+		b2seg1->setPosition(-10, 5, 0);
+		b1seg1->setScale(1, 3, 1);
+		b2seg1->setScale(1, 3, 1);
+		b1seg1->rotate(Quaternion(Radian(-1), Vector3(0,0,1)));
+		b2seg1->rotate(Quaternion(Radian(1), Vector3(0,0,1)));
 
 
-		//Entity* cabeza = mSM->createEntity("sphere.mesh");
-		//Entity* ojo1 = mSM->createEntity("sphere.mesh");
-		//Entity* ojo2 = mSM->createEntity("sphere.mesh");
-		//head->attachObject(cabeza);
-		//eye1->attachObject(ojo1);
-		//eye2->attachObject(ojo2);
-
-		//Entity* cuerpo = mSM->createEntity("sphere.mesh");
-		//body->attachObject(cuerpo);
-
-		//int altOjos = 50;
-		//int profOjos = 100;
-		//int sepOjos = 20;
-		//int sS = 1;
-		//Entity* ojo1 = mSM->createEntity("sphere.mesh");
-		//eye1->attachObject(ojo1);
-		//eye1->setPosition(sepOjos, altOjos, profOjos);
-		//eye1->setScale(sS, sS, sS);
-
-		//Entity* ojo2 = mSM->createEntity("sphere.mesh");
-		//eye2->attachObject(ojo2);
-		//eye2->setPosition(-sepOjos, altOjos, profOjos);
-		//eye2->setScale(sS, sS, sS);
-
-
-		//Entity* ombligo = mSM->createEntity("sphere.mesh");
-		//belly->attachObject(ombligo);
-		////belly->setScale(sS,sS,sS);
-
-
-
-
-
-
-
-
-
+		b1seg2->setPosition(10, 3, 0);
+		b2seg2->setPosition(0, 6, 0);
+		b1seg2->rotate(Quaternion(Radian(1.5), Vector3(0,0,1)));
+		//b2seg2->rotate(Quaternion(Radian(-1.5), Vector3(0,0,1)));*/
+		b1seg3->rotate(Quaternion(Radian(-0.5), Vector3(0,0,1)));
+		b1seg3->setScale(1,0.5,1);
+		b1seg3->rotate(Quaternion(Radian(1.2f), Vector3(0,1,0)));
+		b1seg3->setPosition(3,-3,2);
 
 
 
@@ -157,4 +147,5 @@ public:
     body->setPosition(0, -230, 0); ç
     */
 	}
+
 };
