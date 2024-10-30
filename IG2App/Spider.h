@@ -86,7 +86,6 @@ public:
 
 
 		b1seg2->setPosition(10, 3, 0);
-		b2seg2->setPosition(0, 6, 0);
 		b1seg2->rotate(Quaternion(Radian(1.5), Vector3(0,0,1)));
 		//b2seg2->rotate(Quaternion(Radian(-1.5), Vector3(0,0,1)));*/
 		b1seg3->rotate(Quaternion(Radian(-0.5), Vector3(0,0,1)));
@@ -94,6 +93,13 @@ public:
 		b1seg3->rotate(Quaternion(Radian(1.2f), Vector3(0,1,0)));
 		b1seg3->setPosition(3,-3,2);
 
+		b2seg2->setPosition(-10, 3, 0);
+		b2seg2->rotate(Quaternion(Radian(-1.5), Vector3(0,0,1)));
+		//b2seg2->rotate(Quaternion(Radian(-1.5), Vector3(0,0,1)));*/
+		b2seg3->rotate(Quaternion(Radian(0.5), Vector3(0,0,1)));
+		b2seg3->setScale(-1,0.5,1);
+		b2seg3->rotate(Quaternion(Radian(-1.2f), Vector3(0,1,0)));
+		b2seg3->setPosition(-3,-3,2);
 
 
 
