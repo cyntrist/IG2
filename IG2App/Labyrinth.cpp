@@ -10,7 +10,7 @@
 #include <fstream>
 
 #include "Ogrehead.h"
-#include "Spider.h"
+#include "Bat.h"
 
 Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node(nullptr)
 {
@@ -51,12 +51,13 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	std::vector<Block*> aux;
 
 	// DEBUGGING PARA VER EL MODELO
-	auto h = new Spider(
-		Vector3(0, 50, 50),
+	auto h = new Bat(
+		Vector3(0, 0, 0),
 		sm->getRootSceneNode()->createChildSceneNode(),
 		sm,
 		this);
 	h->setScale({10, 10, 10});
+	villains.push_back(h);
 
 	// parsing data into objects
 	for (int i = 0; i < nf; i++)
@@ -160,7 +161,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 			case 's': // spider
 				{
 					auto pos = Vector3(i, j, H_DEPTH);
-					auto v = new Spider(
+					auto v = new Bat(
 						pos,
 						sm->getRootSceneNode()->createChildSceneNode("nSpider" + std::to_string(j + i)),
 						sm,
@@ -225,6 +226,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 			v->getPosition().z
 		);
 	}
+
+	villains[0]->setPosition(0,0,0);
 
 
 	file.close();

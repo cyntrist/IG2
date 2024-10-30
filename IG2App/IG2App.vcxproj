@@ -128,7 +128,7 @@
     <ClInclude Include="IG2Object.h" />
     <ClInclude Include="Labyrinth.h" />
     <ClInclude Include="Ogrehead.h" />
-    <ClInclude Include="Spider.h" />
+    <ClInclude Include="Bat.h" />
     <ClInclude Include="Wall.h" />
     <ClInclude Include="Pearl.h" />
     <ClInclude Include="Villain.h" />
@@ -143,7 +143,7 @@
     <ClCompile Include="IG2Object.cpp" />
     <ClCompile Include="Labyrinth.cpp" />
     <ClCompile Include="Ogrehead.cpp" />
-    <ClCompile Include="Spider.cpp" />
+    <ClCompile Include="Bat.cpp" />
     <ClCompile Include="Wall.cpp" />
     <ClCompile Include="Pearl.cpp" />
     <ClCompile Include="Villain.cpp" />

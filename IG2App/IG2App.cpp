@@ -155,6 +155,9 @@ void IG2App::setupScene()
 
 	addInputListener(mLabyrinth->getHero());
 
+	for (auto v : mLabyrinth->getVillains())
+		addInputListener(v);
+
 
 	/// PLANO
 	MeshManager::getSingleton().createPlane(

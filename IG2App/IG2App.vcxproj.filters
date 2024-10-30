@@ -57,7 +57,7 @@
     <ClInclude Include="Ogrehead.h">
       <Filter>Archivos de encabezado\Villanos</Filter>
     </ClInclude>
-    <ClInclude Include="Spider.h">
+    <ClInclude Include="Bat.h">
       <Filter>Archivos de encabezado\Villanos</Filter>
     </ClInclude>
   </ItemGroup>
@@ -95,7 +95,7 @@
     <ClCompile Include="Ogrehead.cpp">
       <Filter>Archivos de código fuente\Villanos</Filter>
     </ClCompile>
-    <ClCompile Include="Spider.cpp">
+    <ClCompile Include="Bat.cpp">
       <Filter>Archivos de código fuente\Villanos</Filter>
     </ClCompile>
     <ClCompile Include="Block.cpp">

@@ -38,7 +38,7 @@ public:
 	Vector3 getWallSize() const { return wallSize; }
 
 	Block* getBlock(int id);
-
+	std::vector<IG2Object*> getVillains() const { return villains; }
 
 	void initLight();
 };
