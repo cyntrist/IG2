@@ -158,7 +158,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					aux.push_back(p);
 					break;
 				}
-			case 's': // spider
+			case 's': 
 				{
 					auto pos = Vector3(i, j, H_DEPTH);
 					auto v = new Bat(
@@ -168,6 +168,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						this);
 					villains.push_back(v);
 					v->setRotation({0, 90, 0});
+					v->setScale(Vector3(2,2,2));ç
 
 					auto p = new Pearl(
 						{0, 0, 0},
@@ -175,7 +176,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						sm,
 						PEARL_NAME + to_string(i * nc + j)
 					);
-
 					p->setType(Block::TYPE::NONE);
 					p->setPass(true);
 					aux.push_back(p);
