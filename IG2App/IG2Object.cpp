@@ -19,8 +19,11 @@ IG2Object::IG2Object(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, S
 	initialPosition(initPos)
 {
 	// Creates a new entity with the mesh and attach the entity
-	entity = sceneMng->createEntity(mesh);
-	mNode->attachObject(entity);
+	if (mesh != "")
+	{
+		entity = sceneMng->createEntity(mesh);
+		mNode->attachObject(entity);
+	}
 	this->setPosition(initialPosition);
 }
 
