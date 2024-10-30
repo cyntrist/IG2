@@ -6,7 +6,6 @@ void Heroe::init()
 {
 
 
-
 }
 
 void Heroe::setScale(Vector3 s)

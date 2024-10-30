@@ -28,12 +28,13 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 	// ------------------------- LUCES
 	string light;
+	int lighttype = 0;
 	file >> light;
 	if (light == "directional") {
-
+		lighttype = 0;
 	}
 	if (light == "spotlight") {
-
+		lighttype = 1;
 	}
 
 
@@ -117,6 +118,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						this);
 					h->setScale({10, 10, 10});
 					h->setRotation({0, 90, 0});
+					h->initLight(lighttype);
+
 					hero.push_back(h);
 
 					auto p = new Pearl(
