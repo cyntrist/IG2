@@ -75,9 +75,6 @@ void Heroe::updateMovement(Vector3 vec)
 
 	}
 	
-
-	
-
 	mNode->translate(dir);
 }
 

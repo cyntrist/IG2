@@ -5,6 +5,15 @@
 #include <vector>
 #include "Block.h"
 
+
+///
+/// TO DO:	CAMBIAR COLISIONES DE PERLAS DE INDICE A AABB
+///			TEXTURAS, MODIFICAR EL STAGE1.TXT Y AÑADIR LAS TEXTURAS A MEDIA/IG2APP
+///			COLISIONES DE VILLANOS Y SINBAD CON AABB
+/// 
+
+
+
 class Labyrinth
 {
 	std::vector<IG2Object*> walls;
