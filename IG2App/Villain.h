@@ -10,10 +10,16 @@ class Villain : public IG2Object
 {
 	Labyrinth* lab = nullptr;
 
+	bool isDead_;
+
 public:
 	Villain(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab)
 		: IG2Object(initPos, node, sceneMng, mesh), lab(lab)
 	{
+		isDead_ = false;
 	}
 	void init() override {}
+
+	void setDead(bool a) { isDead_ = a; }
+	bool isDead() { return isDead_; }
 };

@@ -75,9 +75,13 @@ void Heroe::updateMovement(Vector3 vec)
 
 	}
 
-	if (checkAABB(dir) && !getBlock(dir)->isDead()) {
-		//std::cout << "FUNCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA " << std::endl;
-		eatPearl(getBlock(dir));
+	if (checkBlockAABB(dir)) {
+		if(!getBlock(dir)->isDead())
+			eatPearl(getBlock(dir));
+	}
+	if (checkVillainAABB()) {
+		std::cout << " jijijii " << std::endl;
+		// cosas que haga el villano ig???
 	}
 	
 	mNode->translate(dir);
@@ -147,16 +151,27 @@ bool Heroe::checkMiddle()
 	return centro == Vector3().ZERO;
 }
 
-bool Heroe::checkAABB(Vector3 dir)
+bool Heroe::checkBlockAABB(Vector3 dir)
 {
 	Block* aux = getBlock(dir);
 
 	//std::cout << aux->getAABB() << std::endl;
 	
-
-
 	bool sol = getAABB().intersects(aux->getAABB());
 	return sol;
+}
+
+bool Heroe::checkVillainAABB()
+{
+	bool aux = false;
+	int i = 0;
+	// recorre los villanos
+
+	while (!aux && i < lab->getVillains().size()) {
+		aux = getAABB().intersects(lab->getVillains()[i]->getAABB());
+		i++;
+	}
+	return aux;
 }
 
 void Heroe::eatPearl(Block* p)
