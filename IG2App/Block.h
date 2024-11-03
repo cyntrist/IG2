@@ -37,4 +37,7 @@ public:
 	bool isDead();
 	void setDead(bool a);
 
+
+	Node* getNode() { return mNode; };
+
 };

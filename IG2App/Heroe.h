@@ -84,6 +84,7 @@ public:
 	Block* getBlock(Vector3 dir);
 	bool checkCollision(Vector3 dir);
 	bool checkMiddle();
+	bool checkAABB(Vector3 dir);
 
 	// come una perla
 	void eatPearl(Block* p);

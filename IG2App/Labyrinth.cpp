@@ -104,6 +104,12 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
 					p->setType(Block::TYPE::PEARL);
 					p->setPass(true);
+
+					//// bounding box
+					//Entity* box = sm->createEntity("sphere");
+
+					//p->getAABB() = box.node;
+
 					aux.push_back(p);
 				}
 				break;

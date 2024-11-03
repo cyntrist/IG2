@@ -221,7 +221,6 @@ namespace OgreBites {
 		{
 			(*it)->frameRendered(evt);
 		}
-
 		return true;
 	}
 	

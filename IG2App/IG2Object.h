@@ -138,6 +138,9 @@ public:
 	 */
 	static void addListener(IG2Object* entidad) { appListeners.push_back(entidad); };
 
+
+	void showBoundingBox(bool a) { mNode->showBoundingBox(a); }
+
 protected:
 	// Scene node representing this element in the scene
 	SceneNode* mNode = nullptr;

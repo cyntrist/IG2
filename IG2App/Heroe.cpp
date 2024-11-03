@@ -74,6 +74,11 @@ void Heroe::updateMovement(Vector3 vec)
 		}
 
 	}
+
+	if (checkAABB(dir) && !getBlock(dir)->isDead()) {
+		//std::cout << "FUNCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA " << std::endl;
+		eatPearl(getBlock(dir));
+	}
 	
 	mNode->translate(dir);
 }
@@ -114,7 +119,13 @@ bool Heroe::checkCollision(Vector3 dir)
 	bool colisiona = false;
 
 	Block* aux = getBlock(dir);
-	if (aux->Type() == Block::TYPE::PEARL) eatPearl(aux);
+
+	////std::cout << "BLOCK " << aux->Type() << std::endl;
+	//if (aux->Type() == Block::TYPE::PEARL && getAABB().intersects(aux->getAABB())) {
+	//	std::cout << "INTERSECCION " << std::endl;
+	//}
+
+	//if (aux->Type() == Block::TYPE::PEARL) eatPearl(aux);
 
 	if (aux == nullptr) colisiona = true;
 	if (aux->isPass()) colisiona = false;
@@ -134,6 +145,18 @@ bool Heroe::checkMiddle()
 
 	//Si todos los numeros son multiplos de 100 esta en un centro
 	return centro == Vector3().ZERO;
+}
+
+bool Heroe::checkAABB(Vector3 dir)
+{
+	Block* aux = getBlock(dir);
+
+	//std::cout << aux->getAABB() << std::endl;
+	
+
+
+	bool sol = getAABB().intersects(aux->getAABB());
+	return sol;
 }
 
 void Heroe::eatPearl(Block* p)
