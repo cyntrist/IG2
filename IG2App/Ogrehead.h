@@ -9,6 +9,11 @@ public:
 	{
 		
 	}
+	void frameRendered(const Ogre::FrameEvent& evt) override;
+
+
+
+
 
 };
 

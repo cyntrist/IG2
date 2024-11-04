@@ -120,13 +120,12 @@ public:
 
 	void frameRendered(const Ogre::FrameEvent& evt) override
 	{
-		if (timer->getMilliseconds() > ROT_TIMER)
-		{
-			timer->reset();
-			sentido = -sentido;
-		}
+		updateAnim();
+		Villain::frameRendered(evt);
 
-		brazoIzq->rotate(Quaternion(Radian(ROT_FACTOR * sentido), Vector3(0,0,1)));
-		brazoDer->rotate(Quaternion(Radian(-ROT_FACTOR * sentido), Vector3(0,0,1)));
 	}
+
+
+	void updateAnim();
+	void updateMovement();
 };
