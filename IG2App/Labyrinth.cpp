@@ -25,6 +25,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	// init params
 	int nf = 0, nc = 0; // number rows number cols
 	file >> nf >> nc;
+	file >> matPearl >> matWall >> matPlane;
+	std::cout << matPearl << matWall << matPlane << std::endl;
 
 	// ------------------------- LUCES
 	string light;
@@ -51,13 +53,13 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	std::vector<Block*> aux;
 
 	// DEBUGGING PARA VER EL MODELO
-	auto h = new Bat(
-		Vector3(0, 0, 0),
-		sm->getRootSceneNode()->createChildSceneNode(),
-		sm,
-		this);
-	h->setScale({10, 10, 10});
-	villains.push_back(h);
+	//auto h = new Bat(
+	//	Vector3(0, 0, 0),
+	//	sm->getRootSceneNode()->createChildSceneNode(),
+	//	sm,
+	//	this);
+	//h->setScale({10, 10, 10});
+	//villains.push_back(h);
 
 	// parsing data into objects
 	for (int i = 0; i < nf; i++)
@@ -233,7 +235,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		);
 	}
 
-	villains[0]->setPosition(0,0,0);
+	//villains[0]->setPosition(0,0,0);
 
 
 	file.close();

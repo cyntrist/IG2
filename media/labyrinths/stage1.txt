@@ -1,5 +1,8 @@
 19
 19
+penguin
+wall
+plane
 spotlight
 xxxxxxxxxxxxxxxxxxx
 xvoooooooxooooooovx

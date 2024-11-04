@@ -24,6 +24,8 @@ class Labyrinth
 	std::vector<IG2Object*> villains;
 	SceneNode node;
 
+	std::string matPearl, matWall, matPlane;
+
 	Vector3 wallSize;
 	Vector2 labSize;
 
@@ -39,6 +41,8 @@ public:
 
 	Block* getBlock(int id);
 	std::vector<IG2Object*> getVillains() const { return villains; }
+
+	std::string getMatPlane() const { return matPlane;}
 
 	void initLight();
 };
