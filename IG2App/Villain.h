@@ -21,5 +21,5 @@ public:
 	void init() override {}
 
 	void setDead(bool a) { isDead_ = a; }
-	bool isDead() { return isDead_; }
+	bool isDead() const { return isDead_; }
 };
