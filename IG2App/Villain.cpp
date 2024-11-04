@@ -28,17 +28,20 @@ void Villain::frameRendered(const Ogre::FrameEvent& evt)
 		}
 
 
-
-		if (dir == Vector3().ZERO) {
-			//if (checkCollisions({ 1,0,0 }))
-				dir = { 1,0,0 };
-		}
+		
 	}
 
 
-	std::cout << " update ";
+	std::cout << dir << std::endl;
 
 	mNode->translate(dir);
+
+	if (dir == Vector3().ZERO) {
+		if (checkCollisions({ 1,0,0 }))
+			dir = { 1,0,0 };
+		else if (checkCollisions({ -1,0,0 }))
+			dir = { -1,0,0 };
+	}
 }
 
 bool Villain::checkCollisions(Vector3 dir)
