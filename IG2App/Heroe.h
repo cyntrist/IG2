@@ -23,6 +23,8 @@ private:
 	// puntos y vidas
 	int vidas;
 	int puntos;
+
+	int pointValue;
 	
 	// direccion actual
 	Vector3 dir;
@@ -47,8 +49,8 @@ public:
 	};
 
 	// constructora
-	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab_)
-		: IG2Object(initPos, node, sceneMng, mesh), lab(lab_) {
+	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab_, int p)
+		: IG2Object(initPos, node, sceneMng, mesh), lab(lab_), pointValue(p) {
 	
 		vidas = 3;
 		puntos = 0;

@@ -1,6 +1,7 @@
 #include "Heroe.h"
 #include "Block.h"
 #include "Pearl.h"
+#include "Game.h"
 
 void Heroe::init()
 {
@@ -182,7 +183,7 @@ void Heroe::eatPearl(Block* p)
 		p->setDead(true);
 		// puntos
 		//
-		addPoint(10);
+		addPoint(pointValue);
 	}
 	
 
@@ -191,6 +192,7 @@ void Heroe::eatPearl(Block* p)
 void Heroe::addPoint(int i)
 {
 	puntos += i;
+	lab->getGame()->addPoints(i);
 }
 
 void Heroe::setLight(Ogre::Light* l)

@@ -90,6 +90,7 @@ void IG2App::setup(void)
 	// Game:
 	game = new Game();
 
+	
 
 	// Adds the listener for this object
 	addInputListener(this);
@@ -151,6 +152,7 @@ void IG2App::setupScene()
 		mLabNode,
 		mSM
 	);
+	mLabyrinth->setGame(game);
 
 
 	addInputListener(mLabyrinth->getHero());

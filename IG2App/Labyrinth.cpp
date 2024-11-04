@@ -124,7 +124,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						sm->getRootSceneNode()->createChildSceneNode("nHeroe"),
 						sm,
 						"Sinbad.mesh",
-						this);
+						this,
+						10);
 					h->setScale({10, 10, 10});
 					h->setRotation({0, 90, 0});
 					h->initLight(lighttype);

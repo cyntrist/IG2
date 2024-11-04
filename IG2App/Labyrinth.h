@@ -5,6 +5,8 @@
 #include <vector>
 #include "Block.h"
 
+class Game;
+
 
 ///
 /// TO DO:	CAMBIAR COLISIONES DE PERLAS DE INDICE A AABB
@@ -29,6 +31,8 @@ class Labyrinth
 	Vector3 wallSize;
 	Vector2 labSize;
 
+	Game* game;
+
 public:
 	Labyrinth(SceneNode* sn, SceneManager* sm, const string& path = LAB_PATH);
 	~Labyrinth();
@@ -45,5 +49,10 @@ public:
 	std::string getMatPlane() const { return matPlane;}
 
 	void initLight();
+
+
+
+	void setGame(Game* g) { game = g; }
+	Game* getGame() { return game; }
 };
 
