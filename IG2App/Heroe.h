@@ -19,13 +19,12 @@ using Chelo = Heroe;
 class Heroe : public IG2Object
 {
 private:
-
 	// puntos y vidas
 	int vidas;
 	int puntos;
 
 	int pointValue;
-	
+
 	// direccion actual
 	Vector3 dir;
 	// direccion nueva
@@ -35,42 +34,44 @@ private:
 	Labyrinth* lab;
 
 	//
-	Ogre::Light* light;
-	Ogre::SceneNode* lightNode;
+	Light* light;
+	SceneNode* lightNode;
 
-//
 
 public:
-
 	// constructora basica, genera el objeto en el origen
-	Heroe() : IG2Object() {
+	Heroe() : IG2Object()
+	{
 		vidas = 3;
 		puntos = 0;
 	};
 
 	// constructora
 	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab_, int p)
-		: IG2Object(initPos, node, sceneMng, mesh), lab(lab_), pointValue(p) {
-	
+		: IG2Object(initPos, node, sceneMng, mesh), pointValue(p), lab(lab_)
+	{
 		vidas = 3;
 		puntos = 0;
 	}
 
-	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, int vidas_, int puntos_, Labyrinth* lab_)
-		: IG2Object(initPos, node, sceneMng, mesh), vidas(vidas_), puntos(puntos_), lab(lab_) { }
+	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, int vidas_, int puntos_,
+	      Labyrinth* lab_)
+		: IG2Object(initPos, node, sceneMng, mesh), vidas(vidas_), puntos(puntos_), lab(lab_)
+	{
+	}
 
 
-	void init();
+	void init() override;
 
 	void setScale(Vector3 s);
 
-// ------------------- METODOS ------------------------
+	// ------------------- METODOS ------------------------
 
-	void frameRendered(const Ogre::FrameEvent& evt) override;
+	void frameRendered(const FrameEvent& evt) override;
 
 	// 
 	// addInputListener()
-	bool keyPressed(const OgreBites::KeyboardEvent& evt);
+	bool keyPressed(const OgreBites::KeyboardEvent& evt) override;
 
 	// ---------- MOVIMIENTO -------------
 	//
@@ -97,11 +98,8 @@ public:
 	void addPoint(int i);
 
 	//
-	void setLight(Ogre::Light* l);
-	Ogre::Light* getLight(Ogre::Light l);
+	void setLight(Light* l);
+	Light* getLight(Light l);
 
 	void initLight(int type);
-
-
 };
-
