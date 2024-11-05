@@ -239,22 +239,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		);
 	}
 
-	for (auto v : hero)
-	{
-		v->setPosition(
-			v->getPosition().x,			// + (getWallSize().x)/2
-			v->getPosition().y,			// + (getWallSize().y)/2
-			v->getPosition().z
-		);
-		//v->setPosition(
-		//	v->getPosition().x * wallSize.x - labSize.x / 2 + v->calculateBoxSize().x/2,
-		//	v->getPosition().y * wallSize.y - labSize.y / 2 + v->calculateBoxSize().y/2,
-		//	v->getPosition().z
-		//);
-		std::cout << "<<<<<<<:" << v->getPosition() << ":>>>>>>>" << std::endl;
-
-	}
-
 	//villains[0]->setPosition(0,0,0);
 
 
