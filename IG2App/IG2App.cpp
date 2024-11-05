@@ -3,18 +3,6 @@
 using namespace Ogre;
 using namespace std;
 
-bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt){
-        
-    // ESC key finished the rendering...
-    if (evt.keysym.sym == SDLK_ESCAPE){
-        getRoot()->queueEndRendering();
-    }
-    
-    
-    
-    
-  return true;
-}
 
 void IG2App::shutdown(){
     
@@ -146,9 +134,49 @@ void IG2App::setupScene(void){
     SceneNode* mPSNode = mSM->getRootSceneNode()->createChildSceneNode();
     pSys->setEmitting(true);
     mPSNode->attachObject(pSys);
+
+
+    // -----------------------------------------------------------------------
+    // estela 
+
+    SceneNode* rosalina = mSM->getRootSceneNode()->createChildSceneNode();
+    Entity * bola = mSM->createEntity("sphere.mesh");
+    rosalina->attachObject(bola);
+
+
+    estelaSys = mSM->createParticleSystem("psSmoke", "smokeParticleSystem");
+
+
+
     
 }
 
-void IG2App::frameRendered(const Ogre::FrameEvent& evt){    
+void IG2App::frameRendered(const Ogre::FrameEvent& evt){   
+
+
+
+
+
 }
+
+bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt) {
+
+    // ESC key finished the rendering...
+    if (evt.keysym.sym == SDLK_ESCAPE) {
+        getRoot()->queueEndRendering();
+    }
+    if (evt.keysym.sym == SDLK_c) {
+        // activa las particulas
+
+        if (estelaSys->isEmitting()) {
+            estelaSys->setEmitting(true);
+        }
+    }
+
+
+
+    return true;
+}
+
+
 

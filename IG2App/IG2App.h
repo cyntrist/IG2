@@ -46,6 +46,8 @@ private:
     // Camera
     Ogre::SceneNode* mCamNode = nullptr;
     OgreBites::CameraMan* mCamMgr = nullptr;
+
+    ParticleSystem* estelaSys = nullptr;
 };
 
 #endif
