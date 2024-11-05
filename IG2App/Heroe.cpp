@@ -62,6 +62,8 @@ void Heroe::updateMovement(Vector3 vec)
 {
 	if (checkMiddle()) {
 
+
+		std::cout << "we're so back " << std::endl;
 		/*Block* aux = getBlock(dir);
 		if (aux->Type() == Block::TYPE::PEARL) eatPearl(aux);*/
 		if (newdir != dir) {
@@ -76,9 +78,9 @@ void Heroe::updateMovement(Vector3 vec)
 
 	}
 
-	if (checkBlockAABB(dir)) {
-		if(!getBlock(dir)->isDead())
-			eatPearl(getBlock(dir));
+	if (checkBlockAABB(Vector3().ZERO)) {
+		if(!getBlock(Vector3().ZERO)->isDead())
+			eatPearl(getBlock(Vector3().ZERO));
 	}
 	if (checkVillainAABB()) {
 		std::cout << " jijijii " << std::endl;
