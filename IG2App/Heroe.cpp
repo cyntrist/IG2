@@ -118,7 +118,7 @@ Block* Heroe::getBlock(Vector3 dir)
 	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE) auxt = "NONE";
 	//std::cout << " TYPE " << auxt << std::endl << std::endl << std::endl;
 
-	return lab->getLabyrinth()[x][y];
+	return lab->getLabyrinth()[y][x];
 }
 
 bool Heroe::checkCollision(Vector3 dir)

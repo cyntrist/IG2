@@ -112,7 +112,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				break;
 			case 'h':
 				{
-					auto vecH = Vector3(i, j, H_DEPTH);
+					auto vecH = Vector3(0,0, H_DEPTH);
 
 					auto h = new Heroe(
 						vecH,
@@ -238,14 +238,14 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		);
 	}
 
-	for (auto v : hero)
-	{
-		v->setPosition(
-			v->getPosition().x * wallSize.x - labSize.x / 2 + v->calculateBoxSize().x/2,
-			v->getPosition().y * wallSize.y - labSize.y / 2 + v->calculateBoxSize().y/2,
-			v->getPosition().z
-		);
-	}
+	//for (auto v : hero)
+	//{
+	//	v->setPosition(
+	//		v->getPosition().x * wallSize.x - labSize.x / 2 + v->calculateBoxSize().x/2,
+	//		v->getPosition().y * wallSize.y - labSize.y / 2 + v->calculateBoxSize().y/2,
+	//		v->getPosition().z
+	//	);
+	//}
 
 	//villains[0]->setPosition(0,0,0);
 

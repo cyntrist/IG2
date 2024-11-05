@@ -30,7 +30,7 @@ void Villain::frameRendered(const FrameEvent& evt)
 		}
 	}
 
-	std::cout << dir << std::endl;
+	//std::cout << dir << std::endl;
 
 	mNode->translate(dir);
 
