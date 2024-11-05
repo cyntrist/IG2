@@ -56,6 +56,11 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	//h->setScale({10, 10, 10});
 	//villains.push_back(h);
 
+	int auxx = -labSize.x / 2;
+	int auxy = -labSize.y / 2;
+	int offsetx = labSize.x / 2 + wallSize.x / 2;
+	int offsety = labSize.y / 2 + wallSize.y / 2;
+
 	// parsing data into objects
 	for (int j = 0; j < nc; j++)
 	{
@@ -74,8 +79,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 					wallSize = w->calculateBoxSize();
 					w->setPosition({
-						wallSize.x * i,
-						wallSize.y * j,
+						wallSize.x * (i - auxx),
+						wallSize.y * (j - auxx),
 						LAB_DEPTH
 					});
 					w->setType(Block::TYPE::WALL);
@@ -94,8 +99,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					);
 
 					p->setPosition({
-						wallSize.x * i,
-						wallSize.y * j,
+						wallSize.x * (i-auxx) - offsetx,
+						wallSize.y * (j-auxy) - offsety,
 						LAB_DEPTH
 					});
 					p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
@@ -212,23 +217,25 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	labSize = {wallSize.x * nf, wallSize.y * nc};
 
 	// recoloca el laberinto
-	for (auto a : blocks)
-	{
-		for (auto b : a)
-		{
-			b->setPosition(
-				b->getPosition().x - labSize.x / 2 + wallSize.x / 2,
-				b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
-				b->getPosition().z
-			);
+	//for (auto a : blocks)
+	//{
+	//	for (auto b : a)
+	//	{
+	//		b->setPosition(
+	//			b->getPosition().x - labSize.x / 2 + wallSize.x / 2,
+	//			b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
+	//			b->getPosition().z
+	//		);
 
-			//char aux;
-			//if(b->Type() == Block::TYPE::WALL) aux = 'x';
-			//if(b->Type() == Block::TYPE::PEARL) aux = 'o';
-			//std::cout << aux;
-		}
-		//std::cout << std::endl;
-	}
+	//		std::cout << " vector: " << b->getPosition() << std::endl;
+
+	//		//char aux;
+	//		//if(b->Type() == Block::TYPE::WALL) aux = 'x';
+	//		//if(b->Type() == Block::TYPE::PEARL) aux = 'o';
+	//		//std::cout << aux;
+	//	}
+	//	//std::cout << std::endl;
+	//}
 
 	for (auto v : villains)
 	{
@@ -241,12 +248,22 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 	for (auto v : hero)
 	{
-		//v->setPosition(
-		//	v->getPosition().x * wallSize.x - labSize.x / 2 + v->calculateBoxSize().x/2,
-		//	v->getPosition().y * wallSize.y - labSize.y / 2 + v->calculateBoxSize().y/2,
+
+		v->setPosition(
+			v->getPosition().x * wallSize.x - labSize.x / 2 + v->calculateBoxSize().x/2,
+			v->getPosition().y * wallSize.y - labSize.y / 2 + v->calculateBoxSize().y/2,
+			v->getPosition().z
+		);
+		//Vector3 aux = {
+		//	v->getPosition().x,
+		//	v->getPosition().y,
 		//	v->getPosition().z
-		//);
-		std::cout << "<<<<<<<:" << v->getPosition() << ":>>>>>>>" << std::endl;
+		//};
+
+		//aux.x += (labSize.x/ 2)*wallSize.x;
+		//aux.y += (labSize.y/ 2)*wallSize.y;
+		//v->setPosition(aux);
+		//std::cout << "<<<<<<<:" << v->getPosition() << ":>>>>>>>" << std::endl << std::endl << std::endl << std::endl;
 
 	}
 
