@@ -91,6 +91,7 @@ public:
 
 	// come una perla
 	void eatPearl(Block* p);
+	void getHit();
 
 	// añade puntos al score
 	void addPoint(int i);
