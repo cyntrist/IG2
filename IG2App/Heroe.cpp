@@ -82,10 +82,20 @@ void Heroe::updateMovement(Vector3 vec)
 		if(!getBlock(Vector3().ZERO)->isDead())
 			eatPearl(getBlock(Vector3().ZERO));
 	}
-	if (checkVillainAABB()) {
-		std::cout << " jijijii " << std::endl;
-		// cosas que haga el villano ig???
+
+
+	//std::cout << immune << std::endl;
+	if (!immune) 
+	{
+		if (checkVillainAABB()) {
+			getHit();
+		}
 	}
+	else {
+		immunity();
+	}
+
+	
 	
 	mNode->translate(dir);
 }
@@ -148,7 +158,16 @@ bool Heroe::checkMiddle()
 	y = mNode->getPosition().y;
 	z = mNode->getPosition().z;
 
+	//std::cout << x << " " << y << " " << z << std::endl;
+	//std::cout << lab->getWallSize().x << " " << lab->getWallSize().y << " " << std::endl;
+
+	int wallx = lab->getWallSize().x/2;
+	int wally = lab->getWallSize().y/2;
+
 	Vector3 centro(x % 100, y % 100, z % 100);
+
+	//std::cout << centro << " "  << std::endl;
+
 
 	//Si todos los numeros son multiplos de 100 esta en un centro
 	return centro == Vector3().ZERO;
@@ -188,6 +207,36 @@ void Heroe::eatPearl(Block* p)
 		addPoint(pointValue);
 	}
 	
+
+}
+
+void Heroe::getHit()
+{
+
+	lab->getGame()->addLives(-1);
+	startImmunity(100);
+	std::cout << lab->getGame()->getLives() << std::endl;
+
+	if (lab->getGame()->getLives() <= 0) {
+		lab->getGame()->changeStage(lab->getGame()->getStage() + 1);
+	}
+}
+
+void Heroe::startImmunity(int time)
+{
+	immunityCounter = time;
+	immune = true;
+}
+
+void Heroe::immunity()
+{
+	if (immunityCounter <= 0) {
+		immunityCounter = 0;
+		immune = false;
+	}
+	else {
+		immunityCounter--;
+	}
 
 }
 

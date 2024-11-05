@@ -25,6 +25,10 @@ private:
 
 	int pointValue;
 
+
+	int immunityCounter = 0;
+	bool immune = false;
+
 	// direccion actual
 	Vector3 dir;
 	// direccion nueva
@@ -44,6 +48,8 @@ public:
 	{
 		vidas = 3;
 		puntos = 0;
+		immune = false;
+
 	};
 
 	// constructora
@@ -52,12 +58,15 @@ public:
 	{
 		vidas = 3;
 		puntos = 0;
+		immune = false;
+
 	}
 
 	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, int vidas_, int puntos_,
 	      Labyrinth* lab_)
 		: IG2Object(initPos, node, sceneMng, mesh), vidas(vidas_), puntos(puntos_), lab(lab_)
 	{
+		immune = false;
 	}
 
 
@@ -93,6 +102,8 @@ public:
 	// come una perla
 	void eatPearl(Block* p);
 	void getHit();
+	void startImmunity(int time);
+	void immunity();
 
 	// añade puntos al score
 	void addPoint(int i);
