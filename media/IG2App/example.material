@@ -1,0 +1,47 @@
+material example/stonesFloor{
+    technique {
+	pass {
+	    texture_unit {
+			texture BeachStones.jpg
+	    }
+	}
+    }
+}
+
+material example/esferaSmile{
+    technique {
+		pass {
+			texture_unit {
+				texture spotlight_image.png
+				env_map spherical 
+	    	}
+		}
+    }
+}
+
+material example/panel{
+	technique {
+		pass {
+			lighting off
+			texture_unit {
+				texture 10points.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+material example/smoke{
+	technique{
+		pass{
+			lighting off
+			scene_blend alpha_blend
+			depth_write off
+			diffuse vertexcolour
+			texture_unit{
+				texture smoke.png
+				tex_address_mode clamp
+				}
+		}
+	}
+}
+
