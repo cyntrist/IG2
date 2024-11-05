@@ -139,6 +139,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					p->setType(Block::TYPE::NONE);
 					p->setPass(true);
 					aux.push_back(p);
+					std::cout << "<<<<<<<:" << h->getPosition() << ":>>>>>>>" << std::endl;
 				}
 				break;
 			case 'v': // ogrehead
@@ -238,14 +239,16 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		);
 	}
 
-	//for (auto v : hero)
-	//{
-	//	v->setPosition(
-	//		v->getPosition().x * wallSize.x - labSize.x / 2 + v->calculateBoxSize().x/2,
-	//		v->getPosition().y * wallSize.y - labSize.y / 2 + v->calculateBoxSize().y/2,
-	//		v->getPosition().z
-	//	);
-	//}
+	for (auto v : hero)
+	{
+		//v->setPosition(
+		//	v->getPosition().x * wallSize.x - labSize.x / 2 + v->calculateBoxSize().x/2,
+		//	v->getPosition().y * wallSize.y - labSize.y / 2 + v->calculateBoxSize().y/2,
+		//	v->getPosition().z
+		//);
+		std::cout << "<<<<<<<:" << v->getPosition() << ":>>>>>>>" << std::endl;
+
+	}
 
 	//villains[0]->setPosition(0,0,0);
 

@@ -63,7 +63,7 @@ void Heroe::updateMovement(Vector3 vec)
 	if (checkMiddle()) {
 
 
-		std::cout << "we're so back " << std::endl;
+		//std::cout << "we're so back " << std::endl;
 		/*Block* aux = getBlock(dir);
 		if (aux->Type() == Block::TYPE::PEARL) eatPearl(aux);*/
 		if (newdir != dir) {
