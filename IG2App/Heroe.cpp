@@ -214,11 +214,12 @@ void Heroe::getHit()
 {
 
 	lab->getGame()->addLives(-1);
-	startImmunity(100);
+	startImmunity(200);
 	std::cout << lab->getGame()->getLives() << std::endl;
 
 	if (lab->getGame()->getLives() <= 0) {
-		lab->getGame()->changeStage(lab->getGame()->getStage() + 1);
+		//lab->getGame()->changeStage(lab->getGame()->getStage() + 1);
+		lab->getGame()->changeStage(-1);
 	}
 }
 
