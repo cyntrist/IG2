@@ -7,39 +7,79 @@ void Villain::frameRendered(const FrameEvent& evt)
 	// lo comento para que no moleste <3 pero con esto se mueven pero no cambain de direccion aun
 	// el codigo de colisiones middle y tal es copypaste del heroe
 	if (checkMiddle()) {
-
 		// si choca, busca una nueva direccion valida
 		if (checkCollisions(dir)) {
-			Vector3 aux1 = {dir.y, dir.x, dir.z};
-			Vector3 aux2 = -aux1;
+			if (newdir != dir) {
 
-			// prueba las direcciones de los lados
-			if (checkCollisions(aux1) || checkCollisions(aux2)) {
-				// elige la que se acerque mas al player
-				if (lab->getHero()->getPosition() < getPosition())
-					dir = aux1;
-				else
-					dir = aux2;
+				if (checkCollisions({ 1,0,0 }))
+					newdir = { 0,-1,0 };
+				else if (checkCollisions({ -1,0,0 }))
+					newdir = { -1,0,0 };
+				else if (checkCollisions({ 0,1,0 }))
+					newdir = { 0,1,0 };
+				else if (checkCollisions({ 0,-1,0 }))
+					newdir = { 0,-1,0 };
+			}
 
-				// esta mal, pero de placeholder sirve
-			}
-			else {
-				// si no tiene direcciones, da la vuelta
-				dir = -dir;
-			}
+			//std::cout << "COLLISION " << std::endl;
+
+			//dir = { 0,0,0 };
+			//Vector3 aux1 = {dir.y, dir.x, dir.z};
+			//Vector3 aux2 = -aux1;
+
+			/*if (checkCollisions({ 1,0,0 }))
+				dir = { 1,0,0 };
+			else if (checkCollisions({ -1,0,0 }))
+				dir = { -1,0,0 };
+			else if (checkCollisions({ 0,1,0 }))
+				dir = { 0,1,0 };
+			else if (checkCollisions({ 0,-1,0 }))
+				dir = { 0,-1,0 };*/
+
+			//std::cout << "new direction " << dir << std::endl;
+
+
+
+			//// prueba las direcciones de los lados
+			//if (checkCollisions(aux1) || checkCollisions(aux2)) {
+			//	// elige la que se acerque mas al player
+			//	if (lab->getHero()->getPosition() < getPosition())
+			//		dir = aux1;
+			//	else
+			//		dir = aux2;
+
+			//	// esta mal, pero de placeholder sirve
+			//}
+			//else {
+			//	// si no tiene direcciones, da la vuelta
+			//	dir = -dir;
+			//}
+
+
+			dir = newdir;
+
 		}
 	}
 
-	//std::cout << dir << std::endl;
-
+	std::cout << checkCollisions(dir) << std::endl;
 	mNode->translate(dir);
 
 	if (dir == Vector3().ZERO) {
 		if (checkCollisions({ 1,0,0 }))
-			dir = { 1,0,0 };
+			newdir = { 1,0,0 };
 		else if (checkCollisions({ -1,0,0 }))
-			dir = { -1,0,0 };
+			newdir = { -1,0,0 };
+		else if (checkCollisions({ 0,1,0 }))
+			newdir = { 0,1,0 };
+		else if (checkCollisions({ 0,-1,0 }))
+			newdir = { 0,-1,0 };
+
+		dir = newdir;
+
 	}
+
+
+
 }
 
 bool Villain::checkCollisions(Vector3 dir)
@@ -64,15 +104,20 @@ bool Villain::checkCollisions(Vector3 dir)
 
 bool Villain::checkMiddle()
 {
+	bool mid = false;
 	int x, y, z;
 	x = mNode->getPosition().x;
 	y = mNode->getPosition().y;
 	z = mNode->getPosition().z;
 
 	Vector3 centro(x % 100, y % 100, z % 100);
+	Vector3 aux = {2,2,5};
+
+	if (centro.x <= aux.x && centro.y <= aux.y) mid = true;
+
 
 	//Si todos los numeros son multiplos de 100 esta en un centro
-	return centro == Vector3().ZERO;
+	return mid;
 }
 
 Block* Villain::getB(Vector3 dir) {
@@ -89,13 +134,14 @@ Block* Villain::getB(Vector3 dir) {
 
 	y += dir.y;
 	x += dir.x;
+	std::cout << "dir x " << dir.x << "dir y " << dir.y << std::endl;
 
-	//string auxt = "NONE";
-	//auxt = lab->getLabyrinth()[x][y]->Type();
-	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL) auxt = "WALL";
-	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::PEARL) auxt = "PEARL";
-	//if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE) auxt = "NONE";
-	//std::cout << " TYPE " << auxt << std::endl << std::endl << std::endl;
+	/*string auxt = "NONE";
+	auxt = lab->getLabyrinth()[x][y]->Type();
+	if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::WALL) auxt = "WALL";
+	if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::PEARL) auxt = "PEARL";
+	if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE) auxt = "NONE";
+	std::cout << " TYPE " << auxt << std::endl << std::endl << std::endl;*/
 
 	return lab->getLabyrinth()[x][y];
 

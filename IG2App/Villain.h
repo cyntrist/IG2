@@ -20,7 +20,7 @@ class Villain : public IG2Object
 	bool isDead_;
 
 	Vector3 dir;
-	Vector3 newDir;
+	Vector3 newdir;
 
 public:
 	Villain(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab)
@@ -28,7 +28,7 @@ public:
 	{
 		isDead_ = false;
 		dir = {0, 0, 0};
-		newDir = {0, 0, 0};
+		newdir = {0, 0, 0};
 	}
 
 	void init() override
