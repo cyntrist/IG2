@@ -26,19 +26,14 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	int nf = 0, nc = 0; // number rows number cols
 	file >> nf >> nc;
 	file >> matPearl >> matWall >> matPlane;
-	std::cout << matPearl << matWall << matPlane << std::endl;
+
 
 	// ------------------------- LUCES
 	string light;
 	int lighttype = 0;
 	file >> light;
-	if (light == "spotlight") {
-		lighttype = 0;
-	}
-	if (light == "directional") {
-		lighttype = 1;
-	}
-
+	if (light == "spotlight") lighttype = 0;
+	if (light == "directional") lighttype = 1;
 
 
 	// reading file
@@ -62,11 +57,11 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	//villains.push_back(h);
 
 	// parsing data into objects
-	for (int i = 0; i < nf; i++)
+	for (int j = 0; j < nc; j++)
 	{
-		for (int j = 0; j < nc; j++)
+		for (int i = 0; i < nf; i++)
 		{
-			switch (grid[j][i])
+			switch (grid[i][j])
 			{
 			case 'x':
 				{
@@ -117,7 +112,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				break;
 			case 'h':
 				{
-					Vector3 vecH = {0, 0, H_DEPTH};
+					auto vecH = Vector3(i, j, H_DEPTH);
 
 					auto h = new Heroe(
 						vecH,
@@ -125,7 +120,9 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						sm,
 						"Sinbad.mesh",
 						this,
-						10);
+						10
+					);
+
 					h->setScale({10, 10, 10});
 					h->setRotation({0, 90, 0});
 					h->initLight(lighttype);
@@ -167,7 +164,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					aux.push_back(p);
 					break;
 				}
-			case 's': 
+			case 's':
 				{
 					auto pos = Vector3(i, j, H_DEPTH);
 					auto v = new Bat(
@@ -177,7 +174,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 						this);
 					villains.push_back(v);
 					v->setRotation({0, 90, 0});
-					v->setScale(Vector3(2,2,2));
+					v->setScale(Vector3(2, 2, 2));
 
 					auto p = new Pearl(
 						{0, 0, 0},
@@ -212,7 +209,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	}
 
 	labSize = {wallSize.x * nf, wallSize.y * nc};
-	int i = 0;
 
 	// recoloca el laberinto
 	for (auto a : blocks)
@@ -232,6 +228,15 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 		v->setPosition(
 			v->getPosition().x * wallSize.x - labSize.x / 2 + OGREHEAD_SIZE / 2,
 			v->getPosition().y * wallSize.y - labSize.y / 2 + OGREHEAD_SIZE / 2,
+			v->getPosition().z
+		);
+	}
+
+	for (auto v : hero)
+	{
+		v->setPosition(
+			v->getPosition().x * wallSize.x - labSize.x / 2 + HERO_SIZE / 2,
+			v->getPosition().y * wallSize.y - labSize.y / 2 + HERO_SIZE / 2,
 			v->getPosition().z
 		);
 	}
@@ -261,6 +266,4 @@ Block* Labyrinth::getBlock(int id)
 
 void Labyrinth::initLight()
 {
-
-
 }
