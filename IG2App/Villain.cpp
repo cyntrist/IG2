@@ -1,45 +1,45 @@
 #include "Villain.h"
 #include "Labyrinth.h"
 
-void Villain::frameRendered(const Ogre::FrameEvent& evt)
+void Villain::frameRendered(const FrameEvent& evt)
 {
 
 	// lo comento para que no moleste <3 pero con esto se mueven pero no cambain de direccion aun
 	// el codigo de colisiones middle y tal es copypaste del heroe
-	//if (checkMiddle()) {
+	if (checkMiddle()) {
 
-	//	// si choca, busca una nueva direccion valida
-	//	if (checkCollisions(dir)) {
-	//		Vector3 aux1 = {dir.y, dir.x, dir.z};
-	//		Vector3 aux2 = -aux1;
+		// si choca, busca una nueva direccion valida
+		if (checkCollisions(dir)) {
+			Vector3 aux1 = {dir.y, dir.x, dir.z};
+			Vector3 aux2 = -aux1;
 
-	//		// prueba las direcciones de los lados
-	//		if (checkCollisions(aux1) || checkCollisions(aux2)) {
-	//			// elige la que se acerque mas al player
-	//			if (lab->getHero()->getPosition() < getPosition())
-	//				dir = aux1;
-	//			else
-	//				dir = aux2;
+			// prueba las direcciones de los lados
+			if (checkCollisions(aux1) || checkCollisions(aux2)) {
+				// elige la que se acerque mas al player
+				if (lab->getHero()->getPosition() < getPosition())
+					dir = aux1;
+				else
+					dir = aux2;
 
-	//			// esta mal, pero de placeholder sirve
-	//		}
-	//		else {
-	//			// si no tiene direcciones, da la vuelta
-	//			dir = -dir;
-	//		}
-	//	}
-	//}
+				// esta mal, pero de placeholder sirve
+			}
+			else {
+				// si no tiene direcciones, da la vuelta
+				dir = -dir;
+			}
+		}
+	}
 
-	//std::cout << dir << std::endl;
+	std::cout << dir << std::endl;
 
-	//mNode->translate(dir);
+	mNode->translate(dir);
 
-	//if (dir == Vector3().ZERO) {
-	//	if (checkCollisions({ 1,0,0 }))
-	//		dir = { 1,0,0 };
-	//	else if (checkCollisions({ -1,0,0 }))
-	//		dir = { -1,0,0 };
-	//}
+	if (dir == Vector3().ZERO) {
+		if (checkCollisions({ 1,0,0 }))
+			dir = { 1,0,0 };
+		else if (checkCollisions({ -1,0,0 }))
+			dir = { -1,0,0 };
+	}
 }
 
 bool Villain::checkCollisions(Vector3 dir)
@@ -48,7 +48,7 @@ bool Villain::checkCollisions(Vector3 dir)
 
 	Block* aux = getB(dir);
 
-	////std::cout << "BLOCK " << aux->Type() << std::endl;
+	//std::cout << "BLOCK " << aux->Type() << std::endl;
 	//if (aux->Type() == Block::TYPE::PEARL && getAABB().intersects(aux->getAABB())) {
 	//	std::cout << "INTERSECCION " << std::endl;
 	//}

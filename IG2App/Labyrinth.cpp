@@ -235,8 +235,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	for (auto v : hero)
 	{
 		v->setPosition(
-			v->getPosition().x * wallSize.x - labSize.x / 2 + HERO_SIZE / 2,
-			v->getPosition().y * wallSize.y - labSize.y / 2 + HERO_SIZE / 2,
+			v->getPosition().x * wallSize.x - labSize.x / 2 + v->calculateBoxSize().x/2,
+			v->getPosition().y * wallSize.y - labSize.y / 2 + v->calculateBoxSize().y/2,
 			v->getPosition().z
 		);
 	}
