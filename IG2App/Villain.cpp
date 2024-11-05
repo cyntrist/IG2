@@ -61,7 +61,7 @@ void Villain::frameRendered(const FrameEvent& evt)
 		}
 	}
 
-	std::cout << checkCollisions(dir) << std::endl;
+	//std::cout << checkCollisions(dir) << std::endl;
 	mNode->translate(dir);
 
 	if (dir == Vector3().ZERO) {
@@ -134,7 +134,7 @@ Block* Villain::getB(Vector3 dir) {
 
 	y += dir.y;
 	x += dir.x;
-	std::cout << "dir x " << dir.x << "dir y " << dir.y << std::endl;
+	//std::cout << "dir x " << dir.x << "dir y " << dir.y << std::endl;
 
 	/*string auxt = "NONE";
 	auxt = lab->getLabyrinth()[x][y]->Type();
@@ -143,7 +143,8 @@ Block* Villain::getB(Vector3 dir) {
 	if (lab->getLabyrinth()[x][y]->Type() == Block::TYPE::NONE) auxt = "NONE";
 	std::cout << " TYPE " << auxt << std::endl << std::endl << std::endl;*/
 
-	return lab->getLabyrinth()[x][y];
+	//return lab->getLabyrinth()[y][x];
+	return lab->getLabyrinth()[0][0];
 
 
 }
