@@ -27,7 +27,7 @@ public:
 	void init() override {}
 
 
-	void frameRendered(const Ogre::FrameEvent& evt) override;
+	void frameRendered(const FrameEvent& evt) override;
 
 
 	void setDead(bool a) { isDead_ = a; }
