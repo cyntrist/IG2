@@ -132,7 +132,7 @@ Block* Villain::getBlock(Vector3 dir)
 	y += dir.y;
 	x += dir.x;
 
-	std::cout << "JODER: " << x << " " << y << std::endl;
+	//std::cout << "JODER: " << x << " " << y << std::endl;
 
 	if (x < 0 || y < 0 || x >= 19 || y >= 19) return nullptr;
 	block = lab->getLabyrinth()[y][x];
