@@ -274,10 +274,10 @@ void Labyrinth::initLight()
 
 Block* Labyrinth::getBlock(Vector3 pos, Vector3 dir)
 {
-	int x = trunc((pos.x + labSize.x / 2) / WALL_LENGTH - 6 + dir.x);
-	int y = trunc((pos.y + labSize.y / 2) / WALL_LENGTH - 6 + dir.y);
+	int x = trunc((pos.x + labSize.x / 2) / WALL_LENGTH - 5 + dir.x);
+	int y = trunc((pos.y + labSize.y / 2) / WALL_LENGTH - 5 + dir.y);
 
-	std::cout << "BLOCK: " << x << " " << y << std::endl;
+	std::cout << "GETBLOCKLAB: " << x << " " << y << std::endl;
 
 	if (y >= nc || x >= nf || x < 0 || y < 0)
 		return nullptr;

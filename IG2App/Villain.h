@@ -15,6 +15,7 @@ class Villain : public IG2Object
 
 	Vector3 dir;
 	Vector3 newDir;
+	std::vector<bool> availableDirs { true, true, true, true}; // izq arriba der abajo
 
 public:
 	Villain(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab)
