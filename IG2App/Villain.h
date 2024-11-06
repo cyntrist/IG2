@@ -45,5 +45,5 @@ public:
 
 	bool checkMiddle();
 	bool checkCollisions(Vector3 dir);
-	Block* getB(Vector3 dir);
+	Block* getBlock(Vector3 dir);
 };
