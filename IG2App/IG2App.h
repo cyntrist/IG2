@@ -31,6 +31,11 @@ protected:
     virtual void setup();
     virtual void shutdown();
     virtual void setupScene();
+    void setUpLabyrinth();
+    void deleteLabyrinth();
+
+
+    void endGame();
     
     
     Ogre::SceneNode* mSinbadNode = nullptr;
@@ -58,6 +63,9 @@ protected:
     OgreBites::TextBox* levelInfo = nullptr;
     OgreBites::Label* levelLabel = nullptr;
     Game* game = nullptr;
+
+
+    int currentStage = 1;
 };
 
 #endif

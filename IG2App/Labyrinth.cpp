@@ -247,12 +247,27 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 Labyrinth::~Labyrinth()
 {
-	//for (const auto i : walls)
-	//	delete i;
-	//for (const auto i : pearls)
-	//	delete i;
-	walls.clear();
-	pearls.clear();
+
+
+	hero.clear();
+
+	/*for (const auto i : villains) {
+		if(i != nullptr)
+		delete i;
+	}*/
+
+	villains.clear();
+	//for (const auto i : blocks) {
+	//	for (const auto j : i) {
+	//		if(j != nullptr)
+	//		delete j;
+	//	}
+	//}
+
+	blocks.clear();
+
+
+	game = nullptr;
 }
 
 Block* Labyrinth::getBlock(int id)

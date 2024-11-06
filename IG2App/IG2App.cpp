@@ -17,6 +17,19 @@ void IG2App::frameRendered(const FrameEvent& evt)
 	levelInfo->appendText(StringConverter::toString(game->getLives()));
 	levelInfo->appendText("\nPoints: ");
 	levelInfo->appendText(StringConverter::toString(game->getPoints()));
+
+
+	if (game->getStage() == -1) endGame();
+	else if (game->getStage() > currentStage) {
+
+		std::cout << "CAMBIA 1 " << std::endl;
+		currentStage = game->getStage();
+		std::cout << "CAMBIA 2 " << std::endl;
+		deleteLabyrinth();
+		std::cout << "CAMBIA 3 " << std::endl;
+		setUpLabyrinth();
+		std::cout << "CAMBIA 4 " << std::endl;
+	}
 }
 
 bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt)
@@ -43,7 +56,6 @@ void IG2App::shutdown()
 {
 	mShaderGenerator->removeSceneManager(mSM);
 	mSM->removeRenderQueueListener(mOverlaySystem);
-
 	mRoot->destroySceneManager(mSM);
 
 	delete mTrayMgr;
@@ -147,10 +159,18 @@ void IG2App::setupScene()
 	//mSinbadNode->setScale(20, 20, 20);
 	//------------------------------------------------------------------------
 
+	setUpLabyrinth();
+}
+
+void IG2App::setUpLabyrinth()
+{
 	mLabNode = mSM->getRootSceneNode()->createChildSceneNode("nLabyrinth");
+	string p = "../media/labyrinths/stage" + to_string(currentStage);
+	p += ".txt";
 	mLabyrinth = new Labyrinth(
 		mLabNode,
-		mSM
+		mSM,
+		p
 	);
 	mLabyrinth->setGame(game);
 
@@ -172,7 +192,23 @@ void IG2App::setupScene()
 	Entity* planeEnt = mSM->createEntity("suelo", "plane");
 	SceneNode* planeNode = mLabNode->createChildSceneNode("sueloNode");
 	//entPlano->setMaterialName("");
-	planeNode->setPosition(0,0,LAB_DEPTH - mLabyrinth->getWallSize().z/2);
+	planeNode->setPosition(0, 0, LAB_DEPTH - mLabyrinth->getWallSize().z / 2);
 	planeNode->attachObject(planeEnt);
 	planeEnt->setMaterialName(mLabyrinth->getMatPlane());
+}
+
+void IG2App::deleteLabyrinth()
+{
+
+	delete mLabyrinth;
+	mLabyrinth = nullptr;	
+	delete mLabNode;
+	mLabNode = nullptr;
+	delete mHeroe;
+	mHeroe = nullptr;
+}
+
+void IG2App::endGame()
+{
+	getRoot()->queueEndRendering();
 }

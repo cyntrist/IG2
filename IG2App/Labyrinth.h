@@ -18,10 +18,7 @@ class Game;
 
 class Labyrinth
 {
-	std::vector<IG2Object*> walls;
-	std::vector<IG2Object*> pearls;
 	std::vector<IG2Object*> hero;
-	//std::vector<Block*> blocks;
 	std::vector<std::vector<Block*>> blocks;
 	std::vector<IG2Object*> villains;
 	SceneNode node;
