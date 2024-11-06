@@ -3,7 +3,7 @@
 penguin
 wall
 plane
-spotlight
+directional
 xxxxxxxxxxxxxxxxxxx
 xsoooooooxooooooovx
 xoxxoxxxoxoxxxoxxox

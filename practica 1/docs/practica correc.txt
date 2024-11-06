@@ -1,0 +1,4 @@
+redundancia (bloque) 
+villano (movi y colisiones)
+luz
+redundancia del codigo (general)
