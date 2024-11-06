@@ -23,7 +23,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	}
 
 	// init params
-	int nf = 0, nc = 0; // number rows number cols
 	file >> nf >> nc;
 	file >> matPearl >> matWall >> matPlane;
 
@@ -112,7 +111,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				break;
 			case 'h':
 				{
-					auto vecH = Vector3(0,0, H_DEPTH);
+					auto vecH = Vector3(0, 0, H_DEPTH);
 
 					auto h = new Heroe(
 						vecH,
@@ -147,7 +146,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					auto pos = Vector3(i, j, H_DEPTH);
 					auto v = new Ogrehead(
 						pos,
-						sm->getRootSceneNode()->createChildSceneNode("nOgre" + std::to_string(j + i)),
+						sm->getRootSceneNode()->createChildSceneNode(
+							"nOgrex" + std::to_string(i) + "y" + std::to_string(j)),
 						sm,
 						this);
 					villains.push_back(v);
@@ -170,7 +170,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					auto pos = Vector3(i, j, H_DEPTH);
 					auto v = new Bat(
 						pos,
-						sm->getRootSceneNode()->createChildSceneNode("nSpider" + std::to_string(j + i)),
+						sm->getRootSceneNode()->createChildSceneNode(
+							"nSpiderx" + std::to_string(i) + "y" + std::to_string(j)),
 						sm,
 						this);
 					villains.push_back(v);
@@ -239,8 +240,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 Labyrinth::~Labyrinth()
 {
-
-
 	hero.clear();
 
 	/*for (const auto i : villains) {
@@ -271,4 +270,17 @@ Block* Labyrinth::getBlock(int id)
 
 void Labyrinth::initLight()
 {
+}
+
+Block* Labyrinth::getBlock(Vector3 pos, Vector3 dir)
+{
+	int x = trunc((pos.x + labSize.x / 2) / WALL_LENGTH - 6 + dir.x);
+	int y = trunc((pos.y + labSize.y / 2) / WALL_LENGTH - 6 + dir.y);
+
+	std::cout << "BLOCK: " << x << " " << y << std::endl;
+
+	if (y >= nc || x >= nf || x < 0 || y < 0)
+		return nullptr;
+
+	return blocks[y][x];
 }

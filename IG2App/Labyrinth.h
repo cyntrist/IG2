@@ -8,16 +8,9 @@
 class Game;
 
 
-///
-/// TO DO:	CAMBIAR COLISIONES DE PERLAS DE INDICE A AABB
-///			TEXTURAS, MODIFICAR EL STAGE1.TXT Y AÑADIR LAS TEXTURAS A MEDIA/IG2APP
-///			COLISIONES DE VILLANOS Y SINBAD CON AABB
-/// 
-
-
-
 class Labyrinth
 {
+	int nc, nf;
 	std::vector<IG2Object*> hero;
 	std::vector<std::vector<Block*>> blocks;
 	std::vector<IG2Object*> villains;
@@ -43,13 +36,14 @@ public:
 	Block* getBlock(int id);
 	std::vector<IG2Object*> getVillains() const { return villains; }
 
-	std::string getMatPlane() const { return matPlane;}
+	std::string getMatPlane() const { return matPlane; }
 
 	void initLight();
+
+	Block* getBlock(Vector3 pos, Vector3 dir);
 
 
 
 	void setGame(Game* g) { game = g; }
 	Game* getGame() { return game; }
 };
-
