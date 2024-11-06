@@ -1,0 +1,55 @@
+material plane
+{
+    technique 
+	{ 
+		pass 
+		{  
+			texture_unit 
+			{
+				texture RustedMetal.jpg
+			}
+		}
+    }
+}
+
+material wall
+{
+    technique 
+	{ 
+		pass 
+		{  
+			texture_unit                                                                                                                        
+			{
+				texture BumpyMetal.jpg
+			}
+		}
+    }
+}
+
+material bat/eye
+{
+    technique 
+	{ 
+		pass 
+		{  
+			texture_unit 
+			{
+				texture Water01.jpg
+			}
+		}
+    }
+}
+
+material bat/body
+{
+    technique 
+	{ 
+		pass 
+		{  
+			texture_unit 
+			{
+				texture BumpyMetal.jpg
+			}
+		}
+    }
+}
