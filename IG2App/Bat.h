@@ -12,6 +12,7 @@ constexpr Real ROT_FACTOR = 0.01f;
 class Bat : public Villain
 {
 	Timer* timer;
+	SceneNode* body = nullptr;
 	Node* brazoIzq = nullptr;
 	Node* brazoDer = nullptr;
 	int sentido = 1;
@@ -24,6 +25,7 @@ public:
 
 		/// CREACION
 		auto head = mNode->createChildSceneNode();
+		body = head;
 		auto eye1 = head->createChildSceneNode();
 		auto eye2 = head->createChildSceneNode();
 		auto fang1 = head->createChildSceneNode();
@@ -112,6 +114,7 @@ public:
 		b2seg3->rotate(Quaternion(Radian(-1.2f), Vector3(0,1,0)));
 		b2seg3->setPosition(-3,-3,2);
 	}
+
 	~Bat() override
 	{
 		delete timer;
@@ -122,10 +125,12 @@ public:
 	{
 		updateAnim();
 		Villain::frameRendered(evt);
-
+		setOrientation(-getDir());
 	}
 
-
+	void setOrientation(Vector3 vec) override
+	{
+		body->setDirection(vec.x, vec.y, vec.z, Node::TS_WORLD);
+	};
 	void updateAnim();
-	void updateMovement();
 };

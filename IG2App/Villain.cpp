@@ -1,4 +1,6 @@
 #include "Villain.h"
+
+#include "Heroe.h"
 #include "Labyrinth.h"
 
 void Villain::frameRendered(const FrameEvent& evt)
@@ -8,20 +10,19 @@ void Villain::frameRendered(const FrameEvent& evt)
 		// si choca, busca una nueva direccion valida
 		if (checkCollisions(dir))
 		{
-			if (newdir != dir)
+			if (newDir != dir)
 			{
 				if (checkCollisions({1, 0, 0}))
-					newdir = {0, -1, 0};
+					newDir = {0, -1, 0};
 				else if (checkCollisions({-1, 0, 0}))
-					newdir = {-1, 0, 0};
+					newDir = {-1, 0, 0};
 				else if (checkCollisions({0, 1, 0}))
-					newdir = {0, 1, 0};
+					newDir = {0, 1, 0};
 				else if (checkCollisions({0, -1, 0}))
-					newdir = {0, -1, 0};
+					newDir = {0, -1, 0};
 			}
-
-
-			dir = newdir;
+			dir = newDir;
+			setOrientation(-dir);
 		}
 	}
 
@@ -30,15 +31,15 @@ void Villain::frameRendered(const FrameEvent& evt)
 	if (dir == Vector3().ZERO)
 	{
 		if (checkCollisions({1, 0, 0}))
-			newdir = {1, 0, 0};
+			newDir = {1, 0, 0};
 		else if (checkCollisions({-1, 0, 0}))
-			newdir = {-1, 0, 0};
+			newDir = {-1, 0, 0};
 		else if (checkCollisions({0, 1, 0}))
-			newdir = {0, 1, 0};
+			newDir = {0, 1, 0};
 		else if (checkCollisions({0, -1, 0}))
-			newdir = {0, -1, 0};
+			newDir = {0, -1, 0};
 
-		dir = newdir;
+		dir = newDir;
 	}
 }
 
@@ -47,13 +48,13 @@ bool Villain::checkCollisions(Vector3 dir)
 	bool colisiona = false;
 	Block* aux = getBlock(dir);
 
-	if (aux == nullptr || !aux->isPass()) 
+	if (aux == nullptr || !aux->isPass())
 		colisiona = true;
 
 	return colisiona;
 }
 
-bool Villain::checkMiddle()
+bool Villain::checkMiddle() const
 {
 	bool mid = false;
 	int x = mNode->getPosition().x;
@@ -73,17 +74,16 @@ Block* Villain::getBlock(Vector3 dir)
 	int offsetx = lab->getLabSize().x / lab->getWallSize().x / 2;
 	int offsety = lab->getLabSize().y / lab->getWallSize().y / 2;
 
-	int auxx = (getPosition().x) / WALL_LENGTH;
-	int auxy = (getPosition().y) / WALL_LENGTH;
+	int auxx = getPosition().x / WALL_LENGTH;
+	int auxy = getPosition().y / WALL_LENGTH;
 
 	int x = offsetx + trunc(auxx / 5);
 	int y = offsety + trunc(auxy / 5);
-	//std::cout << "dir x " << dir.x << "dir y " << dir.y << std::endl;
-
 
 	y += dir.y;
 	x += dir.x;
-	//std::cout << "dir x " << dir.x << "dir y " << dir.y << std::endl;
+
+	if (x < 0 || y < 0) return nullptr;
 
 	/*string auxt = "NONE";
 	auxt = lab->getLabyrinth()[x][y]->Type();

@@ -90,7 +90,7 @@ public:
 	 */
 	void setVisible(bool visible);
 
-	void setOrientation(Vector3 vec);
+	virtual void setOrientation(Vector3 vec);
 
 	void setRotation(Vector3 r);
 

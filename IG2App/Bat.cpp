@@ -11,9 +11,3 @@ void Bat::updateAnim()
 	brazoIzq->rotate(Quaternion(Radian(ROT_FACTOR * sentido), Vector3(0, 0, 1)));
 	brazoDer->rotate(Quaternion(Radian(-ROT_FACTOR * sentido), Vector3(0, 0, 1)));
 }
-
-void Bat::updateMovement()
-{
-
-
-}

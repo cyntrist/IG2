@@ -221,13 +221,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
 				b->getPosition().z
 			);
-
-			//char aux;
-			//if(b->Type() == Block::TYPE::WALL) aux = 'x';
-			//if(b->Type() == Block::TYPE::PEARL) aux = 'o';
-			//std::cout << aux;
 		}
-		//std::cout << std::endl;
 	}
 
 	for (auto v : villains)
@@ -238,8 +232,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 			v->getPosition().z
 		);
 	}
-
-	//villains[0]->setPosition(0,0,0);
 
 
 	file.close();
