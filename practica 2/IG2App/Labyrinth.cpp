@@ -222,7 +222,9 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				SceneNode* mPSNode = sm->getRootSceneNode()->createChildSceneNode();
 				mPSNode->setPosition(p->getPosition());
 				pSys->setEmitting(true);
-				p->addParticleSys(pSys);
+				mPSNode->attachObject(pSys);
+				p->addParticleSys(mPSNode);
+
 				break;
 			}
 			default:
@@ -248,6 +250,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 	labSize = {wallSize.x * nf, wallSize.y * nc};
 
+
 	// recoloca el laberinto
 	for (auto a : blocks)
 	{
@@ -258,6 +261,11 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
 				b->getPosition().z
 			);
+			std::vector<SceneNode*> aux = b->getParticleSystems();
+
+			for (auto p : aux) {
+				p->setPosition(b->getPosition());
+			}
 		}
 	}
 

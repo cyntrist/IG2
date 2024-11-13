@@ -8,7 +8,7 @@ public:
 
 	enum TYPE { NONE, WALL, PEARL };
 
-	std::vector<ParticleSystem*> pSys;
+	std::vector<SceneNode*> pSys;
 
 private:
 	void init() override
@@ -39,8 +39,8 @@ public:
 	void setDead(bool a);
 
 
-	void addParticleSys(ParticleSystem* p);
-	std::vector<ParticleSystem*> getParticleSystems() { return pSys; };
+	void addParticleSys(SceneNode* p);
+	std::vector<SceneNode*> getParticleSystems() { return pSys; };
 	void startEmittingParticleSys(int i, bool a);
 	void startEmittingAllParticleSys(bool a);
 

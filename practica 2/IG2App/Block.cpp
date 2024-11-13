@@ -12,19 +12,21 @@ void Block::setDead(bool a)
     isDead_ = a;
 }
 
-void Block::addParticleSys(ParticleSystem* p)
+void Block::addParticleSys(SceneNode* p)
 {
     pSys.push_back(p);
 }
 
 void Block::startEmittingParticleSys(int i, bool a)
 {
-    pSys[i]->setEmitting(a);
+   // ParticleSystem* p = pSys[i]->getAttachedObject(0);
+        
+    //p->setEmitting(a);
 }
 
 void Block::startEmittingAllParticleSys(bool a)
 {
     for (auto s : pSys) {
-        s->setEmitting(a);
+    //    s->setEmitting(a);
     }
 }
