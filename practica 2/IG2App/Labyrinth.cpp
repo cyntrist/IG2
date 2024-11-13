@@ -8,6 +8,7 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <OgreParticleSystem.h>
 
 #include "Ogrehead.h"
 #include "Bat.h"
@@ -165,7 +166,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					aux.push_back(p);
 					break;
 				}
-			case 's':
+			case 'b':
 				{
 					auto pos = Vector3(i, j, H_DEPTH);
 					auto v = new Bat(
@@ -189,6 +190,43 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					aux.push_back(p);
 					break;
 				}
+			case 's':
+			{
+				// creacion de smokes
+				auto p = new Pearl(
+					{ 0, 0, 0 },
+					sn,
+					sm,
+					PEARL_NAME + to_string(i * nc + j)
+				);
+
+				p->setPosition({
+					wallSize.x * i,
+					wallSize.y * j,
+					LAB_DEPTH
+					});
+				p->setScale({ PEARL_SIZE, PEARL_SIZE, PEARL_SIZE });
+				p->setType(Block::TYPE::PEARL);
+				p->setPass(true);
+
+				//// bounding box
+				//Entity* box = sm->createEntity("sphere");
+
+				//p->getAABB() = box.node;
+
+				aux.push_back(p);
+
+				//
+				std::string name = "psSmoke" + to_string(i * nc + j);
+				ParticleSystem* pSys = sm->createParticleSystem(name, "smokeParticleSystem");
+				SceneNode* mPSNode = sm->getRootSceneNode()->createChildSceneNode();
+				mPSNode->setPosition(p->getPosition());
+				pSys->setEmitting(true);
+				mPSNode->attachObject(pSys);
+				p->addParticleSys(mPSNode);
+
+				break;
+			}
 			default:
 				{
 					auto p = new Pearl(
@@ -212,6 +250,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 	labSize = {wallSize.x * nf, wallSize.y * nc};
 
+
 	// recoloca el laberinto
 	for (auto a : blocks)
 	{
@@ -222,6 +261,11 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				b->getPosition().y - labSize.y / 2 + wallSize.y / 2,
 				b->getPosition().z
 			);
+			std::vector<SceneNode*> aux = b->getParticleSystems();
+
+			for (auto p : aux) {
+				p->setPosition(b->getPosition());
+			}
 		}
 	}
 
