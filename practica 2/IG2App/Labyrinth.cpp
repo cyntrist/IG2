@@ -217,8 +217,10 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 				aux.push_back(p);
 
 				//
-				ParticleSystem* pSys = sm->createParticleSystem("psSmoke", "smokeParticleSystem");
+				std::string name = "psSmoke" + to_string(i * nc + j);
+				ParticleSystem* pSys = sm->createParticleSystem(name, "smokeParticleSystem");
 				SceneNode* mPSNode = sm->getRootSceneNode()->createChildSceneNode();
+				mPSNode->setPosition(p->getPosition());
 				pSys->setEmitting(true);
 				p->addParticleSys(pSys);
 				break;
