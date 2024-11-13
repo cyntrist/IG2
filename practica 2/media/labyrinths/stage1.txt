@@ -5,7 +5,7 @@ wall
 plane
 spotlight
 xxxxxxxxxxxxxxxxxxx
-xsoooooooxooooooovx
+xboooooooxooooooovx
 xoxxoxxxoxoxxxoxxox
 xooooooooooooooooox
 xoxxoxoxxxxxoxoxxox
@@ -21,5 +21,5 @@ xooxoooooooooooxoox
 xxoxoxoxxxxxoxoxoxx
 xooooxoooxoooxoooox
 xoxxxxxxoxoxxxxxxox
-xvoooooooxooooooosx
+xvoooooooxooooooobx
 xxxxxxxxxxxxxxxxxxx
