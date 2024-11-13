@@ -17,6 +17,8 @@ class Villain : public IG2Object
 	Vector3 newDir;
 	std::vector<bool> availableDirs { true, true, true, true}; // izq arriba der abajo
 
+	SceneNode* estela;
+
 public:
 	Villain(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, Labyrinth* lab)
 		: IG2Object(initPos, node, sceneMng, mesh), lab(lab)
@@ -40,4 +42,11 @@ public:
 	bool checkMiddle() const;
 	bool checkCollisions(Vector3 dir);
 	Block* getBlock(Vector3 dir);
+
+	void updateEstela();
+
+	void setEstela(SceneNode* n) { estela = n; };
+	SceneNode* GetEstela() {
+		return estela;
+	};
 };

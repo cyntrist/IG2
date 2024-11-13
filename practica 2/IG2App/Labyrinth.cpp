@@ -164,6 +164,18 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					p->setType(Block::TYPE::NONE);
 					p->setPass(true);
 					aux.push_back(p);
+
+					// PARTICULAS PLACEHOLDER PARA EL OGREHEAD DE LA INTRO
+
+					std::string name = "ogreheadSmoke" + to_string(i*nc + j);
+					ParticleSystem* pSys = sm->createParticleSystem(name, "smokeEstela");
+					SceneNode* estelaNode = sm->getRootSceneNode()->createChildSceneNode();
+					estelaNode->setPosition(p->getPosition());
+					pSys->setEmitting(true);
+					estelaNode->attachObject(pSys);
+					v->setEstela(estelaNode);
+
+
 					break;
 				}
 			case 'b':
@@ -276,6 +288,9 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 			v->getPosition().y * wallSize.y - labSize.y / 2 + OGREHEAD_SIZE / 2,
 			v->getPosition().z
 		);
+
+		if(v->GetEstela() != nullptr)
+			v->GetEstela()->setPosition(v->getPosition());
 	}
 
 

@@ -5,6 +5,8 @@
 
 void Villain::frameRendered(const FrameEvent& evt)
 {
+
+
 	for (auto d : availableDirs) d = true;
 	if (checkMiddle())
 	{
@@ -58,6 +60,7 @@ void Villain::frameRendered(const FrameEvent& evt)
 			availableDirs[3] = false;
 	}
 
+
 	newDir = {0, 0, 0};
 	for (int i = 0; i < availableDirs.size(); i++)
 	{
@@ -78,13 +81,13 @@ void Villain::frameRendered(const FrameEvent& evt)
 			dir = newDir;
 			setOrientation(-dir);
 			move(dir);
-			return;
 		}
 	}
 
 	dir = newDir;
 	setOrientation(-dir);
 	move(dir);
+	updateEstela();
 }
 
 bool Villain::checkCollisions(Vector3 dir)
@@ -146,4 +149,13 @@ Block* Villain::getBlock(Vector3 dir)
 	//std::cout << "TYPE " << auxt << std::endl << std::endl << std::endl;
 
 	return block;
+}
+
+void Villain::updateEstela()
+{
+	if (estela != nullptr) {
+
+		estela->setPosition(mNode->getPosition());
+	}
+
 }
