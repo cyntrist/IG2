@@ -1,0 +1,47 @@
+material example/stonesFloor{
+    technique {
+	pass {
+	    texture_unit {
+			texture BeachStones.jpg
+	    }
+	}
+    }
+}
+
+material example/sky{
+ technique{
+        pass{
+            
+            lighting off
+            
+            texture_unit {
+                texture spaceSky.jpg
+            }
+        }
+    }
+}
+
+fragment_program shaderOrangeFS glsl{
+	source shaderOrangeFS.glsl
+
+}
+
+vertex_program shaderOrangeVS glsl {
+	source shaderOrangeVS.glsl
+	default_params {
+		param_named_auto modelViewProjMat worldviewproj_matrix
+	}
+}
+
+material orangeShader{
+ technique{
+        pass{
+	    vertex_program_ref shaderOrangeVS{}
+            fragment_program_ref shaderOrangeFS{}
+
+        }
+    }
+}
+
+
+

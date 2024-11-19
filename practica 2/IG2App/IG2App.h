@@ -10,62 +10,42 @@
 #include <OgreInput.h>
 #include <SDL_keycode.h>
 #include <OgreMeshManager.h>
+#include <OgreEntity.h>
+#include <OgreSkeletonInstance.h>
+#include <OgreBone.h>
+#include <OgreKeyFrame.h>
+#include <OgreBillboardSet.h>
+#include <OgreParticleSystem.h>
 #include <sstream>
 #include <iostream>
 #include <string>
 
-#include "Game.h"
-
-class Labyrinth;
-class Heroe;
-
 class IG2App : public  OgreBites::IG2ApplicationContext, OgreBites::InputListener{
 
 public:
-    explicit IG2App() : IG2ApplicationContext("IG2App") { };  // new -> setup()
-    virtual ~IG2App() { };                                    // delete -> shutdown()
+    explicit IG2App() : IG2ApplicationContext("IG2App") { };
+    virtual ~IG2App() { };
  
 protected:
-    void frameRendered(const Ogre::FrameEvent& evt) override;
-    virtual bool keyPressed(const OgreBites::KeyboardEvent& evt);  // InputListener
+    virtual bool keyPressed(const OgreBites::KeyboardEvent& evt);
     virtual void setup();
     virtual void shutdown();
     virtual void setupScene();
-    void setUpLabyrinth();
-    void deleteLabyrinth();
-
-
-    void endGame();
+    virtual void frameRendered(const Ogre::FrameEvent& evt);
     
+private:
     
-    Ogre::SceneNode* mSinbadNode = nullptr;
-    Ogre::SceneNode* mDragonNode = nullptr;
-    Ogre::SceneNode* mSwordNode = nullptr;
-    Ogre::SceneNode* mHelmetNode = nullptr;
-    Ogre::SceneNode* mHeadNode = nullptr;
-    Ogre::SceneNode* mBustNode = nullptr;
-    Ogre::SceneNode* mRomanNode = nullptr;
-    Ogre::SceneNode* mSnowmanNode = nullptr;
-      
+    // Sinbad
+    Ogre::SceneNode* sinbadNode = nullptr;
+    Ogre::Entity* sinbadEnt;    
+        
+    // Scene manager and tray system
     Ogre::SceneManager* mSM = nullptr;
     OgreBites::TrayManager* mTrayMgr = nullptr;
-    
-    Ogre::Light* light = nullptr;
-    Ogre::SceneNode* mLightParent = nullptr;
-    Ogre::SceneNode* mLightNode = nullptr;
-    
+   
+    // Camera
     Ogre::SceneNode* mCamNode = nullptr;
     OgreBites::CameraMan* mCamMgr = nullptr;
-
-    Labyrinth* mLabyrinth = nullptr;
-    Ogre::SceneNode* mLabNode = nullptr;
-    Heroe* mHeroe = nullptr;
-    OgreBites::TextBox* levelInfo = nullptr;
-    OgreBites::Label* levelLabel = nullptr;
-    Game* game = nullptr;
-
-
-    int currentStage = 1;
 };
 
 #endif
