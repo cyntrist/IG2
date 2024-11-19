@@ -44,4 +44,31 @@ material orangeShader{
 }
 
 
+// ------------------------------------------------------------------------
+
+
+
+fragment_program SpaceSkyShaderFS glsl{
+	source spaceSkyShaderFS.glsl
+
+}
+
+vertex_program SpaceSkyShaderVS glsl {
+	source spaceSkyShaderVS.flsl 
+	default_params {
+		param_named_auto modelViewProjMat worldviewproj_matrix
+	}
+}
+
+material SpaceSkyShader {
+ technique{
+        pass{
+	    vertex_program_ref SpaceSkyShaderVS {}
+            fragment_program_ref SpaceSkyShaderFS {}
+
+        }
+    }
+}
+
+
 
