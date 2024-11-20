@@ -396,6 +396,8 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 		sm->getRootSceneNode()->createChildSceneNode("nOgrexINTRO"),
 		sm,
 		this);
+
+	// asi no se mueve (comentado)
 	//villains.push_back(v);
 	v->setRotation({ 0, 0, 90 });
 
