@@ -295,7 +295,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	}
 
 
-	createFires(sm, Nfires);
+	//createFires(sm, Nfires);
 
 	file.close();
 }

@@ -1,18 +1,18 @@
 particle_system smokeEstela{
 	billboard_type point
-	particle_width 35
-	particle_height 35
+	particle_width 10
+	particle_height 10
 	quota 500
 	material ogrehead/smoke
 	emitter Point{
 		direction 0 0 0
 		position 0 0 0
 		angle 180
-		emission_rate 50
+		emission_rate 10
 		time_to_live 10
 		velocity_min 50
 		velocity_max 80
-		colour 1.0 1.0 0.0 0.4
+		colour 0.0 0.0 0.0 0.4
 		duration 0
 		}
 	affector ColourFader{
@@ -22,6 +22,15 @@ particle_system smokeEstela{
 		alpha -0.06
 	}
 	affector Scaler{
-		rate 50
+		rate 10
+	}
+	affector Rotator{
+		rotation_speed_range_start -30
+ 		rotation_speed_range_end 55
+ 		rotation_range_start 60
+ 		rotation_range_end 90
+	}
+	affector DirectionRandomiser{
+		randomness 5
 	}
 }

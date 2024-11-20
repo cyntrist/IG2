@@ -3,15 +3,15 @@ particle_system smokeParticleSystem{
 	particle_width 35
 	particle_height 35
 	quota 500
-	material ogrehead/smoke
+	material example/smoke
 	emitter Point{
 		direction 0 1 0
 		position 0 0 0
 		angle 180
 		emission_rate 50
-		time_to_live 10
+		time_to_live 5
 		velocity_min 50
-		velocity_max 80
+		velocity_max 60
 		colour 1.0 0.0 0.5 0.4
 		duration 10
 		}
@@ -22,6 +22,6 @@ particle_system smokeParticleSystem{
 		alpha -0.06
 	}
 	affector Scaler{
-		rate 50
+		rate 20
 	}
 }
