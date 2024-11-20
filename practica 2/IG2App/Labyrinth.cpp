@@ -15,6 +15,9 @@
 
 Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node(nullptr)
 {
+	
+	startIntro(sn, sm);
+	
 	// opening stream
 	ifstream file(path);
 	if (!file.is_open())
@@ -166,15 +169,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					p->setPass(true);
 					aux.push_back(p);
 
-					// PARTICULAS PLACEHOLDER PARA EL OGREHEAD DE LA INTRO
-
-					std::string name = "ogreheadSmoke" + to_string(i*nc + j);
-					ParticleSystem* pSys = sm->createParticleSystem(name, "smokeEstela");
-					SceneNode* estelaNode = sm->getRootSceneNode()->createChildSceneNode();
-					estelaNode->setPosition(p->getPosition());
-					pSys->setEmitting(true);
-					estelaNode->attachObject(pSys);
-					v->setEstela(estelaNode);
+		
 
 
 					break;
@@ -360,7 +355,7 @@ void Labyrinth::createFires(SceneManager* sm, int n)
 		std::string name = "fire" + to_string(i);
 		ParticleSystem* pSys = sm->createParticleSystem(name, "fireParticleSystem");
 		SceneNode* fire = sm->getRootSceneNode()->createChildSceneNode();
-		fire->setPosition(Vector3(posini,0,0));
+		fire->setPosition(Vector3(posini,-10,600));
 		pSys->setEmitting(true);
 		fire->attachObject(pSys);
 		fires.push_back(pSys);
@@ -368,3 +363,73 @@ void Labyrinth::createFires(SceneManager* sm, int n)
 	}
 
 }
+
+void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
+{
+
+	// pone el suelo, a sinbad y al ogrehead
+	 
+	
+	//  -------------------- SINBAD -----------------
+	auto vecH = Vector3(0, 0, 700);
+
+	auto h = new Heroe(
+		vecH,
+		sm->getRootSceneNode()->createChildSceneNode("nHeroeINTRO"),
+		sm,
+		"Sinbad.mesh",
+		this,
+		10
+	);
+
+	h->setScale({ 10, 10, 10 });
+	h->setRotation({ 0, 0, 0 });
+	//h->initLight(0);
+
+	hero.push_back(h);
+
+	//  -------------------- OGREHEAD -------------------
+
+	auto pos = Vector3(-100, 0, 700);
+	auto v = new Ogrehead(
+		pos,
+		sm->getRootSceneNode()->createChildSceneNode("nOgrexINTRO"),
+		sm,
+		this);
+	//villains.push_back(v);
+	v->setRotation({ 0, 0, 90 });
+
+
+	// PARTICULAS PLACEHOLDER PARA EL OGREHEAD DE LA INTRO
+
+	std::string name = "ogreheadSmokeINTRO";
+	ParticleSystem* pSys = sm->createParticleSystem(name, "smokeEstela");
+	SceneNode* estelaNode = sm->getRootSceneNode()->createChildSceneNode();
+	estelaNode->setPosition(v->getPosition());
+	pSys->setEmitting(true);
+	estelaNode->attachObject(pSys);
+	v->setEstela(estelaNode);
+
+	//  ---------------------- FLOOR --------------------
+
+	/// PLANO
+	MeshManager::getSingleton().createPlane(
+		"planeINTRO", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+		Plane(Vector3::UNIT_Y, 0),
+		800, 800, 100, 80,
+		true, 1, 1.0, 1.0, Vector3::UNIT_Z
+	);
+
+	Entity* planeEnt = sm->createEntity("sueloINTRO", "planeINTRO");
+	SceneNode* planeNode = sn->createChildSceneNode("sueloNodeINTRO");
+	//entPlano->setMaterialName("");
+	planeNode->setPosition(0, -50, 700);
+	planeNode->attachObject(planeEnt);
+	planeEnt->setMaterialName(getMatPlane());
+
+
+	// --------------------- FIRE ------------------------------
+	createFires(sm, 10);
+
+}
+

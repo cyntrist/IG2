@@ -25,6 +25,7 @@ class Labyrinth
 	Game* game;
 
 
+
 	// particluas
 	ParticleSystem* psys;
 	std::vector<ParticleSystem*> fires;
@@ -50,8 +51,15 @@ public:
 
 	Block* getBlock(Vector3 pos, Vector3 dir);
 
-	void createFires(SceneManager* sm, int n);
-
 	void setGame(Game* g) { game = g; }
 	Game* getGame() { return game; }
+
+
+	// ---------- parctica 2 -----------
+	void createFires(SceneManager* sm, int n);
+
+	void startIntro(SceneNode* sn, SceneManager* sm);
+
+
+
 };
