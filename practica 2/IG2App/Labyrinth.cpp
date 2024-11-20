@@ -294,6 +294,15 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	}
 
 
+	// ---------------- fireeeeeeeeeeeeeeeeeee
+	std::string name = "fire"; //+ to_string(i * nc + j);
+	ParticleSystem* pSys = sm->createParticleSystem(name, "fireParticleSystem");
+	SceneNode* fire = sm->getRootSceneNode()->createChildSceneNode();
+	fire->setPosition({0,0,0});
+	pSys->setEmitting(true);
+	fire->attachObject(pSys);
+
+
 	file.close();
 }
 
