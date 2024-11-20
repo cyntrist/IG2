@@ -57,8 +57,9 @@ public:
 
 	// ---------- parctica 2 -----------
 	void createFires(SceneManager* sm, int n);
-
 	void startIntro(SceneNode* sn, SceneManager* sm);
+
+	void setBackground();
 
 
 

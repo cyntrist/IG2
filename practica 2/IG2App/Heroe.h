@@ -112,5 +112,5 @@ public:
 	void setLight(Light* l);
 	Light* getLight(Light l);
 
-	void initLight(int type);
+	void initLight(int type, std::string name);
 };

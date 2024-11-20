@@ -16,7 +16,6 @@
 Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node(nullptr)
 {
 	
-	startIntro(sn, sm);
 	
 	// opening stream
 	ifstream file(path);
@@ -37,6 +36,9 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	file >> light;
 	if (light == "spotlight") lighttype = 0;
 	if (light == "directional") lighttype = 1;
+
+
+	startIntro(sn, sm);
 
 
 	// reading file
@@ -129,7 +131,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 					h->setScale({10, 10, 10});
 					h->setRotation({0, 90, 0});
-					h->initLight(lighttype);
+					h->initLight(lighttype, "light");
 
 					hero.push_back(h);
 
@@ -384,7 +386,7 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 
 	h->setScale({ 10, 10, 10 });
 	h->setRotation({ 0, 0, 0 });
-	//h->initLight(0);
+	h->initLight(0, "lightINTRO");
 
 	hero.push_back(h);
 
@@ -424,7 +426,6 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 
 	Entity* planeEnt = sm->createEntity("sueloINTRO", "planeINTRO");
 	SceneNode* planeNode = sn->createChildSceneNode("sueloNodeINTRO");
-	//entPlano->setMaterialName("");
 	planeNode->setPosition(0, -50, 700);
 	planeNode->attachObject(planeEnt);
 	planeEnt->setMaterialName(getMatPlane());
@@ -432,6 +433,11 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 
 	// --------------------- FIRE ------------------------------
 	createFires(sm, 10);
+
+}
+
+void Labyrinth::setBackground()
+{
 
 }
 

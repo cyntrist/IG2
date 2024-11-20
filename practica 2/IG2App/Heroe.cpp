@@ -257,10 +257,10 @@ Ogre::Light* Heroe::getLight(Ogre::Light l)
 	return light;
 }
 
-void Heroe::initLight(int type)
+void Heroe::initLight(int type, std::string name)
 {
 	// crea un nodo hijo del heroe
-	light = mSM->createLight("light");
+	light = mSM->createLight(name);
 	light->setDiffuseColour(1.0f, 1.0f, 1.0f);
 
 	lightNode = mNode->createChildSceneNode();
