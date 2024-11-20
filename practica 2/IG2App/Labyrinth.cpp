@@ -47,6 +47,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 
 	std::vector<Block*> aux;
 
+
 	// DEBUGGING PARA VER EL MODELO
 	//auto h = new Bat(
 	//	Vector3(0, 0, 0),
@@ -294,14 +295,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	}
 
 
-	// ---------------- fireeeeeeeeeeeeeeeeeee
-	std::string name = "fire"; //+ to_string(i * nc + j);
-	ParticleSystem* pSys = sm->createParticleSystem(name, "fireParticleSystem");
-	SceneNode* fire = sm->getRootSceneNode()->createChildSceneNode();
-	fire->setPosition({0,0,0});
-	pSys->setEmitting(true);
-	fire->attachObject(pSys);
-
+	createFires(sm, Nfires);
 
 	file.close();
 }
@@ -351,4 +345,26 @@ Block* Labyrinth::getBlock(Vector3 pos, Vector3 dir)
 		return nullptr;
 
 	return blocks[y][x];
+}
+
+void Labyrinth::createFires(SceneManager* sm, int n)
+{
+	int aux = n / 2;
+	int diff = 50;
+	int posini = -diff * aux;
+
+	for (int i = 0; i < n; i++) {
+
+
+		// ---------------- fireeeeeeeeeeeeeeeeeee
+		std::string name = "fire" + to_string(i);
+		ParticleSystem* pSys = sm->createParticleSystem(name, "fireParticleSystem");
+		SceneNode* fire = sm->getRootSceneNode()->createChildSceneNode();
+		fire->setPosition(Vector3(posini,0,0));
+		pSys->setEmitting(true);
+		fire->attachObject(pSys);
+		fires.push_back(pSys);
+		posini += diff;
+	}
+
 }
