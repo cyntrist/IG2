@@ -6,18 +6,15 @@ material plane
 		{  
 			texture_unit 
 			{
-				texture grass_1024.jpg
+				texture RustedMetal.jpg
+				colour_op modulate
 			}
 			texture_unit 
 			{
 				texture flare.png
-				colour_op alpha_blend
+				colour_op modulate
 			}
-			texture_unit 
-			{
-				texture dirt01.jpg
-				colour_op_ex blend_current_alpha src_texture src_current
-			}
+
 		}
     }
 }
@@ -112,7 +109,7 @@ material spaceskyBackground{
 			texture_unit{
 				texture spacesky.jpg
 				colour_op modulate
-				scroll_anim 1 1
+				scroll_anim 0.1 0.1
 			}
 		}
 	}

@@ -102,8 +102,6 @@ void IG2App::setup(void)
 	// Game:
 	game = new Game();
 
-	
-
 	// Adds the listener for this object
 	addInputListener(this);
 	setupScene();
