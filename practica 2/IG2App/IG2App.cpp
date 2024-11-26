@@ -162,10 +162,10 @@ void IG2App::setupScene()
 
 	std::cout << "Loading fondo" << std::endl;
 	// -------------- FONDO ---------------------------
-	Ogre::Plane fondo;
-	fondo.d = 1000;
-	fondo.normal = Ogre::Vector3::UNIT_Z;
-	mSM->setSkyPlane(true, fondo, "spaceskyBackground", 1500, 50, true, 1.5, 50, 50);
+	Ogre::Plane fondoSPACE;
+	fondoSPACE.d = 1000;
+	fondoSPACE.normal = Ogre::Vector3::NEGATIVE_UNIT_Y;
+	mSM->setSkyPlane(true, fondoSPACE, "spaceskyBackground", 1500, 50, true, 10, 50, 50);
 
 	setUpLabyrinth();
 }
@@ -191,13 +191,13 @@ void IG2App::setUpLabyrinth()
 
 	/// PLANO
 	MeshManager::getSingleton().createPlane(
-		"plane", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+		"planeFloor", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
 		Plane(Vector3(0, 0, 1), 0),
 		mLabyrinth->getLabSize().x,
 		mLabyrinth->getLabSize().y
 	);
 
-	Entity* planeEnt = mSM->createEntity("suelo", "plane");
+	Entity* planeEnt = mSM->createEntity("suelo", "planeFloor");
 	SceneNode* planeNode = mLabNode->createChildSceneNode("sueloNode");
 	//entPlano->setMaterialName("");
 	planeNode->setPosition(0, 0, LAB_DEPTH - mLabyrinth->getWallSize().z / 2);
