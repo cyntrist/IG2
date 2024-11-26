@@ -139,14 +139,14 @@ void IG2App::setupScene()
 	// Creating the light
 
 	//mSM->setAmbientLight(ColourValue(0.7, 0.8, 0.9));
-	Light* luz = mSM->createLight("Luz");
-	luz->setType(Light::LT_DIRECTIONAL);
-	luz->setDiffuseColour(0.75, 0.75, 0.75);
+	light = mSM->createLight("Luz");
+	light->setType(Light::LT_DIRECTIONAL);
+	light->setDiffuseColour(1.0f, 1.0f, 1.0f);
 
 	mLightNode = mSM->getRootSceneNode()->createChildSceneNode("nLuz");
 	//mLightNode = mCamNode->createChildSceneNode("nLuz");
-	mLightNode->attachObject(luz);
-	mLightNode->setDirection(Vector3(-1, 0, -1));
+	mLightNode->attachObject(light);
+	mLightNode->setDirection(Vector3(0, 0, -1));
 
 
 	//------------------------------------------------------------------------
@@ -158,6 +158,14 @@ void IG2App::setupScene()
 	////mSinbadNode->setPosition(x, y, z);
 	//mSinbadNode->setScale(20, 20, 20);
 	//------------------------------------------------------------------------
+
+
+	std::cout << "Loading fondo" << std::endl;
+	// -------------- FONDO ---------------------------
+	Ogre::Plane fondo;
+	fondo.d = 1000;
+	fondo.normal = Ogre::Vector3::UNIT_Z;
+	mSM->setSkyPlane(true, fondo, "spaceskyBackground", 1500, 50, true, 1.5, 50, 50);
 
 	setUpLabyrinth();
 }
