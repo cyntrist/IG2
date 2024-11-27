@@ -115,5 +115,51 @@ material spaceskyBackground{
 	}
 }
 
+fragment_program SpaceSkyShaderFS glsl{
+	source spaceSkyShaderFS.glsl
+
+}
+
+vertex_program SpaceSkyShaderVS glsl {
+	source spaceSkyShaderVS.glsl 
+	default_params {
+		param_named_auto modelViewProjMat worldviewproj_matrix
+	}
+}
+
+material zoomSky {
+	technique{
+		pass{
+			vertex_program_ref SpaceSkyShaderVS {}
+            fragment_program_ref SpaceSkyShaderFS {}
+			texture_unit 
+			{
+				texture spacesky.jpg
+				colour_op modulate
+				scroll_anim 0.1 0.1
+			}
+			texture_unit 
+			{
+				texture terrain.png
+				colour_op modulate
+			}
+
+		}
+	}
+
+}
+
+
+
+material SpaceSkyShader {
+ technique{
+        pass{
+	    	vertex_program_ref SpaceSkyShaderVS {}
+            fragment_program_ref SpaceSkyShaderFS {}
+
+        }
+    }
+}
+
 
 

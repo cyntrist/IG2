@@ -35,6 +35,8 @@ protected:
     void deleteLabyrinth();
 
 
+    void setUpIntro();
+
     void endGame();
     
     

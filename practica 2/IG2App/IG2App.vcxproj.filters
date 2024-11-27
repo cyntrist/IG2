@@ -36,9 +36,6 @@
     <ClInclude Include="Heroe.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Labyrinth.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Wall.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -59,6 +56,9 @@
     </ClInclude>
     <ClInclude Include="Bat.h">
       <Filter>Archivos de encabezado\Villanos</Filter>
+    </ClInclude>
+    <ClInclude Include="Labyrinth.h">
+      <Filter>Archivos de código fuente</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

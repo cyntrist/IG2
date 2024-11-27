@@ -158,12 +158,11 @@ void IG2App::setupScene()
 	//------------------------------------------------------------------------
 
 
-	std::cout << "Loading fondo" << std::endl;
 	// -------------- FONDO ---------------------------
 	Ogre::Plane fondoSPACE;
 	fondoSPACE.d = 1000;
 	fondoSPACE.normal = Ogre::Vector3::NEGATIVE_UNIT_Y;
-	mSM->setSkyPlane(true, fondoSPACE, "spaceskyBackground", 1500, 50, true, 10, 50, 50);
+	mSM->setSkyPlane(true, fondoSPACE, "zoomSky", 1500, 50, true, 10, 50, 50);
 
 	setUpLabyrinth();
 }
