@@ -117,7 +117,13 @@ material spaceskyBackground{
 
 fragment_program SpaceSkyShaderFS glsl{
 	source spaceSkyShaderFS.glsl
-
+	default_params{  
+		param_named texturaL 	int 0 
+		param_named texturaM 	int 1 
+		param_named BF 			float 0.5 
+		param_named LuzAmb 		float 1.0 
+		param_named_auto Flipping render_target_flipping
+	}
 }
 
 vertex_program SpaceSkyShaderVS glsl {
@@ -134,31 +140,24 @@ material zoomSky {
             fragment_program_ref SpaceSkyShaderFS {}
 			texture_unit 
 			{
+				tex_coord_set 0
 				texture spacesky.jpg
 				colour_op modulate
+				tex_address_mode clamp
+				filtering bilinear
 				scroll_anim 0.1 0.1
 			}
 			texture_unit 
 			{
+				tex_coord_set 1
 				texture terrain.png
 				colour_op modulate
+				tex_address_mode wrap
 			}
 
 		}
 	}
 
-}
-
-
-
-material SpaceSkyShader {
- technique{
-        pass{
-	    	vertex_program_ref SpaceSkyShaderVS {}
-            fragment_program_ref SpaceSkyShaderFS {}
-
-        }
-    }
 }
 
 
