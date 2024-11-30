@@ -165,4 +165,45 @@ material zoomSky
     }
 }
 
+vertex_program corrosionShaderVS glsl
+{ 
+    source corrosionShaderVS.glsl 
+
+    default_params
+    {
+        param_named_auto modelViewProjMat worldviewproj_matrix
+    }
+}
+
+fragment_program corrosionShaderFS glsl
+{ 
+    source corrosionShaderFS.glsl
+
+    default_params
+    {
+        param_named text int 0
+    }
+}
+material corrosion_material{
+	technique{
+		pass{
+			lighting off
+
+            //vertex_program_ref corrosionShaderVS {}
+            //fragment_program_ref corrosionShaderFS {}
+
+            texture_unit
+            { 
+                texture  corrosion.jpg
+            }
+
+            texture_unit
+            { 
+                texture  BumpyMetal.jpg
+            }
+		}
+	}
+
+}
+
 

@@ -357,7 +357,7 @@ void Labyrinth::createFires(SceneManager* sm, int n)
 		std::string name = "fire" + to_string(i);
 		ParticleSystem* pSys = sm->createParticleSystem(name, "fireParticleSystem");
 		SceneNode* fire = sm->getRootSceneNode()->createChildSceneNode();
-		fire->setPosition(Vector3(posini,-10,600));
+		fire->setPosition(Vector3(posini,-10,400));
 		pSys->setEmitting(true);
 		fire->attachObject(pSys);
 		fires.push_back(pSys);
@@ -429,6 +429,15 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 	planeNode->setPosition(0, -50, 700);
 	planeNode->attachObject(planeEnt);
 	planeEnt->setMaterialName(getMatPlane());
+
+
+	// --------------------- CORROSION -------------------------
+	Entity* sphereEnt = sm->createEntity("uv_sphere.mesh");
+	SceneNode* sphereNode = sm->getRootSceneNode()->createChildSceneNode();
+	sphereNode->attachObject(sphereEnt);
+	sphereNode->setPosition(Vector3(0, 30, 500));
+	sphereNode->setScale(Vector3(0.8,0.8,0.8));
+	sphereEnt->setMaterialName("corrosion_material");
 
 
 	// --------------------- FIRE ------------------------------
