@@ -1,18 +1,32 @@
-#version 330 core
-in vec2 vUv0;
-// meter un vUv1
+#version 330 core 
 
-uniform sampler2D texturaL;
-uniform sampler2D texturaM;
-uniform float BF;
-uniform float intLuzAmb;
+out vec4 fFragColor;  
+in vec2 textCoord;
 
-// profundidad tmb -> gl_FragDepth
-out vec4 fFragColor;
+uniform sampler2D textSky;    
+uniform sampler2D textLight;    
+uniform float my_time;
 
- void main() { 
-    vec3 colorL = vec3(texture(texturaL, vUv0));
-	//vec3 colorM = vec3(texture(texturaM, vUv0));
- 	vec3 color = colorL; //*colorM;
- 	fFragColor = vec4(color, 1.0);
- }
+uniform float minLight;
+uniform float maxLight; 
+
+void main() { 
+
+    vec3 color1 = vec3(texture(textSky,textCoord));
+    vec3 color2 = vec3(texture(textLight,textCoord));
+
+    vec3 mezcla = mix(color1,color2,0.5);
+
+    float diff = maxLight - minLight;
+
+    float lightFactor = minLight + (diff*((my_time+1)/2));
+
+    fFragColor =  vec4( mezcla.x *lightFactor,
+                        mezcla.y *lightFactor,
+                        mezcla.z *lightFactor, 1); 
+
+    vec3 cfinal = color1*color2*lightFactor;
+
+    fFragColor =  vec4(cfinal , 1); 
+                
+}

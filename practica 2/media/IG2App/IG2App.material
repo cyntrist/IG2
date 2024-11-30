@@ -114,51 +114,57 @@ material spaceskyBackground{
 		}
 	}
 }
+vertex_program spaceSkyZoomLightVS glsl
+{ 
+    source SpaceSkyShaderVS.glsl 
 
-fragment_program SpaceSkyShaderFS glsl{
-	source spaceSkyShaderFS.glsl
-	default_params{  
-		param_named texturaL 	int 0 
-		param_named texturaM 	int 1 
-		param_named BF 			float 0.5 
-		param_named LuzAmb 		float 1.0 
-		param_named_auto Flipping render_target_flipping
-	}
+    default_params
+    {
+        param_named_auto modelViewProjMat worldviewproj_matrix
+        param_named_auto my_time  sintime_0_2pi 15
+        param_named minZoom float 0.3 
+        param_named maxZoom float 1
+    }
 }
 
-vertex_program SpaceSkyShaderVS glsl {
-	source spaceSkyShaderVS.glsl 
-	default_params {
-		param_named_auto modelViewProjMat worldviewproj_matrix
-	}
+fragment_program spaceSkyZoomLightFS glsl
+{ 
+    source SpaceSkyShaderFS.glsl
+
+    default_params
+    {
+        param_named textSky int 0
+        param_named textLight int 1
+        param_named_auto my_time  sintime_0_2pi 15
+        param_named minLight float 0.3 
+        param_named maxLight float 1
+    }
 }
 
-material zoomSky {
-	technique{
-		pass{
-			vertex_program_ref SpaceSkyShaderVS {}
-            fragment_program_ref SpaceSkyShaderFS {}
-			texture_unit 
-			{
-				tex_coord_set 0
-				texture spacesky.jpg
-				colour_op modulate
-				tex_address_mode clamp
-				filtering bilinear
-				scroll_anim 0.1 0.1
-			}
-			texture_unit 
-			{
-				tex_coord_set 1
-				texture terrain.png
-				colour_op modulate
-				tex_address_mode wrap
-			}
+material zoomSky
+{
+    technique
+    {
+        pass 
+        {
+            lighting off
 
-		}
-	}
+            vertex_program_ref spaceSkyZoomLightVS {}
+            fragment_program_ref spaceSkyZoomLightFS {}
 
+            texture_unit
+            { 
+                texture  spacesky.jpg
+                tex_address_mode clamp
+            }
+
+            texture_unit
+            { 
+                texture  lightMap.jpg
+                tex_address_mode clamp
+            }
+        }
+    }
 }
-
 
 
