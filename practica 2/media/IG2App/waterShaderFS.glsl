@@ -1,15 +1,12 @@
+
+
 #version 330 core 
-
-in vec4 vertex;
-uniform mat4 modelViewProjMat;
+in vec2 vUv0; 
 uniform sampler2D textW;    
-//uniform float time;
+out vec4 fFragColor; 
+void main(){ 
+    vec4 color = texture(textW,vUv0); 
+    fFragColor= color;
 
-in vec2 uv0;
-out vec2 vUv0;
 
-void main() {   
-    vec3 color = vec3(texture(textW,vUv0));
-    
-    fFragColor=vec4(color,1.0);
-} 
+    }

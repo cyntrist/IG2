@@ -224,6 +224,8 @@ vertex_program waterShaderVS glsl
     default_params
     {
         param_named_auto modelViewProjMat worldviewproj_matrix
+        param_named_auto time sintime_0_2pi 50
+
     }
 }
 
@@ -241,7 +243,7 @@ material water_material {
 	technique{
 		pass{
 			lighting off
-			
+			 
             vertex_program_ref waterShaderVS {}
             fragment_program_ref waterShaderFS {}
 
