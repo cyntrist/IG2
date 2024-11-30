@@ -5,28 +5,28 @@ in vec2 textCoord;
 
 uniform sampler2D textSky;    
 uniform sampler2D textLight;    
-uniform float my_time;
+uniform float time;
 
 uniform float minLight;
 uniform float maxLight; 
 
 void main() { 
 
-    vec3 color1 = vec3(texture(textSky,textCoord));
-    vec3 color2 = vec3(texture(textLight,textCoord));
+    vec3 t1 = vec3(texture(textSky,textCoord));
+    vec3 t2 = vec3(texture(textLight,textCoord));
 
-    vec3 mezcla = mix(color1,color2,0.5);
+    vec3 mezcla = mix(t1, t2, 0.5);
 
     float diff = maxLight - minLight;
 
-    float lightFactor = minLight + (diff*((my_time+1)/2));
+    float lfactor = minLight + (diff*( (time+1) / 2));
 
-    fFragColor =  vec4( mezcla.x *lightFactor,
-                        mezcla.y *lightFactor,
-                        mezcla.z *lightFactor, 1); 
+    fFragColor =  vec4( mezcla.x * lfactor,
+                        mezcla.y * lfactor,
+                        mezcla.z * lfactor, 1); 
 
-    vec3 cfinal = color1*color2*lightFactor;
+    vec3 color = t1 * t2 * lfactor;
 
-    fFragColor =  vec4(cfinal , 1); 
+    fFragColor =  vec4(color , 1); 
                 
 }
