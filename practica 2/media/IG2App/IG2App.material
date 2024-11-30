@@ -225,6 +225,7 @@ vertex_program waterShaderVS glsl
     {
         param_named_auto modelViewProjMat worldviewproj_matrix
         param_named_auto time sintime_0_2pi 50
+		//param_named_auto center vec2 0 0
 
     }
 }
