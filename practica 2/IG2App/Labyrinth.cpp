@@ -428,7 +428,7 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 	SceneNode* planeNode = sn->createChildSceneNode("sueloNodeINTRO");
 	planeNode->setPosition(0, -50, 700);
 	planeNode->attachObject(planeEnt);
-	planeEnt->setMaterialName(getMatPlane());
+	planeEnt->setMaterialName("water_material");
 
 
 	// --------------------- CORROSION -------------------------
