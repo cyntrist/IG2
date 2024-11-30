@@ -180,17 +180,23 @@ fragment_program corrosionShaderFS glsl
     source corrosionShaderFS.glsl
 
     default_params
-    {
-        param_named text int 0
+    {        
+		param_named_auto flipping render_target_flipping
+		param_named textC int 0 
+		param_named textM int 1 
+		param_named textChelo int 2
     }
 }
 material corrosion_material{
 	technique{
 		pass{
 			lighting off
+			cull_hardware none
+            cull_software none
 
-            //vertex_program_ref corrosionShaderVS {}
-            //fragment_program_ref corrosionShaderFS {}
+
+            vertex_program_ref corrosionShaderVS {}
+            fragment_program_ref corrosionShaderFS {}
 
             texture_unit
             { 
@@ -200,6 +206,10 @@ material corrosion_material{
             texture_unit
             { 
                 texture  BumpyMetal.jpg
+            }
+			texture_unit
+            { 
+                texture  chelo.jpg
             }
 		}
 	}
