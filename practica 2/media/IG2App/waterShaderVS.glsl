@@ -17,10 +17,10 @@ void main(){
     vUv0=uv0; 
 
     vec4 vertexCoord = vertex;
-    float distanceCenter = distance(vec2(vertexCoord.x,vertexCoord.z),center);
+    float distanceCenter = distance(vec2(vertexCoord.x,vertexCoord.z), center);
 
-    float a = 4;
-    float b = 2;
+    float a = 50;  // lo rapido que va
+    float b = 1;    // lo alto que sube
 
     vertexCoord.y   += sin(vertexCoord.x + (time*a)) * b 
                     + sin(vertexCoord.z + (distanceCenter) + (time*a)) * b;
