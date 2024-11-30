@@ -1,7 +1,7 @@
 #version 330 core 
 
 out vec4 fFragColor;  
-in vec2 textCoord;
+in vec2 vUv0;
 
 uniform sampler2D textSky;    
 uniform sampler2D textLight;    
@@ -12,8 +12,8 @@ uniform float maxLight;
 
 void main() { 
 
-    vec3 t1 = vec3(texture(textSky,textCoord));
-    vec3 t2 = vec3(texture(textLight,textCoord));
+    vec3 t1 = vec3(texture(textSky,vUv0));
+    vec3 t2 = vec3(texture(textLight,vUv0));
 
     vec3 mezcla = mix(t1, t2, 0.5);
 
