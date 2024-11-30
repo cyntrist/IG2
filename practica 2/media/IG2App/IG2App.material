@@ -114,7 +114,7 @@ material spaceskyBackground{
 		}
 	}
 }
-vertex_program spaceSkyZoomLightVS glsl
+vertex_program SpaceSkyShaderVS glsl
 { 
     source SpaceSkyShaderVS.glsl 
 
@@ -127,7 +127,7 @@ vertex_program spaceSkyZoomLightVS glsl
     }
 }
 
-fragment_program spaceSkyZoomLightFS glsl
+fragment_program SpaceSkyShaderFS glsl
 { 
     source SpaceSkyShaderFS.glsl
 
@@ -149,19 +149,17 @@ material zoomSky
         {
             lighting off
 
-            vertex_program_ref spaceSkyZoomLightVS {}
-            fragment_program_ref spaceSkyZoomLightFS {}
+            vertex_program_ref SpaceSkyShaderVS {}
+            fragment_program_ref SpaceSkyShaderFS {}
 
             texture_unit
             { 
                 texture  spacesky.jpg
-                tex_address_mode clamp
             }
 
             texture_unit
             { 
                 texture  lightMap.jpg
-                tex_address_mode clamp
             }
         }
     }
