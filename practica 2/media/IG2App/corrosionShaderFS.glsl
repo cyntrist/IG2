@@ -7,6 +7,7 @@ uniform sampler2D textChelo;
 uniform float flipping;
 
 out vec4 fFragColor; 
+
 void main() {   
 
     vec4 corrosionColor = texture(textC, vUv0);
@@ -25,14 +26,14 @@ void main() {
     // ???
     faceSide *= flipping;
 
-    // Seleccionar la textura según la cara
+    // 
     vec4 side = texture(textM, vUv0);
 
     if(faceSide > 0.0 )
         side = texture(textM, vUv0);
     else
-        side = texture(textChelo, vUv0)
+        side = texture(textChelo, vUv0);
 
-    fFragColor = sideColor; // Asignar el color de la textura al fragmento
+    fFragColor = side; // Asignar el color de la textura al fragmento
 
 } 
