@@ -19,12 +19,12 @@ void main(){
     vec4 vertexCoord = vertex;
     float distanceCenter = distance(vec2(vertexCoord.x,vertexCoord.z),center);
 
-    float a = 10;
-    float b = 10;
+    float a = 4;
+    float b = 2;
 
     vertexCoord.y   += sin(vertexCoord.x + (time*a)) * b 
                     + sin(vertexCoord.z + (distanceCenter) + (time*a)) * b;
 
 
-    gl_Position = modelViewProjMat * vertex; 
+    gl_Position = modelViewProjMat * vertexCoord; 
 }
