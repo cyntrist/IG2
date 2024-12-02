@@ -42,6 +42,9 @@ public:
 	// Crea los fuegos de detras del Hero.
 	void createFireParticlesSystems();
 	// Crea la trail que le sale al OgreHead.
+	//
+	// Crea la bola corrosiva de chelo
+	void createCorrosionBall();
 	void update(const FrameEvent& evt);
 	void createGround();
 };

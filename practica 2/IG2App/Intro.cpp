@@ -29,8 +29,11 @@ void Intro::setUpScene(SceneNode* cNode)
 	// Un suelo que pisar,
 	createGround();
 
+	// a chelo para completar nuestra vida
+	createCorrosionBall();
+
 	// Unos fuegos para calentarnos,
-	//createFireParticlesSystems();
+	createFireParticlesSystems();
 
 	// Un hero para salvarnos,
 	hero = new HeroIntro({0, 55, 0}, introNode, sMang);
@@ -52,6 +55,16 @@ void Intro::setUpScene(SceneNode* cNode)
 void Intro::setVisible(bool vis)
 {
 	introNode->setVisible(vis);
+}
+
+void Intro::createCorrosionBall()
+{
+	Entity* sphereEnt = sMang->createEntity("uv_sphere.mesh");
+	SceneNode* sphereNode = introNode->createChildSceneNode();
+	sphereNode->attachObject(sphereEnt);
+	sphereNode->setPosition(Vector3(0, 75, -200));
+	sphereNode->setScale(Vector3(0.8, 0.8, 0.8));
+	sphereEnt->setMaterialName("corrosion_material");
 }
 
 void Intro::update(const FrameEvent& evt)
@@ -96,19 +109,25 @@ void Intro::createGround()
 
 void Intro::createFireParticlesSystems()
 {
-	Vector3 pos{ -150, 10, -300 }; // Posicion del primer fuego.
-
-	for (int i = 0; i < 10; i++)
+	Vector3 pos{ 55, 25, -300 }; // Posicion del primer fuego.
+	int n = 10;
+	int aux = n / 2;
+	int diff = 50;
+	pos.x = -diff * aux;
+	for (int i = 0; i < n; i++)
 	{
-		ParticleSystem* parSys = sMang->createParticleSystem("fuego" + std::to_string(i), "intro/fire");
+		ParticleSystem* parSys = sMang->createParticleSystem("fuego" + std::to_string(i), "fireParticleSystem");
 		SceneNode* snFire = introNode->createChildSceneNode();
-		snFire->setPosition(pos);
+		snFire->setPosition({pos});
 		parSys->setEmitting(true);
 		snFire->attachObject(parSys);
+
+		pos.x += diff;
+
 		// Shhh ganyanada.
-		if (i < 5) { snFire->roll(Degree(30)); }
+		/*if (i < 5) { snFire->roll(Degree(30)); }
 		else { snFire->roll(Degree(-30)); }
 		vParSys.push_back(parSys);
-		pos.x += 30;
+		pos.x += 30;*/
 	}
 }

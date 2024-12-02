@@ -425,17 +425,17 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 	planeEnt->setMaterialName("water_material");
 
 
-	// --------------------- CORROSION -------------------------
-	Entity* sphereEnt = sm->createEntity("uv_sphere.mesh");
-	SceneNode* sphereNode = sm->getRootSceneNode()->createChildSceneNode();
-	sphereNode->attachObject(sphereEnt);
-	sphereNode->setPosition(Vector3(0, 30, 500));
-	sphereNode->setScale(Vector3(0.8, 0.8, 0.8));
-	sphereEnt->setMaterialName("corrosion_material");
+	//// --------------------- CORROSION -------------------------
+	//Entity* sphereEnt = sm->createEntity("uv_sphere.mesh");
+	//SceneNode* sphereNode = sm->getRootSceneNode()->createChildSceneNode();
+	//sphereNode->attachObject(sphereEnt);
+	//sphereNode->setPosition(Vector3(0, 30, 500));
+	//sphereNode->setScale(Vector3(0.8, 0.8, 0.8));
+	//sphereEnt->setMaterialName("corrosion_material");
 
 
 	// --------------------- FIRE ------------------------------
-	createFires(sm, 10);
+	//createFires(sm, 10);
 }
 
 void Labyrinth::setBackground()
