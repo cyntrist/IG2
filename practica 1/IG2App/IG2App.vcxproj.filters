@@ -19,6 +19,12 @@
     <Filter Include="Archivos de encabezado\Villanos">
       <UniqueIdentifier>{466638d5-a2ae-4628-aae4-8d4fa51bee0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de encabezado\Intro">
+      <UniqueIdentifier>{f5ecd3b5-7cc4-47a3-bf3b-8ef3db11a9de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de código fuente\Intro">
+      <UniqueIdentifier>{63c8798d-a8ac-48a8-8eae-a10da3773e7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IG2ApplicationContext.h">
@@ -60,6 +66,18 @@
     <ClInclude Include="Bat.h">
       <Filter>Archivos de encabezado\Villanos</Filter>
     </ClInclude>
+    <ClInclude Include="Intro.h">
+      <Filter>Archivos de encabezado\Intro</Filter>
+    </ClInclude>
+    <ClInclude Include="HeroIntro.h">
+      <Filter>Archivos de encabezado\Intro</Filter>
+    </ClInclude>
+    <ClInclude Include="OgreHeadIntro.h">
+      <Filter>Archivos de encabezado\Intro</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IG2ApplicationContext.cpp">
@@ -99,6 +117,18 @@
       <Filter>Archivos de código fuente\Villanos</Filter>
     </ClCompile>
     <ClCompile Include="Block.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="OgreHeadIntro.cpp">
+      <Filter>Archivos de código fuente\Intro</Filter>
+    </ClCompile>
+    <ClCompile Include="HeroIntro.cpp">
+      <Filter>Archivos de código fuente\Intro</Filter>
+    </ClCompile>
+    <ClCompile Include="Intro.cpp">
+      <Filter>Archivos de código fuente\Intro</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>

@@ -120,30 +120,38 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Block.h" />
+    <ClInclude Include="Character.h" />
     <ClInclude Include="Config.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Heroe.h" />
+    <ClInclude Include="HeroIntro.h" />
     <ClInclude Include="IG2ApplicationContext.h" />
     <ClInclude Include="IG2App.h" />
     <ClInclude Include="IG2Object.h" />
+    <ClInclude Include="Intro.h" />
     <ClInclude Include="Labyrinth.h" />
     <ClInclude Include="Ogrehead.h" />
     <ClInclude Include="Bat.h" />
+    <ClInclude Include="OgreHeadIntro.h" />
     <ClInclude Include="Wall.h" />
     <ClInclude Include="Pearl.h" />
     <ClInclude Include="Villain.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Heroe.cpp" />
+    <ClCompile Include="HeroIntro.cpp" />
     <ClCompile Include="IG2ApplicationContext.cpp" />
     <ClCompile Include="IG2Main.cpp" />
     <ClCompile Include="IG2App.cpp" />
     <ClCompile Include="IG2Object.cpp" />
+    <ClCompile Include="Intro.cpp" />
     <ClCompile Include="Labyrinth.cpp" />
     <ClCompile Include="Ogrehead.cpp" />
     <ClCompile Include="Bat.cpp" />
+    <ClCompile Include="OgreHeadIntro.cpp" />
     <ClCompile Include="Wall.cpp" />
     <ClCompile Include="Pearl.cpp" />
     <ClCompile Include="Villain.cpp" />

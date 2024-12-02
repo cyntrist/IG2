@@ -11,17 +11,30 @@ using namespace std;
 void IG2App::frameRendered(const FrameEvent& evt)
 {
 	//InputListener::frameRendered(evt);
-	levelLabel->setCaption("STAGE: " + StringConverter::toString(game->getStage()));
-	levelInfo->clearText();
-	levelInfo->appendText("Lives: ");
-	levelInfo->appendText(StringConverter::toString(game->getLives()));
-	levelInfo->appendText("\nPoints: ");
-	levelInfo->appendText(StringConverter::toString(game->getPoints()));
+	if (!insideIntro)
+	{
+		levelLabel->setCaption("STAGE: " + StringConverter::toString(game->getStage()));
+		levelInfo->clearText();
+		levelInfo->appendText("Lives: ");
+		levelInfo->appendText(StringConverter::toString(game->getLives()));
+		levelInfo->appendText("\nPoints: ");
+		levelInfo->appendText(StringConverter::toString(game->getPoints()));
+	}
+	//else if (animationTimer->getMicroseconds() / 1000 == timesAnimation[animationStep])
+	//{
+	//	animationStep++;
+	//	if (animationStep > timesAnimation.size())
+	//		animationStep = 0;
+	//	else
+	//	{
+	//		// ponemos la animacion correspondiente a animation step
+	//	}
+	//}
 
 
 	if (game->getStage() == -1) endGame();
-	else if (game->getStage() > currentStage) {
-
+	else if (game->getStage() > currentStage)
+	{
 		std::cout << "CAMBIA 1 " << std::endl;
 		currentStage = game->getStage();
 		std::cout << "CAMBIA 2 " << std::endl;
@@ -30,6 +43,8 @@ void IG2App::frameRendered(const FrameEvent& evt)
 		setUpLabyrinth();
 		std::cout << "CAMBIA 4 " << std::endl;
 	}
+
+	if (mIntro != nullptr)	mIntro->update(evt);
 }
 
 bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt)
@@ -90,19 +105,10 @@ void IG2App::setup(void)
 
 	mSM->addRenderQueueListener(mOverlaySystem);
 	/// GUI ejemplo:
-	mTrayMgr = new OgreBites::TrayManager("TrayGUISystem", mWindow.render);
-	mTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
-	addInputListener(mTrayMgr);
-
-	levelLabel = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, 
-		"InfoCap", "Stage: ", 100); 
-	levelInfo = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMRIGHT,
-		"LevelInfo","GameInfo" , 250, 100);
 
 	// Game:
 	game = new Game();
 
-	
 
 	// Adds the listener for this object
 	addInputListener(this);
@@ -159,13 +165,28 @@ void IG2App::setupScene()
 	//mSinbadNode->setScale(20, 20, 20);
 	//------------------------------------------------------------------------
 
-	setUpLabyrinth();
+
+	setIntro();
+	if (!insideIntro)
+		setUpLabyrinth();
 }
 
 void IG2App::setUpLabyrinth()
 {
+	/// GUI
+	mTrayMgr = new OgreBites::TrayManager("TrayGUISystem", mWindow.render);
+	mTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
+	addInputListener(mTrayMgr);
+
+	levelLabel = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT,
+	                                   "InfoCap", "Stage: ", 100);
+	levelInfo = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMRIGHT,
+	                                    "LevelInfo", "GameInfo", 250, 100);
+
+	///
+
 	mLabNode = mSM->getRootSceneNode()->createChildSceneNode("nLabyrinth");
-	string p = "../media/labyrinths/stage" + to_string(currentStage);
+	string p = LAB_PATH + to_string(currentStage);
 	p += ".txt";
 	mLabyrinth = new Labyrinth(
 		mLabNode,
@@ -199,13 +220,24 @@ void IG2App::setUpLabyrinth()
 
 void IG2App::deleteLabyrinth()
 {
-
 	delete mLabyrinth;
-	mLabyrinth = nullptr;	
+	mLabyrinth = nullptr;
 	delete mLabNode;
 	mLabNode = nullptr;
 	delete mHeroe;
 	mHeroe = nullptr;
+}
+
+void IG2App::setIntro()
+{
+	mIntroNode = mSM->getRootSceneNode()->createChildSceneNode("nIntro");
+	mIntro = new Intro(mSM, mIntroNode, mCamNode);
+}
+
+void IG2App::hideIntro()
+{
+	mIntroNode->setVisible(false);
+	setUpLabyrinth();
 }
 
 void IG2App::endGame()

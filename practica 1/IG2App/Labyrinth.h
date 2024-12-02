@@ -42,8 +42,19 @@ public:
 
 	Block* getBlock(Vector3 pos, Vector3 dir);
 
-
+	void setVisible(bool vis) const
+	{
+		//gameNode->setVisible(vis);
+		for (auto e : hero)
+			e->setVisible(vis);
+		for (auto e : blocks)
+			for (auto f : e)
+				f->setVisible(vis);
+		for (auto e : villains)
+			e->setVisible(vis);
+		
+	}
 
 	void setGame(Game* g) { game = g; }
-	Game* getGame() { return game; }
+	Game* getGame() const { return game; }
 };

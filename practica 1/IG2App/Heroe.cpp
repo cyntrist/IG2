@@ -17,6 +17,7 @@ void Heroe::setScale(Vector3 s)
 
 void Heroe::frameRendered(const Ogre::FrameEvent& evt)
 {
+	if (!visible) return;
 	updateMovement(dir);
 
 }
@@ -277,7 +278,7 @@ void Heroe::initLight(int type)
 
 	}
 	else if (type == 1) {
-		light = mSM->createLight("light");;
+		light = mSM->createLight();
 		light->setType(Light::LT_SPOTLIGHT);
 		light->setSpotlightInnerAngle(Ogre::Degree(5.0f));
 		light->setSpotlightOuterAngle(Ogre::Degree(45.0f));

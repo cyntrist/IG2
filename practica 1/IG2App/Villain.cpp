@@ -5,6 +5,8 @@
 
 void Villain::frameRendered(const FrameEvent& evt)
 {
+	if (!visible) return;
+
 	for (auto d : availableDirs) d = true;
 	if (checkMiddle())
 	{

@@ -89,7 +89,7 @@ public:
 	 * @param visible If true, the element is visible. The element is not visible otherwise.
 	 */
 	void setVisible(bool visible);
-
+	bool getVisible() const { return visible; }
 	virtual void setOrientation(Vector3 vec);
 
 	void setRotation(Vector3 r);
@@ -156,4 +156,6 @@ protected:
 
 	// Static vector of listeners
 	static std::vector<IG2Object*> appListeners;
+
+	bool visible = true;
 };
