@@ -400,29 +400,29 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 
 	// PARTICULAS PLACEHOLDER PARA EL OGREHEAD DE LA INTRO
 
-	std::string name = "ogreheadSmokeINTRO";
-	ParticleSystem* pSys = sm->createParticleSystem(name, "smokeEstela");
-	SceneNode* estelaNode = sm->getRootSceneNode()->createChildSceneNode();
-	estelaNode->setPosition(v->getPosition());
-	pSys->setEmitting(true);
-	estelaNode->attachObject(pSys);
-	v->setEstela(estelaNode);
+	//std::string name = "ogreheadSmokeINTRO";
+	//ParticleSystem* pSys = sm->createParticleSystem(name, "smokeEstela");
+	//SceneNode* estelaNode = sm->getRootSceneNode()->createChildSceneNode();
+	//estelaNode->setPosition(v->getPosition());
+	//pSys->setEmitting(true);
+	//estelaNode->attachObject(pSys);
+	//v->setEstela(estelaNode);
 
 	//  ---------------------- FLOOR --------------------
 
-	/// PLANO
-	MeshManager::getSingleton().createPlane(
-		"planeINTRO", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
-		Plane(Vector3::UNIT_Y, 0),
-		800, 800, 100, 80,
-		true, 1, 1.0, 1.0, Vector3::UNIT_Z
-	);
+	///// PLANO
+	//MeshManager::getSingleton().createPlane(
+	//	"planeINTRO", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+	//	Plane(Vector3::UNIT_Y, 0),
+	//	800, 800, 100, 80,
+	//	true, 1, 1.0, 1.0, Vector3::UNIT_Z
+	//);
 
-	Entity* planeEnt = sm->createEntity("sueloINTRO", "planeINTRO");
-	SceneNode* planeNode = sn->createChildSceneNode("sueloNodeINTRO");
-	planeNode->setPosition(0, -50, 700);
-	planeNode->attachObject(planeEnt);
-	planeEnt->setMaterialName("water_material");
+	//Entity* planeEnt = sm->createEntity("sueloINTRO", "planeINTRO");
+	//SceneNode* planeNode = sn->createChildSceneNode("sueloNodeINTRO");
+	//planeNode->setPosition(0, -50, 700);
+	//planeNode->attachObject(planeEnt);
+	//planeEnt->setMaterialName("water_material");
 
 
 	//// --------------------- CORROSION -------------------------

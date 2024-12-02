@@ -9,7 +9,7 @@ OgreHeadIntro::OgreHeadIntro(Vector3 initPos, SceneNode* node, SceneManager* sce
 	this->setPosition(initialPosition);
 
 	generateTrack(sceneMng);
-	//createTrail(sceneMng);
+	createTrail(sceneMng);
 }
 
 OgreHeadIntro::~OgreHeadIntro()
@@ -23,7 +23,7 @@ void OgreHeadIntro::frameRendered(const FrameEvent& evt)
 
 void OgreHeadIntro::createTrail(SceneManager* sMng)
 {
-	ParticleSystem* parSys = sMng->createParticleSystem("estela", "intro/trail");
+	ParticleSystem* parSys = sMng->createParticleSystem("ogreheadSmokeINTRO", "smokeEstela");
 	SceneNode* snTrail = mNode->createChildSceneNode();
 	parSys->setEmitting(true);
 	snTrail->attachObject(parSys);
