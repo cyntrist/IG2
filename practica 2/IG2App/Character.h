@@ -27,5 +27,4 @@ public:
 	bool isCenter();
 
 	void rotate();
-	void setVisible(bool vis) { visible = vis; }
 };

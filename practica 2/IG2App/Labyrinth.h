@@ -52,7 +52,7 @@ public:
 	Block* getBlock(Vector3 pos, Vector3 dir);
 
 	void setGame(Game* g) { game = g; }
-	Game* getGame() { return game; }
+	Game* getGame() const { return game; }
 
 
 	// ---------- parctica 2 -----------
@@ -60,7 +60,7 @@ public:
 	void startIntro(SceneNode* sn, SceneManager* sm);
 
 	void setBackground();
-
+	void setVisible(bool vis) const;
 
 
 };

@@ -1,5 +1,7 @@
 #include "IG2Object.h"
 
+#include <OgreParticleSystem.h>
+
 // Init the static vector for listeners
 std::vector<IG2Object*> IG2Object::appListeners = std::vector<IG2Object*>(0, nullptr);
 
@@ -73,6 +75,7 @@ void IG2Object::setScale(Vector3 vScale)
 
 void IG2Object::setVisible(bool visible)
 {
+	this->visible = visible; 
 	mNode->setVisible(visible);
 }
 

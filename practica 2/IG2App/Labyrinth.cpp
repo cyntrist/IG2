@@ -15,8 +15,6 @@
 
 Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node(nullptr)
 {
-	
-	
 	// opening stream
 	ifstream file(path);
 	if (!file.is_open())
@@ -38,7 +36,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 	if (light == "directional") lighttype = 1;
 
 
-	startIntro(sn, sm);
+	//startIntro(sn, sm);
 
 
 	// reading file
@@ -171,8 +169,6 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					p->setPass(true);
 					aux.push_back(p);
 
-		
-
 
 					break;
 				}
@@ -201,42 +197,42 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 					break;
 				}
 			case 's':
-			{
-				// creacion de smokes
-				auto p = new Pearl(
-					{ 0, 0, 0 },
-					sn,
-					sm,
-					PEARL_NAME + to_string(i * nc + j)
-				);
+				{
+					// creacion de smokes
+					auto p = new Pearl(
+						{0, 0, 0},
+						sn,
+						sm,
+						PEARL_NAME + to_string(i * nc + j)
+					);
 
-				p->setPosition({
-					wallSize.x * i,
-					wallSize.y * j,
-					LAB_DEPTH
+					p->setPosition({
+						wallSize.x * i,
+						wallSize.y * j,
+						LAB_DEPTH
 					});
-				p->setScale({ PEARL_SIZE, PEARL_SIZE, PEARL_SIZE });
-				p->setType(Block::TYPE::PEARL);
-				p->setPass(true);
+					p->setScale({PEARL_SIZE, PEARL_SIZE, PEARL_SIZE});
+					p->setType(Block::TYPE::PEARL);
+					p->setPass(true);
 
-				//// bounding box
-				//Entity* box = sm->createEntity("sphere");
+					//// bounding box
+					//Entity* box = sm->createEntity("sphere");
 
-				//p->getAABB() = box.node;
+					//p->getAABB() = box.node;
 
-				aux.push_back(p);
+					aux.push_back(p);
 
-				//
-				std::string name = "psSmoke" + to_string(i * nc + j);
-				ParticleSystem* pSys = sm->createParticleSystem(name, "smokeParticleSystem");
-				SceneNode* mPSNode = sm->getRootSceneNode()->createChildSceneNode();
-				mPSNode->setPosition(p->getPosition());
-				pSys->setEmitting(true);
-				mPSNode->attachObject(pSys);
-				p->addParticleSys(mPSNode);
+					//
+					std::string name = "psSmoke" + to_string(i * nc + j);
+					ParticleSystem* pSys = sm->createParticleSystem(name, "smokeParticleSystem");
+					SceneNode* mPSNode = sm->getRootSceneNode()->createChildSceneNode();
+					mPSNode->setPosition(p->getPosition());
+					pSys->setEmitting(true);
+					mPSNode->attachObject(pSys);
+					p->addParticleSys(mPSNode);
 
-				break;
-			}
+					break;
+				}
 			default:
 				{
 					auto p = new Pearl(
@@ -273,7 +269,8 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 			);
 			std::vector<SceneNode*> aux = b->getParticleSystems();
 
-			for (auto p : aux) {
+			for (auto p : aux)
+			{
 				p->setPosition(b->getPosition());
 			}
 		}
@@ -287,7 +284,7 @@ Labyrinth::Labyrinth(SceneNode* sn, SceneManager* sm, const string& path) : node
 			v->getPosition().z
 		);
 
-		if(v->GetEstela() != nullptr)
+		if (v->GetEstela() != nullptr)
 			v->GetEstela()->setPosition(v->getPosition());
 	}
 
@@ -350,28 +347,25 @@ void Labyrinth::createFires(SceneManager* sm, int n)
 	int diff = 50;
 	int posini = -diff * aux;
 
-	for (int i = 0; i < n; i++) {
-
-
+	for (int i = 0; i < n; i++)
+	{
 		// ---------------- fireeeeeeeeeeeeeeeeeee
 		std::string name = "fire" + to_string(i);
 		ParticleSystem* pSys = sm->createParticleSystem(name, "fireParticleSystem");
 		SceneNode* fire = sm->getRootSceneNode()->createChildSceneNode();
-		fire->setPosition(Vector3(posini,-10,400));
+		fire->setPosition(Vector3(posini, -10, 400));
 		pSys->setEmitting(true);
 		fire->attachObject(pSys);
 		fires.push_back(pSys);
 		posini += diff;
 	}
-
 }
 
 void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 {
-
 	// pone el suelo, a sinbad y al ogrehead
-	 
-	
+
+
 	//  -------------------- SINBAD -----------------
 	auto vecH = Vector3(0, 0, 700);
 
@@ -384,8 +378,8 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 		10
 	);
 
-	h->setScale({ 10, 10, 10 });
-	h->setRotation({ 0, 0, 0 });
+	h->setScale({10, 10, 10});
+	h->setRotation({0, 0, 0});
 	h->initLight(0, "lightINTRO");
 
 	hero.push_back(h);
@@ -401,7 +395,7 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 
 	// asi no se mueve (comentado)
 	//villains.push_back(v);
-	v->setRotation({ 0, 0, 90 });
+	v->setRotation({0, 0, 90});
 
 
 	// PARTICULAS PLACEHOLDER PARA EL OGREHEAD DE LA INTRO
@@ -436,17 +430,26 @@ void Labyrinth::startIntro(SceneNode* sn, SceneManager* sm)
 	SceneNode* sphereNode = sm->getRootSceneNode()->createChildSceneNode();
 	sphereNode->attachObject(sphereEnt);
 	sphereNode->setPosition(Vector3(0, 30, 500));
-	sphereNode->setScale(Vector3(0.8,0.8,0.8));
+	sphereNode->setScale(Vector3(0.8, 0.8, 0.8));
 	sphereEnt->setMaterialName("corrosion_material");
 
 
 	// --------------------- FIRE ------------------------------
 	createFires(sm, 10);
-
 }
 
 void Labyrinth::setBackground()
 {
-
 }
 
+void Labyrinth::setVisible(bool vis) const
+{
+		//gameNode->setVisible(vis);
+		for (auto e : hero)
+			e->setVisible(vis);
+		for (auto e : blocks)
+			for (auto f : e)
+				f->setVisible(vis);
+		for (auto e : villains)
+			e->setVisible(vis);
+}

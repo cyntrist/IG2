@@ -15,6 +15,7 @@
 #include <string>
 
 #include "Game.h"
+#include "Intro.h"
 
 class Labyrinth;
 class Heroe;
@@ -32,6 +33,7 @@ protected:
     virtual void shutdown();
     virtual void setupScene();
     void setUpLabyrinth();
+    void hideIntro();
     void deleteLabyrinth();
 
 
@@ -66,6 +68,9 @@ protected:
     OgreBites::Label* levelLabel = nullptr;
     Game* game = nullptr;
 
+    Ogre::SceneNode* mIntroNode = nullptr;
+    Intro* mIntro = nullptr;
+    bool insideIntro = true;
 
     int currentStage = 1;
 };

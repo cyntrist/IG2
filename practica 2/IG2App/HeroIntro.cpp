@@ -59,11 +59,13 @@ void HeroIntro::update(float t)
 		break;
 	case 1:
 		if (walk != nullptr) walk->addTime(t);
+		if (topwalk != nullptr) topwalk->addTime(t);
 		if (movement != nullptr) movement->addTime(t);
 		break;
 	case 2:
 		if (sword != nullptr) sword->addTime(t);
 		if (walk != nullptr) walk->addTime(t);
+		if (topwalk != nullptr) topwalk->addTime(t);
 		if (movement != nullptr) movement->addTime(t);
 		break;
 	default:
