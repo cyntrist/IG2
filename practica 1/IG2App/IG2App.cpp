@@ -44,7 +44,7 @@ void IG2App::frameRendered(const FrameEvent& evt)
 		std::cout << "CAMBIA 4 " << std::endl;
 	}
 
-	if (mIntro != nullptr)	mIntro->update(evt);
+	if (mIntro != nullptr) mIntro->update(evt);
 }
 
 bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt)
@@ -129,18 +129,18 @@ void IG2App::setupScene()
 	mCamNode = mSM->getRootSceneNode()->createChildSceneNode("nCam");
 	mCamNode->attachObject(cam);
 
-	mCamNode->setPosition(0, 100, -100);
+	mCamNode->setPosition(0, 100,10);
+	Quaternion rotation(Degree(180), Vector3::UNIT_Z);
+	//mCamNode->rotate(rotation);
 	mCamNode->lookAt(Vector3(0, 0, 0), Node::TS_WORLD);
-	//mCamNode->rotate(Quaternion(Degree(180), Vector3(0, 1, 0)));
-
+	cam->rotate(rotation);
 	// and tell it to render into the main window
 	Viewport* vp = getRenderWindow()->addViewport(cam);
-	vp->setBackgroundColour(ColourValue(0.7, 0.8, 0.9));
+	vp->setBackgroundColour(ColourValue(0, 0, 0, 1));
 
 	mCamMgr = new OgreBites::CameraMan(mCamNode);
 	addInputListener(mCamMgr);
 	mCamMgr->setStyle(OgreBites::CS_ORBIT);
-
 
 	//------------------------------------------------------------------------
 	// Creating the light
