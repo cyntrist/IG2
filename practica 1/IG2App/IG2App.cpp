@@ -129,8 +129,9 @@ void IG2App::setupScene()
 	mCamNode = mSM->getRootSceneNode()->createChildSceneNode("nCam");
 	mCamNode->attachObject(cam);
 
-	mCamNode->setPosition(0, 0, 1000);
+	mCamNode->setPosition(0, 100, -100);
 	mCamNode->lookAt(Vector3(0, 0, 0), Node::TS_WORLD);
+	//mCamNode->rotate(Quaternion(Degree(180), Vector3(0, 1, 0)));
 
 	// and tell it to render into the main window
 	Viewport* vp = getRenderWindow()->addViewport(cam);
@@ -173,6 +174,9 @@ void IG2App::setupScene()
 
 void IG2App::setUpLabyrinth()
 {
+	mCamNode->setPosition(0, 0, 1000);
+	mCamNode->lookAt(Vector3(0, 0, 0), Node::TS_WORLD);
+
 	/// GUI
 	mTrayMgr = new OgreBites::TrayManager("TrayGUISystem", mWindow.render);
 	mTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);

@@ -1,0 +1,28 @@
+particle_system intro/trail
+{
+	material        	trail
+	particle_width  	35
+	particle_height 	35
+	cull_each       	true
+	quota           	500
+	billboard_type  	point
+	sorted				true
+    
+    particle_width   60
+    particle_height  20
+
+
+	// Area emitter
+	emitter Point
+	{
+		position 0 0 0
+		angle 10
+		emission_rate 3
+		direction 0 0 -1
+		velocity_min 50
+		velocity_max 80  
+		time_to_live 4 
+		repeat_delay 1 
+        colour 1.0 0.5 0.0 1	
+	}
+}

@@ -1,0 +1,41 @@
+particle_system fireParticleSystem{
+	billboard_type point
+	particle_width 35
+	particle_height 35
+	quota 500
+	material intro/fire
+	emitter Point{
+		direction 0 1 0
+		position 0 0 0
+		angle 10
+		emission_rate 50
+		time_to_live 10
+		velocity_min 50
+		velocity_max 80
+		colour 1.0 0.0 0.5 0.4
+		duration 10
+		repeat_delay 5
+		}
+	affector ColourFader{
+		red 0.06
+		green 0.06
+		blue 0.06
+		alpha -0.06
+	}
+	affector ColourImage{
+		image smokecolors.png
+	}
+	affector Scaler{
+		rate 50
+		scale_range 1 1
+	}
+	affector Rotator{
+		rotation_speed_range_start -30
+ 		rotation_speed_range_end 55
+ 		rotation_range_start 60
+ 		rotation_range_end 90
+	}
+	affector DirectionRandomiser{
+		randomness 5
+	}
+}

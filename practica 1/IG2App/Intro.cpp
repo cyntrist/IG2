@@ -41,8 +41,6 @@ void Intro::setUpScene(SceneNode* cNode)
 	head = new OgreHeadIntro({100, 10, 0}, introNode, sMang);
 	head->setScale({2, 2, 2});
 
-	// Una trail que nos siga siempre,
-	//createTrailParticleSystem();
 
 	// Y una animacion para alegrarnos el dia.
 	hero->setAnimState(0);
@@ -93,7 +91,7 @@ void Intro::createGround()
 	nGround->attachObject(eGround);
 
 	nGround->setPosition({ 0, 0, 0 });
-	//eGround->setMaterialName("matFloor"); // Material del suelo.
+	eGround->setMaterialName("plane"); // Material del suelo.
 }
 
 void Intro::createFireParticlesSystems()
