@@ -14,7 +14,6 @@ OgreHeadIntro::OgreHeadIntro(Vector3 initPos, SceneNode* node, SceneManager* sce
 
 OgreHeadIntro::~OgreHeadIntro()
 {
-
 }
 
 void OgreHeadIntro::frameRendered(const FrameEvent& evt)
@@ -42,10 +41,10 @@ void OgreHeadIntro::generateTrack(SceneManager* sMng)
 	Real durStep = duration / 4.0;
 
 	// Create the animation and track
-	Ogre::Animation* anim = sMng->createAnimation("ogreHeadWalking", duration);
-	anim->setInterpolationMode(Ogre::Animation::IM_LINEAR);
+	Animation* anim = sMng->createAnimation("ogreHeadWalking", duration);
+	anim->setInterpolationMode(Animation::IM_LINEAR);
 	//anim->setDefaultRotationInterpolationMode();
-	Ogre::NodeAnimationTrack* track = anim->createNodeTrack(0);
+	NodeAnimationTrack* track = anim->createNodeTrack(0);
 	track->setAssociatedNode(mNode);
 	TransformKeyFrame* kf;
 
@@ -97,4 +96,3 @@ void OgreHeadIntro::generateTrack(SceneManager* sMng)
 	movement->setLoop(true);
 	movement->setEnabled(true);
 }
-

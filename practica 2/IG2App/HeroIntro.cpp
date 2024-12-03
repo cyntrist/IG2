@@ -9,8 +9,8 @@ HeroIntro::HeroIntro(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, L
 	swrdR = sceneMng->createEntity("Sword.mesh");
 	swrdL = sceneMng->createEntity("Sword.mesh");
 
-	entity->attachObjectToBone("Hand.R", swrdR);
-	entity->attachObjectToBone("Hand.L", swrdL);
+	entity->attachObjectToBone("Handle.R", swrdR);
+	entity->attachObjectToBone("Handle.L", swrdL);
 
 	swrdR->setVisible(false);
 	swrdL->setVisible(false);
