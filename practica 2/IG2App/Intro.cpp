@@ -96,7 +96,7 @@ void Intro::createGround()
 	nGround->attachObject(eGround);
 
 	nGround->setPosition({0, 0, 0});
-	eGround->setMaterialName("plane"); // Material del suelo.
+	eGround->setMaterialName("water_material"); // Material del suelo.
 }
 
 void Intro::createFireParticlesSystems()
