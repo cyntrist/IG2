@@ -84,7 +84,7 @@ void Intro::createGround()
 		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, // Grupo.
 		ground, // Plano base.
 		1000, 1000, // Tamanyo.
-		20, 20, // Segmentos.
+		50, 50, // Segmentos.
 		true, 1, // Normales y numTexCoordSet.
 		5, 5, // repeticiones de la textura.
 		Vector3::UNIT_Z); // Orientacion.

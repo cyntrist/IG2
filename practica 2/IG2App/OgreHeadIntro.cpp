@@ -10,6 +10,10 @@ OgreHeadIntro::OgreHeadIntro(Vector3 initPos, SceneNode* node, SceneManager* sce
 
 	generateTrack(sceneMng);
 	createTrail(sceneMng);
+
+	movement = sceneMng->createAnimationState("ogreHeadWalking");
+	movement->setLoop(true);
+	movement->setEnabled(true);
 }
 
 OgreHeadIntro::~OgreHeadIntro()
@@ -22,9 +26,15 @@ void OgreHeadIntro::frameRendered(const FrameEvent& evt)
 	if (movement != nullptr) movement->addTime(evt.timeSinceLastFrame);
 }
 
+void OgreHeadIntro::update(float t)
+{
+	std::cout << "jj";
+	if (movement != nullptr) movement->addTime(t);
+}
+
 void OgreHeadIntro::createTrail(SceneManager* sMng)
 {
-	ParticleSystem* parSys = sMng->createParticleSystem("estela", "intro/trail");
+	ParticleSystem* parSys = sMng->createParticleSystem("ogreheadSmokeINTRO", "smokeEstela");
 	SceneNode* snTrail = mNode->createChildSceneNode();
 	parSys->setEmitting(true);
 	snTrail->attachObject(parSys);
@@ -91,8 +101,4 @@ void OgreHeadIntro::generateTrack(SceneManager* sMng)
 	kf->setScale(keyframeScale);
 	kf->setRotation(keyframeRot);
 	kf->setTranslate(keyframePos);
-
-	movement = sMng->createAnimationState("ogreHeadWalking");
-	movement->setLoop(true);
-	movement->setEnabled(true);
 }
