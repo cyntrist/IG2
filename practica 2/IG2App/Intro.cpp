@@ -59,6 +59,7 @@ void Intro::createCorrosionBall()
 void Intro::update(const FrameEvent& evt)
 {
 	hero->update(evt.timeSinceLastFrame);
+	head->update(evt.timeSinceLastFrame);
 
 	if (timerHero.getMilliseconds() / 1000 >= 20)
 	{

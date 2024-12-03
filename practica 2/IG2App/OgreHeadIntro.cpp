@@ -20,15 +20,8 @@ OgreHeadIntro::~OgreHeadIntro()
 {
 }
 
-void OgreHeadIntro::frameRendered(const FrameEvent& evt)
-{
-	std::cout << "jj";
-	if (movement != nullptr) movement->addTime(evt.timeSinceLastFrame);
-}
-
 void OgreHeadIntro::update(float t)
 {
-	std::cout << "jj";
 	if (movement != nullptr) movement->addTime(t);
 }
 

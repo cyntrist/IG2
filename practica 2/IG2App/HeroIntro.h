@@ -21,7 +21,6 @@ class HeroIntro : public Character
 public:
 	HeroIntro(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, Labyrinth* lab = nullptr);
 	~HeroIntro() override;
-	void frameRendered(const FrameEvent& evt) override;
 	void update(float t) override;
 	AnimationState* getAnim(std::string anim) const { return entity->getAnimationState(anim); }
 	void generateTrack(SceneManager* sMng);

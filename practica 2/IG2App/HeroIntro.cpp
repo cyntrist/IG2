@@ -27,28 +27,6 @@ HeroIntro::~HeroIntro()
 {
 }
 
-void HeroIntro::frameRendered(const FrameEvent& evt)
-{
-	switch (idAnim)
-	{
-	case 0:
-		if (dance != nullptr) dance->addTime(evt.timeSinceLastFrame);
-		break;
-	case 1:
-		if (walk != nullptr) walk->addTime(evt.timeSinceLastFrame);
-		if (topwalk != nullptr) topwalk->addTime(evt.timeSinceLastFrame);
-		if (movement != nullptr) movement->addTime(evt.timeSinceLastFrame);
-		break;
-	case 2:
-		if (sword != nullptr) sword->addTime(evt.timeSinceLastFrame);
-		if (walk != nullptr) walk->addTime(evt.timeSinceLastFrame);
-		if (topwalk != nullptr) topwalk->addTime(evt.timeSinceLastFrame);
-		if (movement != nullptr) movement->addTime(evt.timeSinceLastFrame);
-		break;
-	default:
-		break;
-	}
-}
 
 void HeroIntro::update(float t)
 {
