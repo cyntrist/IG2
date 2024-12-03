@@ -5,8 +5,6 @@
 
 void Heroe::init()
 {
-
-
 }
 
 void Heroe::setScale(Vector3 s)
@@ -15,43 +13,43 @@ void Heroe::setScale(Vector3 s)
 }
 
 
-void Heroe::frameRendered(const Ogre::FrameEvent& evt)
+void Heroe::frameRendered(const FrameEvent& evt)
 {
 	updateMovement(dir);
-
 }
 
 bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 {
-	if (evt.keysym.sym == SDLK_UP) {
+	if (evt.keysym.sym == SDLK_UP)
+	{
 		std::cout << "UP " << std::endl;
 		setOrientation({0, -1, 0});
 
-		newdir = { 0, 1, 0 };
+		newdir = {0, 1, 0};
 	}
-	else if (evt.keysym.sym == SDLK_RIGHT) {
+	else if (evt.keysym.sym == SDLK_RIGHT)
+	{
 		std::cout << "RIGHT " << std::endl;
-		setOrientation({ -1, 0, 0 });
+		setOrientation({-1, 0, 0});
 
 
-		newdir = { 1, 0, 0 };
-
-	}	
-	else if (evt.keysym.sym == SDLK_DOWN) {
+		newdir = {1, 0, 0};
+	}
+	else if (evt.keysym.sym == SDLK_DOWN)
+	{
 		std::cout << "DOWN " << std::endl;
 
-		setOrientation({ 0, 1,0 });
+		setOrientation({0, 1, 0});
 
 
-		newdir = { 0, -1, 0 };
-
-	}	
-	else if (evt.keysym.sym == SDLK_LEFT) {
+		newdir = {0, -1, 0};
+	}
+	else if (evt.keysym.sym == SDLK_LEFT)
+	{
 		std::cout << "LEFT " << std::endl;
-		setOrientation({ 1, 0, 0 });
+		setOrientation({1, 0, 0});
 
-		newdir = { -1, 0, 0 };
-
+		newdir = {-1, 0, 0};
 	}
 
 
@@ -60,43 +58,44 @@ bool Heroe::keyPressed(const OgreBites::KeyboardEvent& evt)
 
 void Heroe::updateMovement(Vector3 vec)
 {
-	if (checkMiddle()) {
-
-
+	if (checkMiddle())
+	{
 		//std::cout << "we're so back " << std::endl;
 		/*Block* aux = getBlock(dir);
 		if (aux->Type() == Block::TYPE::PEARL) eatPearl(aux);*/
-		if (newdir != dir) {
-
+		if (newdir != dir)
+		{
 			if (!checkCollision(newdir))
 				dir = newdir;
 		}
 
-		if (checkCollision(dir)) {
-			dir = { 0,0,0 };
+		if (checkCollision(dir))
+		{
+			dir = {0, 0, 0};
 		}
-
 	}
 
-	if (checkBlockAABB(Vector3().ZERO)) {
-		if(!getBlock(Vector3().ZERO)->isDead())
+	if (checkBlockAABB(Vector3().ZERO))
+	{
+		if (!getBlock(Vector3().ZERO)->isDead())
 			eatPearl(getBlock(Vector3().ZERO));
 	}
 
 
 	//std::cout << immune << std::endl;
-	if (!immune) 
+	if (!immune)
 	{
-		if (checkVillainAABB()) {
+		if (checkVillainAABB())
+		{
 			getHit();
 		}
 	}
-	else {
+	else
+	{
 		immunity();
 	}
 
-	
-	
+
 	mNode->translate(dir);
 }
 
@@ -161,8 +160,8 @@ bool Heroe::checkMiddle()
 	//std::cout << x << " " << y << " " << z << std::endl;
 	//std::cout << lab->getWallSize().x << " " << lab->getWallSize().y << " " << std::endl;
 
-	int wallx = lab->getWallSize().x/2;
-	int wally = lab->getWallSize().y/2;
+	int wallx = lab->getWallSize().x / 2;
+	int wally = lab->getWallSize().y / 2;
 
 	Vector3 centro(x % 100, y % 100, z % 100);
 
@@ -178,7 +177,7 @@ bool Heroe::checkBlockAABB(Vector3 dir)
 	Block* aux = getBlock(dir);
 
 	//std::cout << aux->getAABB() << std::endl;
-	
+
 	bool sol = getAABB().intersects(aux->getAABB());
 	return sol;
 }
@@ -189,7 +188,8 @@ bool Heroe::checkVillainAABB()
 	int i = 0;
 	// recorre los villanos
 
-	while (!aux && i < lab->getVillains().size()) {
+	while (!aux && i < lab->getVillains().size())
+	{
 		aux = getAABB().intersects(lab->getVillains()[i]->getAABB());
 		i++;
 	}
@@ -198,7 +198,8 @@ bool Heroe::checkVillainAABB()
 
 void Heroe::eatPearl(Block* p)
 {
-	if (!p->isDead()) {
+	if (!p->isDead())
+	{
 		// 'borra la perla'
 		p->setVisible(false);
 		p->setDead(true);
@@ -206,18 +207,16 @@ void Heroe::eatPearl(Block* p)
 		//
 		addPoint(pointValue);
 	}
-	
-
 }
 
 void Heroe::getHit()
 {
-
 	lab->getGame()->addLives(-1);
 	startImmunity(200);
 	std::cout << lab->getGame()->getLives() << std::endl;
 
-	if (lab->getGame()->getLives() <= 0) {
+	if (lab->getGame()->getLives() <= 0)
+	{
 		//lab->getGame()->changeStage(lab->getGame()->getStage() + 1);
 		lab->getGame()->changeStage(-1);
 	}
@@ -231,14 +230,15 @@ void Heroe::startImmunity(int time)
 
 void Heroe::immunity()
 {
-	if (immunityCounter <= 0) {
+	if (immunityCounter <= 0)
+	{
 		immunityCounter = 0;
 		immune = false;
 	}
-	else {
+	else
+	{
 		immunityCounter--;
 	}
-
 }
 
 void Heroe::addPoint(int i)
@@ -247,12 +247,12 @@ void Heroe::addPoint(int i)
 	lab->getGame()->addPoints(i);
 }
 
-void Heroe::setLight(Ogre::Light* l)
+void Heroe::setLight(Light* l)
 {
 	light = l;
 }
 
-Ogre::Light* Heroe::getLight(Ogre::Light l)
+Light* Heroe::getLight(Light l)
 {
 	return light;
 }
@@ -268,38 +268,36 @@ void Heroe::initLight(int type, std::string name)
 
 
 	// UNA TIENE QUE SER SPOTLIGHT Y LA OTRA DIRECTIONAL
-	if (type == 0) {
+	if (type == 0)
+	{
 		light->setType(Light::LT_SPOTLIGHT);
-		light->setSpotlightInnerAngle(Ogre::Degree(5.0f));
-		light->setSpotlightOuterAngle(Ogre::Degree(45.0f));
+		light->setSpotlightInnerAngle(Degree(5.0f));
+		light->setSpotlightOuterAngle(Degree(45.0f));
 		light->setSpotlightFalloff(1.0f);
-		light->setDirection(0,-1,0);
-
+		light->setDirection(0, -1, 0);
 	}
-	else if (type == 1) {
-		light = mSM->createLight("light");;
+	else if (type == 1)
+	{
+		light = mSM->createLight("light");
 		light->setType(Light::LT_SPOTLIGHT);
-		light->setSpotlightInnerAngle(Ogre::Degree(5.0f));
-		light->setSpotlightOuterAngle(Ogre::Degree(45.0f));
+		light->setSpotlightInnerAngle(Degree(5.0f));
+		light->setSpotlightOuterAngle(Degree(45.0f));
 		light->setSpotlightFalloff(0.0f);
 		light->setDiffuseColour(1.0f, 1.0f, 1.0f);
 		light->setDiffuseColour(1.0f, 0.0f, 0.0f);
 		light->setDiffuseColour(1.0f, 0.0f, 0.0f);
-
 	}
 
 	//  ------------- debug
 	//Block* aux;
 	//aux = new Block({ 0,50,0 }, mNode->createChildSceneNode("debugblock"), IG2Object::mSM, PEARL_MESH);
-	
+
 	// te amo pinguino debug
 
 	//------------------
 
 
-
-
 	// mete la luz en el nodo
-	lightNode->setPosition(0,50,0);
+	lightNode->setPosition(0, 50, 0);
 	//lightNode->setDirection(Ogre::Vector3(0,0,-1));
 }

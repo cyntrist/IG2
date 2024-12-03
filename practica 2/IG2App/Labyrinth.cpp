@@ -444,12 +444,12 @@ void Labyrinth::setBackground()
 
 void Labyrinth::setVisible(bool vis) const
 {
-		//gameNode->setVisible(vis);
-		for (auto e : hero)
-			e->setVisible(vis);
-		for (auto e : blocks)
-			for (auto f : e)
-				f->setVisible(vis);
-		for (auto e : villains)
-			e->setVisible(vis);
+	//gameNode->setVisible(vis);
+	for (auto e : hero)
+		e->setVisible(vis);
+	for (auto e : blocks)
+		for (auto f : e)
+			f->setVisible(vis);
+	for (auto e : villains)
+		e->setVisible(vis);
 }

@@ -25,12 +25,10 @@ class Labyrinth
 	Game* game;
 
 
-
 	// particluas
 	ParticleSystem* psys;
 	std::vector<ParticleSystem*> fires;
 	int Nfires = 10;
-
 
 public:
 	Labyrinth(SceneNode* sn, SceneManager* sm, const string& path = LAB_PATH);
@@ -61,6 +59,4 @@ public:
 
 	void setBackground();
 	void setVisible(bool vis) const;
-
-
 };

@@ -5,8 +5,6 @@
 
 void Villain::frameRendered(const FrameEvent& evt)
 {
-
-
 	for (auto d : availableDirs) d = true;
 	if (checkMiddle())
 	{
@@ -153,9 +151,8 @@ Block* Villain::getBlock(Vector3 dir)
 
 void Villain::updateEstela()
 {
-	if (estela != nullptr) {
-
+	if (estela != nullptr)
+	{
 		estela->setPosition(mNode->getPosition());
 	}
-
 }

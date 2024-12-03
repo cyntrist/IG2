@@ -15,7 +15,7 @@ class Villain : public IG2Object
 
 	Vector3 dir;
 	Vector3 newDir;
-	std::vector<bool> availableDirs { true, true, true, true}; // izq arriba der abajo
+	std::vector<bool> availableDirs{true, true, true, true}; // izq arriba der abajo
 
 	SceneNode* estela;
 
@@ -46,7 +46,9 @@ public:
 	void updateEstela();
 
 	void setEstela(SceneNode* n) { estela = n; };
-	SceneNode* GetEstela() {
+
+	SceneNode* GetEstela()
+	{
 		return estela;
 	};
 };

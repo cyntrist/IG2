@@ -4,16 +4,14 @@
 Character::Character(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, string name, Labyrinth* lab)
 	: IG2Object(initPos, node->createChildSceneNode(name), sceneMng), laberynth(lab)
 {
-
 }
 
 Character::~Character()
 {
 }
 
-void Character::frameRendered(const Ogre::FrameEvent& evt)
+void Character::frameRendered(const FrameEvent& evt)
 {
-
 }
 
 void Character::update(float t)

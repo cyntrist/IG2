@@ -3,9 +3,9 @@
 #include "IG2Object.h"
 
 
-class Block : public IG2Object {
+class Block : public IG2Object
+{
 public:
-
 	enum TYPE { NONE, WALL, PEARL };
 
 	std::vector<SceneNode*> pSys;
@@ -17,13 +17,17 @@ private:
 
 	bool p = false;
 	bool isDead_ = false;
-	TYPE t = TYPE::NONE;
+	TYPE t = NONE;
 
 public:
+	Block()
+	{
+	};
 
-	Block() {};
 	Block(const Vector3& initPos, SceneNode* node, SceneManager* sceneMng, std::string name)
-		: IG2Object(initPos, node, sceneMng, name) {}
+		: IG2Object(initPos, node, sceneMng, name)
+	{
+	}
 
 	~Block() override = default;
 
@@ -31,7 +35,7 @@ public:
 	void setPass(bool a) { p = a; }
 	bool isPass() { return p; }
 
-	void setType(TYPE  a) { t = a; }
+	void setType(TYPE a) { t = a; }
 	TYPE Type() { return t; }
 
 
@@ -45,5 +49,4 @@ public:
 	void startEmittingAllParticleSys(bool a);
 
 	Node* getNode() { return mNode; };
-
 };

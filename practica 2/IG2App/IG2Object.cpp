@@ -75,7 +75,7 @@ void IG2Object::setScale(Vector3 vScale)
 
 void IG2Object::setVisible(bool visible)
 {
-	this->visible = visible; 
+	this->visible = visible;
 	mNode->setVisible(visible);
 }
 

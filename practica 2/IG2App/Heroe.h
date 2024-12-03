@@ -41,7 +41,6 @@ private:
 	Light* light;
 	SceneNode* lightNode;
 
-
 public:
 	// constructora basica, genera el objeto en el origen
 	Heroe() : IG2Object()
@@ -49,7 +48,6 @@ public:
 		vidas = 3;
 		puntos = 0;
 		immune = false;
-
 	};
 
 	// constructora
@@ -59,7 +57,6 @@ public:
 		vidas = 3;
 		puntos = 0;
 		immune = false;
-
 	}
 
 	Heroe(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, String mesh, int vidas_, int puntos_,

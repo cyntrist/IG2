@@ -20,17 +20,17 @@ Adaptado de OgreApplicationContext.h en OGREbites\include
 #include <OgreFrameListener.h>
 #include <OgreSGTechniqueResolverListener.h>
 #include <OgreInput.h>
-#include <OgreOverlaySystem.h> 
-#include <SDL.h>  
+#include <OgreOverlaySystem.h>
+#include <SDL.h>
 
 namespace OgreBites
 {
-	typedef SDL_Window NativeWindowType;
+	using NativeWindowType = SDL_Window;
 
 	/**
 	link between a renderwindow and a platform specific window
 	*/
-	struct NativeWindowPair 
+	struct NativeWindowPair
 	{
 		Ogre::RenderWindow* render = nullptr;
 		NativeWindowType* native = nullptr;
@@ -45,16 +45,16 @@ namespace OgreBites
 	public:
 		explicit IG2ApplicationContext(const Ogre::String& appName = OGRE_VERSION_NAME);
 
-		virtual ~IG2ApplicationContext();
+		~IG2ApplicationContext() override;
 
 		/**
 		get the main RenderWindow owns the context on OpenGL
 		*/
 		Ogre::RenderWindow* getRenderWindow() const { return mWindow.render; }
 
-		Ogre::Root* getRoot() const { return mRoot;	}
+		Ogre::Root* getRoot() const { return mRoot; }
 
-		Ogre::OverlaySystem* getOverlaySystem() const {	return mOverlaySystem; }
+		Ogre::OverlaySystem* getOverlaySystem() const { return mOverlaySystem; }
 
 		/**
 		This function initializes the render system and resources.
@@ -67,14 +67,32 @@ namespace OgreBites
 		void closeApp();
 
 		// callback interface copied from various listeners to be used by ApplicationContext
-		virtual bool frameStarted(const Ogre::FrameEvent& evt) { pollEvents(); return true;	}
-		virtual bool frameRenderingQueued(const Ogre::FrameEvent& evt);
-		virtual bool frameEnded(const Ogre::FrameEvent& evt) { return true; }
-		virtual void windowMoved(Ogre::RenderWindow* rw) {}
-		virtual void windowResized(Ogre::RenderWindow* rw) {}
+		bool frameStarted(const Ogre::FrameEvent& evt) override
+		{
+			pollEvents();
+			return true;
+		}
+
+		bool frameRenderingQueued(const Ogre::FrameEvent& evt) override;
+		bool frameEnded(const Ogre::FrameEvent& evt) override { return true; }
+
+		virtual void windowMoved(Ogre::RenderWindow* rw)
+		{
+		}
+
+		virtual void windowResized(Ogre::RenderWindow* rw)
+		{
+		}
+
 		virtual bool windowClosing(Ogre::RenderWindow* rw) { return true; }
-		virtual void windowClosed(Ogre::RenderWindow* rw) {}
-		virtual void windowFocusChange(Ogre::RenderWindow* rw) {}
+
+		virtual void windowClosed(Ogre::RenderWindow* rw)
+		{
+		}
+
+		virtual void windowFocusChange(Ogre::RenderWindow* rw)
+		{
+		}
 
 		/**
 		inspect the event and call one of the corresponding functions on the registered InputListener
@@ -113,7 +131,7 @@ namespace OgreBites
 		/**
 		When input is grabbed the mouse is confined to the window.
 		*/
-		void setWindowGrab(bool grab);  
+		void setWindowGrab(bool grab);
 
 		/**
 		Finds context-wide resource groups. I load paths from a config file here,
@@ -157,25 +175,24 @@ namespace OgreBites
 		virtual NativeWindowPair createWindow(const Ogre::String& name);
 
 	protected:
-
-		Ogre::Root* mRoot;        // OGRE root
+		Ogre::Root* mRoot; // OGRE root
 		NativeWindowPair mWindow; // the window
 
 		Ogre::FileSystemLayer* mFSLayer; // File system abstraction layer
-		Ogre::OverlaySystem* mOverlaySystem;  // Overlay system
-		
+		Ogre::OverlaySystem* mOverlaySystem; // Overlay system
+
 		std::set<InputListener*> mInputListeners;
 
 		bool mFirstRun;
 		Ogre::String mAppName;
-		Ogre::String mSolutionPath;    // IG2: variable para hacer las rutas relativas al directorio de la solución
-		
-		Ogre::String mRTShaderLibPath;
-		Ogre::RTShader::ShaderGenerator * mShaderGenerator; // The Shader generator instance.
-		SGTechniqueResolverListener * mMaterialMgrListener; // Shader generator material manager listener.
+		Ogre::String mSolutionPath; // IG2: variable para hacer las rutas relativas al directorio de la solución
 
+		Ogre::String mRTShaderLibPath;
+		Ogre::RTShader::ShaderGenerator* mShaderGenerator; // The Shader generator instance.
+		SGTechniqueResolverListener* mMaterialMgrListener; // Shader generator material manager listener.
 	};
 }
+
 /** @} */
 /** @} */
 

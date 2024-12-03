@@ -6,8 +6,8 @@ HeroIntro::HeroIntro(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, L
 	entity = sceneMng->createEntity("Sinbad.mesh");
 	mNode->attachObject(entity);
 	this->setPosition(initialPosition);
-	swrdR = sceneMng->createEntity("Sword.mesh");;
-	swrdL = sceneMng->createEntity("Sword.mesh");;
+	swrdR = sceneMng->createEntity("Sword.mesh");
+	swrdL = sceneMng->createEntity("Sword.mesh");
 
 	entity->attachObjectToBone("Hand.R", swrdR);
 	entity->attachObjectToBone("Hand.L", swrdL);
@@ -85,10 +85,10 @@ void HeroIntro::generateTrack(SceneManager* sMng)
 	Real durStep = duration / 4.0;
 
 	// Create the animation and track
-	Ogre::Animation* anim = sMng->createAnimation("sinbadWalking", duration);
-	anim->setInterpolationMode(Ogre::Animation::IM_LINEAR);
+	Animation* anim = sMng->createAnimation("sinbadWalking", duration);
+	anim->setInterpolationMode(Animation::IM_LINEAR);
 	//anim->setDefaultRotationInterpolationMode();
-	Ogre::NodeAnimationTrack* track = anim->createNodeTrack(0);
+	NodeAnimationTrack* track = anim->createNodeTrack(0);
 	track->setAssociatedNode(mNode);
 	TransformKeyFrame* kf;
 
@@ -108,7 +108,7 @@ void HeroIntro::generateTrack(SceneManager* sMng)
 
 	// Keyframe 1: Go to the right
 	kf = track->createNodeKeyFrame(4);
-	keyframePos += Ogre::Vector3::UNIT_X * movementLength;
+	keyframePos += Vector3::UNIT_X * movementLength;
 	keyframeRot = Quaternion(Degree(90), Vector3(0, 1, 0));
 	kf->setScale(keyframeScale);
 	kf->setRotation(keyframeRot);
@@ -130,7 +130,7 @@ void HeroIntro::generateTrack(SceneManager* sMng)
 
 	// Keyframe 2: Go to the initial position
 	kf = track->createNodeKeyFrame(8);
-	keyframePos += Ogre::Vector3::NEGATIVE_UNIT_X * movementLength;
+	keyframePos += Vector3::NEGATIVE_UNIT_X * movementLength;
 	//keyframeRot = Quaternion(Degree(-90), Vector3(0, 1, 0));
 	kf->setScale(keyframeScale);
 	kf->setRotation(keyframeRot);
@@ -139,7 +139,7 @@ void HeroIntro::generateTrack(SceneManager* sMng)
 
 	// Keyframe 3: Go to the left
 	kf = track->createNodeKeyFrame(12);
-	keyframePos += Ogre::Vector3::NEGATIVE_UNIT_X * movementLength;
+	keyframePos += Vector3::NEGATIVE_UNIT_X * movementLength;
 	kf->setRotation(keyframeRot);
 	kf->setScale(keyframeScale);
 	kf->setTranslate(keyframePos);
@@ -159,7 +159,7 @@ void HeroIntro::generateTrack(SceneManager* sMng)
 
 	// Keyframe 4: Go to the right (initital position)
 	kf = track->createNodeKeyFrame(15.5);
-	keyframePos += Ogre::Vector3::UNIT_X * movementLength;
+	keyframePos += Vector3::UNIT_X * movementLength;
 	kf->setScale(keyframeScale);
 	kf->setRotation(keyframeRot);
 	kf->setTranslate(keyframePos);
@@ -172,7 +172,6 @@ void HeroIntro::generateTrack(SceneManager* sMng)
 	kf->setTranslate(keyframePos);
 
 	movement = sMng->createAnimationState("sinbadWalking");
-
 }
 
 void HeroIntro::setAnimState(int id)

@@ -9,12 +9,11 @@ class Pearl : public Block
 	{
 	};
 
-
 public:
 	Pearl(const Vector3& initPos, SceneNode* node, SceneManager* sceneMng, std::string name)
 		: Block(initPos, node->createChildSceneNode(name), sceneMng, PEARL_MESH)
 	{
 	}
-	~Pearl() override = default;
 
+	~Pearl() override = default;
 };

@@ -5,7 +5,6 @@
 
 class Wall : public Block
 {
-
 public:
 	void init() override
 	{
@@ -14,4 +13,3 @@ public:
 	Wall(const Vector3& initPos, SceneNode* node, SceneManager* sceneMng, std::string name, std::string = "wall");
 	~Wall() override = default;
 };
-

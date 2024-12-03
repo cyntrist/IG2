@@ -1,8 +1,8 @@
 #pragma once
 
 constexpr float WALL_LENGTH = 20;
-constexpr float OGREHEAD_SIZE= 100;
-constexpr float HERO_SIZE= 100;
+constexpr float OGREHEAD_SIZE = 100;
+constexpr float HERO_SIZE = 100;
 constexpr double PEARL_SIZE = 0.7;
 const std::string WALL_NAME = "wall";
 const std::string PEARL_NAME = "pearl";
@@ -18,5 +18,3 @@ constexpr int H_YSET = 0;
 
 constexpr int INI_LIVES = 3;
 constexpr int INI_STAGE = 0;
-
-

@@ -16,6 +16,7 @@ class Bat : public Villain
 	Node* brazoIzq = nullptr;
 	Node* brazoDer = nullptr;
 	int sentido = 1;
+
 public:
 	Bat(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, Labyrinth* lab)
 		: Villain(initPos, node, sceneMng, "", lab)
@@ -94,25 +95,25 @@ public:
 		b2seg1->setPosition(-10, 5, 0);
 		b1seg1->setScale(1, 3, 1);
 		b2seg1->setScale(1, 3, 1);
-		b1seg1->rotate(Quaternion(Radian(-1), Vector3(0,0,1)));
-		b2seg1->rotate(Quaternion(Radian(1), Vector3(0,0,1)));
+		b1seg1->rotate(Quaternion(Radian(-1), Vector3(0, 0, 1)));
+		b2seg1->rotate(Quaternion(Radian(1), Vector3(0, 0, 1)));
 
 
 		b1seg2->setPosition(10, 3, 0);
-		b1seg2->rotate(Quaternion(Radian(1.5), Vector3(0,0,1)));
+		b1seg2->rotate(Quaternion(Radian(1.5), Vector3(0, 0, 1)));
 		//b2seg2->rotate(Quaternion(Radian(-1.5), Vector3(0,0,1)));*/
-		b1seg3->rotate(Quaternion(Radian(-0.5), Vector3(0,0,1)));
-		b1seg3->setScale(1,0.5,1);
-		b1seg3->rotate(Quaternion(Radian(1.2f), Vector3(0,1,0)));
-		b1seg3->setPosition(3,-3,2);
+		b1seg3->rotate(Quaternion(Radian(-0.5), Vector3(0, 0, 1)));
+		b1seg3->setScale(1, 0.5, 1);
+		b1seg3->rotate(Quaternion(Radian(1.2f), Vector3(0, 1, 0)));
+		b1seg3->setPosition(3, -3, 2);
 
 		b2seg2->setPosition(-10, 3, 0);
-		b2seg2->rotate(Quaternion(Radian(-1.5), Vector3(0,0,1)));
+		b2seg2->rotate(Quaternion(Radian(-1.5), Vector3(0, 0, 1)));
 		//b2seg2->rotate(Quaternion(Radian(-1.5), Vector3(0,0,1)));*/
-		b2seg3->rotate(Quaternion(Radian(0.5), Vector3(0,0,1)));
-		b2seg3->setScale(-1,0.5,1);
-		b2seg3->rotate(Quaternion(Radian(-1.2f), Vector3(0,1,0)));
-		b2seg3->setPosition(-3,-3,2);
+		b2seg3->rotate(Quaternion(Radian(0.5), Vector3(0, 0, 1)));
+		b2seg3->setScale(-1, 0.5, 1);
+		b2seg3->rotate(Quaternion(Radian(-1.2f), Vector3(0, 1, 0)));
+		b2seg3->setPosition(-3, -3, 2);
 	}
 
 	~Bat() override
@@ -121,7 +122,7 @@ public:
 		timer = nullptr;
 	}
 
-	void frameRendered(const Ogre::FrameEvent& evt) override
+	void frameRendered(const FrameEvent& evt) override
 	{
 		updateAnim();
 		Villain::frameRendered(evt);

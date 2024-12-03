@@ -12,13 +12,11 @@ Intro::~Intro()
 
 void Intro::setUpScene(SceneNode* cNode)
 {
-	// posicion de la camara
 	cNode->setPosition(0, 90, 600);
 	cNode->rotate(Quaternion(Degree(90), Vector3(0, 1, 0)));
 	cNode->rotate(Quaternion(Degree(-90), Vector3(1, 0, 0)));
 	cNode->rotate(Quaternion(Degree(90), Vector3(0, 0, 1)));
 
-	// Una luz para guiarnos en la oscuridad,
 	Light* luz = sMang->createLight("LuzIntro");
 	luz->setType(Light::LT_DIRECTIONAL);
 	luz->setDiffuseColour(0.75, 0.75, 0.75);
@@ -26,27 +24,18 @@ void Intro::setUpScene(SceneNode* cNode)
 	mLightNode->attachObject(luz);
 	mLightNode->setDirection(Vector3(0.0, -1.0, 0.0)); // Apunta hacia abajo.
 
-	// Un suelo que pisar,
 	createGround();
 
-	// a chelo para completar nuestra vida
 	createCorrosionBall();
 
-	// Unos fuegos para calentarnos,
 	createFireParticlesSystems();
 
-	// Un hero para salvarnos,
 	hero = new HeroIntro({0, 55, 0}, introNode, sMang);
 	hero->setScale({10, 10, 10});
 	hero->setAnimState(0);
 
-	// Una cabeza para pensar pensamientos,
 	head = new OgreHeadIntro({100, 10, 0}, introNode, sMang);
 	head->setScale({2, 2, 2});
-
-
-	// Y una animacion para alegrarnos el dia.
-	hero->setAnimState(0);
 
 
 	timerHero.reset();
@@ -76,10 +65,12 @@ void Intro::update(const FrameEvent& evt)
 		timerHero.reset(); // reinicio de la animacion
 		hero->setAnimState(0);
 	}
-	else if (timerHero.getMilliseconds() / 1000 >= 8) {
+	else if (timerHero.getMilliseconds() / 1000 >= 8)
+	{
 		hero->setAnimState(2); // animacion de sacar las espadas
 	}
-	else if (timerHero.getMilliseconds() / 1000 >= 4) {
+	else if (timerHero.getMilliseconds() / 1000 >= 4)
+	{
 		hero->setAnimState(1); // animacion de moverse y huir
 	}
 }
@@ -88,7 +79,7 @@ void Intro::createGround()
 {
 	Plane ground(Vector3::UNIT_Y, 0); // Plano con orientacion.
 
-	Ogre::MeshManager::getSingleton().createPlane(
+	MeshManager::getSingleton().createPlane(
 		"groundIntro", // Nombre de la nueva mesh.
 		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, // Grupo.
 		ground, // Plano base.
@@ -103,13 +94,13 @@ void Intro::createGround()
 	nGround = introNode->createChildSceneNode("groundNodeIntro");
 	nGround->attachObject(eGround);
 
-	nGround->setPosition({ 0, 0, 0 });
+	nGround->setPosition({0, 0, 0});
 	eGround->setMaterialName("plane"); // Material del suelo.
 }
 
 void Intro::createFireParticlesSystems()
 {
-	Vector3 pos{ 55, 25, -300 }; // Posicion del primer fuego.
+	Vector3 pos{55, 25, -300}; // Posicion del primer fuego.
 	int n = 10;
 	int aux = n / 2;
 	int diff = 50;

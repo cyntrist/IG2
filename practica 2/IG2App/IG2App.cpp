@@ -116,8 +116,10 @@ void IG2App::setupScene()
 	mCamNode = mSM->getRootSceneNode()->createChildSceneNode("nCam");
 	mCamNode->attachObject(cam);
 
-	mCamNode->setPosition(0, 0, 1000);
+	mCamNode->setPosition(0, 100, 10);
+	Quaternion rotation(Degree(180), Vector3::UNIT_Z);
 	mCamNode->lookAt(Vector3(0, 0, 0), Node::TS_WORLD);
+	cam->rotate(rotation);
 
 	// and tell it to render into the main window
 	Viewport* vp = getRenderWindow()->addViewport(cam);
@@ -214,7 +216,7 @@ void IG2App::setUpLabyrinth()
 void IG2App::hideIntro()
 {
 	mIntroNode->setVisible(false);
-	setUpLabyrinth();	
+	setUpLabyrinth();
 }
 
 void IG2App::deleteLabyrinth()
