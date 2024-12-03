@@ -51,6 +51,15 @@ bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt)
 		game->addPoints(10);
 	}
 
+	if (evt.keysym.sym == SDLK_s)
+	{
+		if (insideIntro)
+		{
+			hideIntro();
+			setUpLabyrinth();
+		}
+	}
+
 	// caca culo pedo pis
 
 	return true;
@@ -104,10 +113,20 @@ void IG2App::setup(void)
 
 void IG2App::setupScene()
 {
+	/// GUI ejemplo:
+	mTrayMgr = new OgreBites::TrayManager("TrayGUISystem", mWindow.render);
+	mTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
+	addInputListener(mTrayMgr);
+
+	levelLabel = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT,
+	                                   "InfoCap", "Stage: ", 100);
+	levelInfo = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMRIGHT,
+	                                    "LevelInfo", "GameInfo", 250, 100);
+	///
 	//------------------------------------------------------------------------
 	// Creating the camera
 
-	Camera* cam = mSM->createCamera("Cam");
+	cam = mSM->createCamera("Cam");
 	cam->setNearClipDistance(1);
 	cam->setFarClipDistance(10000);
 	cam->setAutoAspectRatio(true);
@@ -169,16 +188,10 @@ void IG2App::setupScene()
 
 void IG2App::setUpLabyrinth()
 {
-	/// GUI ejemplo:
-	mTrayMgr = new OgreBites::TrayManager("TrayGUISystem", mWindow.render);
-	mTrayMgr->showFrameStats(OgreBites::TL_BOTTOMLEFT);
-	addInputListener(mTrayMgr);
-
-	levelLabel = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT,
-	                                   "InfoCap", "Stage: ", 100);
-	levelInfo = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMRIGHT,
-	                                    "LevelInfo", "GameInfo", 250, 100);
-	///
+	mCamNode->setPosition(0, 0, 1000);
+	mCamNode->lookAt(Vector3(0, 0, 0), Node::TS_WORLD);
+	Quaternion rotation(Degree(-180), Vector3::UNIT_Z);
+	cam->rotate(rotation);
 
 	mLabNode = mSM->getRootSceneNode()->createChildSceneNode("nLabyrinth");
 	string p = "../media/labyrinths/stage" + to_string(currentStage);

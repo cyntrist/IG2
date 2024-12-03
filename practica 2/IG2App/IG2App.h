@@ -75,6 +75,7 @@ protected:
 	SceneNode* mIntroNode = nullptr;
 	Intro* mIntro = nullptr;
 	bool insideIntro = true;
+	Camera* cam = nullptr;
 
 	int currentStage = 1;
 };

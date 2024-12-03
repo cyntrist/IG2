@@ -84,7 +84,7 @@ void Intro::createGround()
 		"groundIntro", // Nombre de la nueva mesh.
 		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, // Grupo.
 		ground, // Plano base.
-		1000, 1000, // Tamanyo.
+		2000, 2000, // Tamanyo.
 		50, 50, // Segmentos.
 		true, 1, // Normales y numTexCoordSet.
 		5, 5, // repeticiones de la textura.
