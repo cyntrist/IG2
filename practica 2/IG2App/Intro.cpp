@@ -34,7 +34,7 @@ void Intro::setUpScene(SceneNode* cNode)
 	hero->setScale({10, 10, 10});
 	hero->setAnimState(0);
 
-	head = new OgreHeadIntro({100, 10, 0}, introNode, sMang);
+	head = new OgreHeadIntro({200, 10, 0}, introNode, sMang);
 	head->setScale({2, 2, 2});
 
 

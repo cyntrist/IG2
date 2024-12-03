@@ -36,12 +36,10 @@ void OgreHeadIntro::createTrail(SceneManager* sMng)
 void OgreHeadIntro::generateTrack(SceneManager* sMng)
 {
 	// Variables
-	int movementLength = 350;
 	Real duration = 20;
-	Vector3 keyframePos(-300, 55, 0);
+	Vector3 keyframePos(-400, 55, 0);
 	Vector3 keyframeScale(2, 2, 2);
 	Quaternion keyframeRot(0, 0, 0, 0);
-	Real durStep = duration / 4.0;
 
 	// Create the animation and track
 	Animation* anim = sMng->createAnimation("ogreHeadWalking", duration);
