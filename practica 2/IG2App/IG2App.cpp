@@ -54,10 +54,7 @@ bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt)
 	if (evt.keysym.sym == SDLK_s)
 	{
 		if (insideIntro)
-		{
 			hideIntro();
-			setUpLabyrinth();
-		}
 	}
 
 	// caca culo pedo pis
