@@ -6,10 +6,6 @@ Intro::Intro(SceneManager* SM, SceneNode* sNode, SceneNode* cNode)
 	setUpScene(cNode);
 }
 
-Intro::~Intro()
-{
-}
-
 void Intro::setUpScene(SceneNode* cNode)
 {
 	cNode->setPosition(0, 90, 600);
@@ -25,9 +21,7 @@ void Intro::setUpScene(SceneNode* cNode)
 	mLightNode->setDirection(Vector3(0.0, -1.0, 0.0)); // Apunta hacia abajo.
 
 	createGround();
-
 	createCorrosionBall();
-
 	createFireParticlesSystems();
 
 	hero = new HeroIntro({0, 55, 0}, introNode, sMang);
@@ -36,7 +30,6 @@ void Intro::setUpScene(SceneNode* cNode)
 
 	head = new OgreHeadIntro({200, 10, 0}, introNode, sMang);
 	head->setScale({2, 2, 2});
-
 
 	timerHero.reset();
 }
@@ -63,40 +56,34 @@ void Intro::update(const FrameEvent& evt)
 
 	if (timerHero.getMilliseconds() / 1000 >= 20)
 	{
-		timerHero.reset(); // reinicio de la animacion
+		timerHero.reset(); 
 		hero->setAnimState(0);
 	}
-	else if (timerHero.getMilliseconds() / 1000 >= 8)
-	{
-		hero->setAnimState(2); // animacion de sacar las espadas
-	}
 	else if (timerHero.getMilliseconds() / 1000 >= 4)
-	{
-		hero->setAnimState(1); // animacion de moverse y huir
-	}
+		hero->setAnimState(1);
+	else if (timerHero.getMilliseconds() / 1000 >= 8)
+		hero->setAnimState(2); 
 }
 
 void Intro::createGround()
 {
-	Plane ground(Vector3::UNIT_Y, 0); // Plano con orientacion.
+	Plane plane(Vector3::UNIT_Y, 0); 
 
 	MeshManager::getSingleton().createPlane(
-		"groundIntro", // Nombre de la nueva mesh.
-		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, // Grupo.
-		ground, // Plano base.
-		2000, 2000, // Tamanyo.
-		50, 50, // Segmentos.
-		true, 1, // Normales y numTexCoordSet.
-		5, 5, // repeticiones de la textura.
-		Vector3::UNIT_Z); // Orientacion.
+		"groundIntro", 
+		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, 
+		plane, 
+		2000, 2000, 
+		50, 50, 
+		true, 1, 
+		5, 5, 
+		Vector3::UNIT_Z);
 
-
-	Entity* eGround = sMang->createEntity("sueloIntro", "groundIntro");
-	nGround = introNode->createChildSceneNode("groundNodeIntro");
-	nGround->attachObject(eGround);
-
-	nGround->setPosition({0, 0, 0});
-	eGround->setMaterialName("water_material"); // Material del suelo.
+	Entity* ePlane = sMang->createEntity("sueloIntro", "groundIntro");
+	nPlane = introNode->createChildSceneNode("planeIntro");
+	nPlane->attachObject(ePlane);
+	nPlane->setPosition({0, 0, 0});
+	ePlane->setMaterialName("water_material"); // Material del suelo.
 }
 
 void Intro::createFireParticlesSystems()

@@ -11,7 +11,6 @@ class OgreHeadIntro : public Character
 
 public:
 	OgreHeadIntro(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, Labyrinth* lab = nullptr);
-	~OgreHeadIntro() override;
 	void update(float t) override;
 	void createTrail(SceneManager* sMng);
 };

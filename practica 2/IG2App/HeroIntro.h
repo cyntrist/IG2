@@ -9,20 +9,17 @@ class HeroIntro : public Character
 {
 	AnimationState* dance = nullptr;
 	AnimationState* walk = nullptr;
-	AnimationState* topwalk = nullptr;
+	AnimationState* walkTop = nullptr;
 	AnimationState* sword = nullptr;
 	AnimationState* movement = nullptr;
-
-	Entity* swrdR = nullptr;
-	Entity* swrdL = nullptr;
-
-	int idAnim = 0;
+	Entity* swordR = nullptr;
+	Entity* swordL = nullptr;
+	int animID = 0;
 
 public:
 	HeroIntro(Vector3 initPos, SceneNode* node, SceneManager* sceneMng, Labyrinth* lab = nullptr);
-	~HeroIntro() override;
 	void update(float t) override;
-	AnimationState* getAnim(std::string anim) const { return entity->getAnimationState(anim); }
 	void generateTrack(SceneManager* sMng);
 	void setAnimState(int id);
+	AnimationState* getAnim(const std::string& anim) const { return entity->getAnimationState(anim); }
 };

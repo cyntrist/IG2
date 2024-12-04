@@ -16,13 +16,12 @@ OgreHeadIntro::OgreHeadIntro(Vector3 initPos, SceneNode* node, SceneManager* sce
 	movement->setEnabled(true);
 }
 
-OgreHeadIntro::~OgreHeadIntro()
-{
-}
+
 
 void OgreHeadIntro::update(float t)
 {
-	if (movement != nullptr) movement->addTime(t);
+	if (movement != nullptr) 
+		movement->addTime(t);
 }
 
 void OgreHeadIntro::createTrail(SceneManager* sMng)
@@ -37,59 +36,56 @@ void OgreHeadIntro::generateTrack(SceneManager* sMng)
 {
 	// Variables
 	Real duration = 20;
-	Vector3 keyframePos(-400, 55, 0);
-	Vector3 keyframeScale(2, 2, 2);
-	Quaternion keyframeRot(0, 0, 0, 0);
+	Quaternion keyRot(0, 0, 0, 0);
+	Vector3 keyPos(-400, 55, 0);
+	Vector3 keyScale(2, 2, 2);
 
 	// Create the animation and track
 	Animation* anim = sMng->createAnimation("ogreHeadWalking", duration);
 	anim->setInterpolationMode(Animation::IM_LINEAR);
-	//anim->setDefaultRotationInterpolationMode();
 	NodeAnimationTrack* track = anim->createNodeTrack(0);
 	track->setAssociatedNode(mNode);
-	TransformKeyFrame* kf;
-
-
+	
 	// Keyframe 0 (Init state)
-	kf = track->createNodeKeyFrame(0);
-	keyframeRot = Quaternion(Degree(90), Vector3(0, 1, 0));
-	kf->setScale(keyframeScale);
-	kf->setRotation(keyframeRot);
-	kf->setTranslate(keyframePos);
+	TransformKeyFrame* kf = track->createNodeKeyFrame(0);
+	keyRot = Quaternion(Degree(90), Vector3(0, 1, 0));
+	kf->setScale(keyScale);
+	kf->setRotation(keyRot);
+	kf->setTranslate(keyPos);
 
 	// Keyframe 1 (follow ogre)
 	kf = track->createNodeKeyFrame(7.75);
-	keyframePos = Vector3(120, 55, 0);
-	kf->setScale(keyframeScale);
-	kf->setRotation(keyframeRot);
-	kf->setTranslate(keyframePos);
+	keyPos = Vector3(120, 55, 0);
+	kf->setScale(keyScale);
+	kf->setRotation(keyRot);
+	kf->setTranslate(keyPos);
 
 	// Keyframe 2 (Turn head)
 	kf = track->createNodeKeyFrame(8);
-	keyframeRot = Quaternion(Degree(-90), Vector3(0, 1, 0));
-	kf->setScale(keyframeScale);
-	kf->setRotation(keyframeRot);
-	kf->setTranslate(keyframePos);
+	keyRot = Quaternion(Degree(-90), Vector3(0, 1, 0));
+	kf->setScale(keyScale);
+	kf->setRotation(keyRot);
+	kf->setTranslate(keyPos);
 
 	// Keyframe 3 (head escapes)
 	kf = track->createNodeKeyFrame(16);
-	keyframePos = Vector3(-300, 55, 0);
-	kf->setScale(keyframeScale);
-	kf->setRotation(keyframeRot);
-	kf->setTranslate(keyframePos);
+	keyPos = Vector3(-300, 55, 0);
+	kf->setScale(keyScale);
+	kf->setRotation(keyRot);
+	kf->setTranslate(keyPos);
 
 	// Keyframe 4 (Turn head)
 	kf = track->createNodeKeyFrame(16.5);
-	keyframeRot = Quaternion(Degree(90), Vector3(0, 1, 0));
-	kf->setScale(keyframeScale);
-	kf->setRotation(keyframeRot);
-	kf->setTranslate(keyframePos);
+	keyRot = Quaternion(Degree(90), Vector3(0, 1, 0));
+	kf->setScale(keyScale);
+	kf->setRotation(keyRot);
+	kf->setTranslate(keyPos);
 
 	// Keyframe 3 (head escapes)
 	kf = track->createNodeKeyFrame(20);
-	keyframePos = Vector3(-50, 55, 0);
-	keyframeScale = Vector3(0, 0, 0);
-	kf->setScale(keyframeScale);
-	kf->setRotation(keyframeRot);
-	kf->setTranslate(keyframePos);
+	keyPos = Vector3(-50, 55, 0);
+	keyScale = Vector3(0, 0, 0);
+	kf->setScale(keyScale);
+	kf->setRotation(keyRot);
+	kf->setTranslate(keyPos);
 }

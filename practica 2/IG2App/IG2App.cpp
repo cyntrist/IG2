@@ -57,8 +57,6 @@ bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt)
 			hideIntro();
 	}
 
-	// caca culo pedo pis
-
 	return true;
 }
 
@@ -78,6 +76,9 @@ void IG2App::shutdown()
 
 	delete mHeroe;
 	mHeroe = nullptr;
+
+	delete mIntro;
+	mIntro = nullptr;
 
 	delete game;
 	game = nullptr;
