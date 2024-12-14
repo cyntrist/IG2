@@ -81,7 +81,10 @@ void IG2App::shutdown()
 	mIntro = nullptr;
 
 	delete game;
-	game = nullptr;
+	game = nullptr;	
+	/*
+	delete mClock;
+	mClock = nullptr;*/
 
 
 	// do not forget to call the base 
@@ -173,15 +176,19 @@ void IG2App::setupScene()
 
 
 	// -------------- FONDO ---------------------------
-	Plane fondoSPACE;
+	/*Plane fondoSPACE;
 	fondoSPACE.d = 1000;
 	fondoSPACE.normal = Vector3::NEGATIVE_UNIT_Y;
-	mSM->setSkyPlane(true, fondoSPACE, "zoomSky", 1500, 50, true, 10, 50, 50);
+	mSM->setSkyPlane(true, fondoSPACE, "zoomSky", 1500, 50, true, 10, 50, 50);*/
 
 
-	setUpIntro();
-	if (!insideIntro)
-		setUpLabyrinth();
+	//setUpIntro();
+	//if (!insideIntro)
+	//	setUpLabyrinth();
+
+	clock();
+
+	avion();
 }
 
 void IG2App::setUpLabyrinth()
@@ -249,4 +256,134 @@ void IG2App::setUpIntro()
 void IG2App::endGame()
 {
 	getRoot()->queueEndRendering();
+}
+
+void IG2App::clock()
+{
+	// crea el nodo del reloj
+	mGeneral = mSM->getRootSceneNode()->createChildSceneNode("general");
+	mClock = mGeneral->createChildSceneNode("nClock");
+
+	//// crea las bolitas con sus nodos y las mete en clock
+	//Ogre::SceneNode* mHourNode;
+
+	int degrees = 360 / 12;
+	int current_degrees = 0;
+	int radius = 100;
+
+	// formula de la circumferencia
+	double inc = 2 * 3.1415 / 12;
+	
+	for (int i = 1; i <= 12; i++) {
+		cout << "i " << degrees * i << endl;
+
+		Entity* time_part = mSM->createEntity("sphere.mesh");
+		string name = "nTime" + to_string(i);
+		SceneNode* n_time_part = mClock->createChildSceneNode(name);
+
+		n_time_part->setPosition(cos(inc * i) * radius, sin(inc * i) * radius, -200);
+
+		//// crea la esfera
+		n_time_part->attachObject(time_part);
+
+		// posiciona la esfera
+
+		// modifica la escala de la esfera
+		if(i%2 == 0)
+			n_time_part->setScale(0.15, 0.15 ,0.15);
+		else
+			n_time_part->setScale(0.1, 0.1, 0.1);
+
+		//// la mete en el clock
+		//mClock->addChild(n_time_part);
+
+		current_degrees += degrees;
+	}
+
+	// manillas
+
+
+	SceneNode* manillaS = mGeneral->createChildSceneNode("MANILLAS");
+
+	manillaS->setPosition(0,0,-200);
+
+
+	SceneNode* manillaGrot = manillaS->createChildSceneNode("nManillaGrot");
+	manillaGrot->setPosition(0, 0, 0);
+	SceneNode* manillaG = manillaGrot->createChildSceneNode("nManillaG");
+	Entity* mG = mSM->createEntity("cube.mesh");
+	manillaG->attachObject(mG);
+	manillaG->setScale(0.6, 0.08, 0.1);
+	manillaG->setPosition(25, 0, 0);
+	manillaGrot->roll(Degree(180));
+
+	SceneNode* manillaMrot = manillaS->createChildSceneNode("nManillaMrot");
+	manillaMrot->setPosition(0, 0, 0);
+	SceneNode* manillaM = manillaMrot->createChildSceneNode("nManillaM");
+	Entity* mM = mSM->createEntity("cube.mesh");
+	manillaM->attachObject(mM);
+	manillaM->setScale(0.6, 0.05, 0.1);
+	manillaM->setPosition(25, 0, 0);
+	manillaMrot->roll(Degree(0));
+
+	SceneNode* manillaProt = manillaS->createChildSceneNode("nManillaProt");
+	manillaProt->setPosition(0,0,0);
+	SceneNode* manillaP = manillaProt->createChildSceneNode("nManillaP");
+	Entity* mP = mSM->createEntity("cube.mesh");
+	manillaP->attachObject(mP);
+	manillaP->setScale(0.6, 0.01, 0.1);
+	manillaP->setPosition(25,0,0);
+	manillaProt->roll(Degree(-90));
+
+}
+
+void IG2App::avion()
+{
+	mAvion = mSM->getRootSceneNode()->createChildSceneNode("nAvion");
+
+	SceneNode* nbody = mAvion->createChildSceneNode("avion_body");
+
+	// body
+	SceneNode* nbarrel = nbody->createChildSceneNode("avion_body_barrel");
+	Entity* barrel = mSM->createEntity("sphere.mesh");
+	nbarrel->attachObject(barrel);
+	nbarrel->setPosition(0,0,0);
+	nbarrel->setScale(1.5,0.3,0.3);
+
+	SceneNode* nAla1 = nbody->createChildSceneNode("avion_body_ala1");
+	Entity* ala1 = mSM->createEntity("cube.mesh");
+	nAla1->attachObject(ala1);
+	nAla1->setPosition(0, 0, 50);
+	nAla1->setScale(1, 0.05, 0.4);
+	nAla1->yaw(Degree(90));
+
+	SceneNode* nAla2 = nbody->createChildSceneNode("avion_body_ala2");
+	Entity* ala2 = mSM->createEntity("cube.mesh");
+	nAla2->attachObject(ala2);
+	nAla2->setPosition(0, 0, -50);
+	nAla2->setScale(1, 0.05, 0.4);
+	nAla2->yaw(Degree(90));
+
+	SceneNode* ntimon = nbody->createChildSceneNode("avion_body_timon");
+	Entity* timon = mSM->createEntity("cube.mesh");
+	ntimon->attachObject(timon);
+	ntimon->setPosition(-120, -20, 0);
+	ntimon->setScale(0.2, 0.4, 0.04);
+	ntimon->roll(Degree(-30));
+
+	SceneNode* nNinja = nbody->createChildSceneNode("avion_body_ninja");
+	Entity* ninja = mSM->createEntity("penguin.mesh");
+	nNinja->attachObject(ninja);
+	nNinja->setPosition(70, -30, 0);
+	nNinja->setScale(0.5, 0.5, 0.5);
+	nNinja->yaw(Degree(-90));
+	nNinja->roll(Degree(0));
+	nNinja->pitch(Degree(180));
+
+
+	// aspas
+
+
+	mAvion->setPosition(0,100,-100);
+
 }

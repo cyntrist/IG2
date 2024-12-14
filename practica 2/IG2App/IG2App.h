@@ -46,6 +46,16 @@ protected:
 	void endGame();
 
 
+	// --------------- ESTUDIANDO
+
+	void clock();
+
+	void avion();
+	SceneNode* mAvion = nullptr;
+	SceneNode* mAspas1 = nullptr;
+	SceneNode* mAspas2 = nullptr;
+
+
 	SceneNode* mSinbadNode = nullptr;
 	SceneNode* mDragonNode = nullptr;
 	SceneNode* mSwordNode = nullptr;
@@ -54,6 +64,10 @@ protected:
 	SceneNode* mBustNode = nullptr;
 	SceneNode* mRomanNode = nullptr;
 	SceneNode* mSnowmanNode = nullptr;
+
+
+	SceneNode* mClock = nullptr;
+	SceneNode* mGeneral = nullptr;
 
 	SceneManager* mSM = nullptr;
 	OgreBites::TrayManager* mTrayMgr = nullptr;
