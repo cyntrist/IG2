@@ -377,7 +377,6 @@ void IG2App::avion()
 	nNinja->setPosition(70, -30, 0);
 	nNinja->setScale(0.5, 0.5, 0.5);
 	nNinja->yaw(Degree(-90));
-	nNinja->roll(Degree(0));
 	nNinja->pitch(Degree(180));
 
 
