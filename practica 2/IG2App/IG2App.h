@@ -20,6 +20,18 @@
 class Labyrinth;
 class Heroe;
 
+
+class Aspa {
+public:
+	Aspa(SceneNode* n, SceneManager* sm, string name);
+};
+
+class Helix {
+public:
+	Helix(SceneNode* n, SceneManager* sm, int j);
+};
+
+
 class IG2App : public OgreBites::IG2ApplicationContext, OgreBites::InputListener
 {
 public:
@@ -54,6 +66,11 @@ protected:
 	SceneNode* mAvion = nullptr;
 	SceneNode* mAspas1 = nullptr;
 	SceneNode* mAspas2 = nullptr;
+
+	void SinbadAnim();
+
+	AnimationState* dance = nullptr;
+	AnimationState* idle = nullptr;
 
 
 	SceneNode* mSinbadNode = nullptr;

@@ -8,6 +8,28 @@
 using namespace Ogre;
 using namespace std;
 
+
+
+Aspa::Aspa(SceneNode* n, SceneManager* sm, string name)
+{
+	Entity* obj = sm->createEntity("cube.mesh");
+	SceneNode* nbase = n->createChildSceneNode(name + "base");
+	nbase->attachObject(obj);
+	nbase->setScale(0.7, 0.01, 0.2);
+	nbase->setPosition(-35, 0, 0);
+	//
+
+	Entity* head = sm->createEntity("ogrehead.mesh");
+	SceneNode* nhead = n->createChildSceneNode(name + "head");
+	nhead->attachObject(head);
+	nhead->yaw(Degree(-90));
+	nhead->roll(Degree(0));
+	nhead->pitch(Degree(90));
+	nhead->setScale(0.2, 0.2, 0.05);
+	nhead->setPosition(-60,-3,0);
+	//
+}
+
 void IG2App::frameRendered(const FrameEvent& evt)
 {
 	//InputListener::frameRendered(evt);
@@ -34,6 +56,14 @@ void IG2App::frameRendered(const FrameEvent& evt)
 	}
 
 	if (mIntro != nullptr) mIntro->update(evt);
+
+
+
+
+	// ------------------ estudiando -------------------------------
+
+	//idle->addTime();
+
 }
 
 bool IG2App::keyPressed(const OgreBites::KeyboardEvent& evt)
@@ -381,8 +411,48 @@ void IG2App::avion()
 
 
 	// aspas
-
+	//SceneNode* helix1 = mAvion->createChildSceneNode();
+	//Helix(helix1, mSM, 10);
+	//helix1->setPosition(0,-100,0);
+	//helix1->roll(Degree(0));
 
 	mAvion->setPosition(0,100,-100);
+
+
+	SinbadAnim();
+}
+
+void IG2App::SinbadAnim()
+{
+	SceneNode* nAnim = mSM->getRootSceneNode()->createChildSceneNode("sinbad_anim_estudiar");
+	Entity* sinbadent = mSM->createEntity("Sinbad.mesh");
+	nAnim->attachObject(sinbadent);
+	nAnim->setPosition(0,0,0);
+	nAnim->roll(Degree(180));
+
+	dance = sinbadent->getAnimationState("Dance");
+	idle = sinbadent->getAnimationState("IdleBase");
+
+	Animation* idleanim = mSM->createAnimation("IdleBase", 6);
+	//idleanim
+}
+
+Helix::Helix(SceneNode* n, SceneManager* sm, int j)
+{
+	float rot = 360 / j;
+	for (int i = 0; i < j; i++) {
+		SceneNode* naspa1 = n->createChildSceneNode();
+		new Aspa(naspa1, sm, "aspa" + to_string(i));
+		naspa1->pitch(Degree(0));
+		naspa1->yaw(Degree(i * rot));
+		naspa1->roll(Degree(0));
+	}
+
+	// pinchito
+	SceneNode* npincho = n->createChildSceneNode();
+	Entity* pincho = sm->createEntity("Barrel.mesh");
+	npincho->attachObject(pincho);
+	npincho->setPosition(0, 0, 0);
+	npincho->setScale(0.5, 0.5, 0.5);
 
 }
