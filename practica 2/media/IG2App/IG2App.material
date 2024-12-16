@@ -270,6 +270,7 @@ source practice_shaderFS.glsl
 	default_params{
 		param_named textCorrosion int 0
 		param_named textChelo int 1
+		param_named textMetal int 2
 	}
 }
 
@@ -280,11 +281,15 @@ material practice_shader{
 			fragment_program_ref practice_shaderFS {}
 
 			texture_unit {
-				texture corrosion.jpg
+				texture checker.png
 				text_adress_mode clamp
 			}
 			texture_unit{
 				texture chelo.jpg
+				text_adress_mode clamp
+			}
+			texture_unit{
+				texture BumpyMetal.jpg
 				text_adress_mode clamp
 			}
 		}
