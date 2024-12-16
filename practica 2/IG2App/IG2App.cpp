@@ -227,7 +227,7 @@ void IG2App::setupScene()
 	ball->attachObject(ball_ent);
 
 	ball->setPosition(0,-100,-50);
-	ball_ent->setMaterialName("corrosion_material");
+	ball_ent->setMaterialName("practice_shader");
 }
 
 void IG2App::setUpLabyrinth()
