@@ -221,6 +221,13 @@ void IG2App::setupScene()
 	clock();
 
 	avion();
+
+	SceneNode* ball = mSM->getRootSceneNode()->createChildSceneNode("ballnode");
+	Entity* ball_ent = mSM->createEntity("sphere.mesh");
+	ball->attachObject(ball_ent);
+
+	ball->setPosition(0,-100,-50);
+	ball_ent->setMaterialName("corrosion_material");
 }
 
 void IG2App::setUpLabyrinth()
@@ -328,6 +335,8 @@ void IG2App::clock()
 
 		//// la mete en el clock
 		//mClock->addChild(n_time_part);
+
+		
 
 		current_degrees += degrees;
 	}

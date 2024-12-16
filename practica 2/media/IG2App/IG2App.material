@@ -277,6 +277,8 @@ source practice_shaderFS.glsl
 material practice_shader{
 	technique{
 		pass{
+
+			lighting off
 			vertex_program_ref practice_shaderVS {}
 			fragment_program_ref practice_shaderFS {}
 
