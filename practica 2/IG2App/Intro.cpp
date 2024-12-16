@@ -95,7 +95,8 @@ void Intro::createFireParticlesSystems()
 	pos.x = -diff * aux;
 	for (int i = 0; i < n; i++)
 	{
-		ParticleSystem* parSys = sMang->createParticleSystem("fuego" + std::to_string(i), "fireParticleSystem");
+		ParticleSystem* parSys = sMang->createParticleSystem("fuego" + 
+			std::to_string(i), "fireParticleSystem");
 		SceneNode* snFire = introNode->createChildSceneNode();
 		snFire->setPosition({pos});
 		parSys->setEmitting(true);

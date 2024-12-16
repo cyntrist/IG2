@@ -62,7 +62,9 @@ void IG2App::frameRendered(const FrameEvent& evt)
 
 	// ------------------ estudiando -------------------------------
 
-	//idle->addTime();
+	idle->addTime(evt.timeSinceLastFrame);
+	dance->addTime(evt.timeSinceLastFrame);
+	walk->addTime(evt.timeSinceLastFrame);
 
 }
 
@@ -379,6 +381,7 @@ void IG2App::avion()
 	nbarrel->attachObject(barrel);
 	nbarrel->setPosition(0,0,0);
 	nbarrel->setScale(1.5,0.3,0.3);
+	barrel->setMaterialName("practice_shader");
 
 	SceneNode* nAla1 = nbody->createChildSceneNode("avion_body_ala1");
 	Entity* ala1 = mSM->createEntity("cube.mesh");
@@ -420,6 +423,9 @@ void IG2App::avion()
 
 
 	SinbadAnim();
+
+	walk->setLoop(true);
+	walk->setEnabled(true);
 }
 
 void IG2App::SinbadAnim()
@@ -432,9 +438,38 @@ void IG2App::SinbadAnim()
 
 	dance = sinbadent->getAnimationState("Dance");
 	idle = sinbadent->getAnimationState("IdleBase");
+	walk = sinbadent->getAnimationState("RunBase");
 
 	Animation* idleanim = mSM->createAnimation("IdleBase", 6);
-	//idleanim
+	dance->setLoop(true);
+	dance->setEnabled(true);
+
+	Animation* runanim = mSM->createAnimation("RunBase", 6);
+	runanim->setInterpolationMode(Animation::IM_LINEAR);
+	NodeAnimationTrack* track = runanim->createNodeTrack(0);
+	track->setAssociatedNode(nAnim);
+	TransformKeyFrame* kf;
+
+	kf = track->createNodeKeyFrame(0);
+	Quaternion rot(Degree(180), Vector3(0,0,1));
+	kf->setRotation(rot);
+	kf->setTranslate({ 0,0,-100 });
+
+	kf = track->createNodeKeyFrame(1);
+	kf->setRotation(rot);
+	kf->setScale({0.5, 0.5, 0.5});
+
+	kf = track->createNodeKeyFrame(6);
+	kf->setRotation(rot);
+	kf->setScale({ 1, 1, 1});
+	kf->setTranslate({ 0,0,0 });
+
+
+	walk = mSM->createAnimationState("RunBase");
+
+	// idleanim
+	// keyframes
+
 }
 
 Helix::Helix(SceneNode* n, SceneManager* sm, int j)

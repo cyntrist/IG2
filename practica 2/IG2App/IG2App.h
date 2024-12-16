@@ -71,6 +71,7 @@ protected:
 
 	AnimationState* dance = nullptr;
 	AnimationState* idle = nullptr;
+	AnimationState* walk = nullptr;
 
 
 	SceneNode* mSinbadNode = nullptr;

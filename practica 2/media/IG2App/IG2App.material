@@ -257,3 +257,39 @@ material water_material {
 
 }
 
+
+vertex_program practice_shaderVS glsl{
+ 	source practice_shaderVS.glsl
+	default_params{
+		param_named_auto modelViewProjMat worldviewproj_matrix
+	}
+}
+
+fragment_program practice_shaderFS glsl{
+source practice_shaderFS.glsl
+	default_params{
+		param_named textCorrosion int 0
+		param_named textChelo int 1
+	}
+}
+
+material practice_shader{
+	technique{
+		pass{
+			vertex_program_ref practice_shaderVS {}
+			fragment_program_ref practice_shaderFS {}
+
+			texture_unit {
+				texture corrosion.jpg
+				text_adress_mode clamp
+			}
+			texture_unit{
+				texture chelo.jpg
+				text_adress_mode clamp
+			}
+		}
+	}
+
+
+}
+
