@@ -223,7 +223,7 @@ void IG2App::setupScene()
 	avion();
 
 	SceneNode* ball = mSM->getRootSceneNode()->createChildSceneNode("ballnode");
-	Entity* ball_ent = mSM->createEntity("sphere.mesh");
+	Entity* ball_ent = mSM->createEntity("uv_sphere.mesh");
 	ball->attachObject(ball_ent);
 
 	ball->setPosition(0,-100,-50);
@@ -386,7 +386,7 @@ void IG2App::avion()
 
 	// body
 	SceneNode* nbarrel = nbody->createChildSceneNode("avion_body_barrel");
-	Entity* barrel = mSM->createEntity("sphere.mesh");
+	Entity* barrel = mSM->createEntity("uv_sphere.mesh");
 	nbarrel->attachObject(barrel);
 	nbarrel->setPosition(0,0,0);
 	nbarrel->setScale(1.5,0.3,0.3);
