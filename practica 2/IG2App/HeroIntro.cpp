@@ -48,7 +48,7 @@ void HeroIntro::update(float t)
 
 
 void HeroIntro::generateTrack(SceneManager* sMng)
-{
+{	
 	// Variables
 	constexpr int movementLength = 200;
 	constexpr Real duration = 16.0;

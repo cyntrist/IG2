@@ -1,0 +1,355 @@
+material example/stonesFloor{
+    technique {
+	pass {
+	    texture_unit {
+			texture BeachStones.jpg
+	    }
+	}
+    }
+}
+
+material example/esferaSmile{
+    technique {
+		pass {
+			texture_unit {
+				texture spotlight_image.png
+				env_map spherical 
+	    	}
+		}
+    }
+}
+
+material example/panel{
+	technique {
+		pass {
+			lighting off
+			texture_unit {
+				texture 10points.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material example/smoke{
+	technique{
+	pass{
+		lighting off
+		scene_blend alpha_blend
+		depth_write off
+		diffuse vertexcolour
+		texture_unit{
+				texture smoke.png
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material example/fire{
+	technique{
+		pass{
+			lighting on
+			scene_blend alpha_blend
+			depth_write off
+			diffuse vertexcolour
+
+			texture_unit{
+				texture smoke.png
+				tex_address_mode modulate
+			}
+		}
+	}
+}
+
+
+material example/textureTest{
+	technique {
+		pass {
+			texture_unit {
+				texture Water01.jpg
+				colour_op modulate
+			}
+			texture_unit {
+				texture lightMap.jpg
+				colour_op add
+			}
+		}
+	}
+}
+
+material example/textureBlend{
+	technique{
+			pass{
+				texture_unit{
+				texture Water01.jpg
+			}
+			texture_unit{
+				texture Material_alpha_blend.png
+				colour_op alpha_blend
+			}
+			texture_unit{
+				texture Material_dirt.jpg
+				colour_op_ex blend_current_alpha src_texture src_current
+			}
+		}
+	}
+}
+
+material example/sky {
+	technique {
+		pass {
+            texture_unit {
+                texture spaceSky.jpg
+				scroll_anim 0.1 0.1
+            }
+		}
+	}
+}
+
+
+
+///////////////
+/// SHADERS
+/////////////&
+
+// Ejemplo
+vertex_program exampleVS glsl {
+	source exampleVS.glsl
+	default_params{
+		param_named_auto modelViewProjMat worldviewproj_matrix
+	}
+}
+
+fragment_program exampleFS glsl {
+	source exampleFS.glsl // Nombre del archivo del código
+	default_params{ // Valores para las variable uniform
+		param_named texturaL int 0 // 1º unidad de textura
+		param_named texturaM int 1 // 2º unidad de textura
+		param_named BF float 0.5 // Valor float
+		param_named intLuzAmb float 1.0 // Valor float
+	}
+}
+
+material example/ejemploGLSL{
+	technique {
+		pass {
+			vertex_program_ref EjemploVS{
+				// Parámetros para el shader
+			}
+			fragment_program_ref EjemploFS{
+				// Parámetros para el shader
+			}
+			texture_unit {
+				texture chelo.jpg 2d
+				tex_address_mode clamp
+				filtering bilinear
+			}
+			texture_unit {
+				texture checker.png 2d
+				tex_address_mode wrap
+			}
+		}
+	}
+}
+
+/// Esfera naranja
+vertex_program shaderOrangeVS glsl {
+	source shaderOrangeVS.glsl
+	default_params{
+		param_named_auto modelViewProjMat worldviewproj_matrix
+	}
+}
+
+fragment_program shaderOrangeFS glsl {
+	source shaderOrangeFS.glsl // Nombre del archivo del código
+	default_params{ // valores para las variable uniform
+
+	}
+}
+
+material example/shaderOrange {
+	technique {
+		pass {
+			vertex_program_ref shaderOrangeVS{
+				// Parámetros para el shader
+			}
+			fragment_program_ref shaderOrangeFS{
+				// Parámetros para el shader
+			}
+		}
+	}
+}
+
+// /// Sky
+// vertex_program spaceSkyShaderVS glsl {
+// 	source spaceSkyShaderVS.glsl
+// 	default_params{
+// 		param_named_auto modelViewProjMat worldviewproj_matrix
+// 	}
+// }
+
+// fragment_program spaceSkyShaderFS glsl {
+// 	source spaceSkyShaderFS.glsl
+// 	default_params{ // valores para las variable uniform
+// 		param_named textSky int 0 // 1º unidad de textura
+// 		param_named textLight int 1 // 2º unidad de textura
+// 		param_named intLuzAmb float 0.8
+// 	}
+// }
+
+// material example/spaceSkyShader {
+// 	technique{
+// 		pass{
+// 			vertex_program_ref spaceSkyShaderVS{
+// 				// Parámetros para el shader
+// 			}
+// 			fragment_program_ref spaceSkyShaderFS{
+// 				// Parámetros para el shader
+// 			}
+// 			lighting off
+// 			texture_unit{
+// 				texture spaceSky.jpg
+// 				//colour_op modulate
+// 				tex_address_mode clamp 
+// 				filtering bilinear
+// 				// scroll_anim 0.1 0.1
+// 			}
+// 			texture_unit{
+// 				texture lightMap.jpg
+//                 tex_address_mode wrap
+// 				colour_op modulate
+// 			}
+// 		}
+// 	}
+// }
+
+vertex_program spaceSkyShaderVS glsl{ 
+    source spaceSkyShaderVS.glsl 
+    default_params
+    { 
+        param_named_auto modelViewProjMat worldviewproj_matrix 
+    } 
+}  
+
+fragment_program spaceSkyShaderFS glsl{
+   source spaceSkyShaderFS.glsl
+   default_params
+   {
+        param_named space int 0
+        param_named light int 1
+        param_named intLuzAmb float 1.0
+   }
+}
+
+material example/spaceSkyShader{
+    technique{
+        pass{
+
+            vertex_program_ref skyVS{} 
+            fragment_program_ref skyFS{}
+
+            texture_unit{
+                texture spaceSky.jpg
+                tex_address_mode clamp 
+                filtering bilinear
+            }
+
+            texture_unit{
+                texture lightMap.jpg
+                tex_address_mode wrap
+				colour_op modulate
+            }
+        }
+    }
+}
+
+
+// esfera dos texturas
+vertex_program checkeredShaderVS glsl {
+	source checkeredShaderVS.glsl
+	default_params{
+		param_named_auto modelViewProjMat worldviewproj_matrix
+	}
+}
+
+fragment_program checkeredShaderFS glsl {
+	source checkeredShaderFS.glsl // Nombre del archivo del código
+	default_params{ // valores para las variable uniform
+		param_named textA int 0 // 1º unidad de textura
+		param_named textB int 1 // 2º unidad de textura
+		param_named textC int 2 // 3ª unidad de textura
+	}
+}
+
+material example/checkeredShader {
+	technique{
+		pass{
+			vertex_program_ref checkeredShaderVS{
+				// Parámetros para el shader
+			}
+			fragment_program_ref checkeredShaderFS{
+				// Parámetros para el shader
+			}
+			lighting off
+			texture_unit{
+				texture checker.png
+				tex_address_mode clamp
+				// scroll_anim 0.1 0.1
+			}
+			texture_unit{
+				texture corrosion.jpg
+				tex_address_mode clamp
+				// scroll_anim 0.1 0.1
+			}
+			texture_unit{
+				texture BumpyMetal.jpg
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+
+
+// esfera vacía
+vertex_program hollowShaderVS glsl {
+	source hollowShaderVS.glsl
+	default_params{
+		param_named_auto modelViewProjMat worldviewproj_matrix
+	}
+}
+
+fragment_program hollowShaderFS glsl {
+	source hollowShaderFS.glsl // Nombre del archivo del código
+	default_params{ // valores para las variable uniform
+		//param_named_auto flipping render_target_flipping
+		param_named textA int 0 // 1º unidad de textura
+		param_named textB int 1 // 2º unidad de textura
+	}
+}
+
+material example/hollowedShader {
+	technique{
+		pass{
+			vertex_program_ref hollowShaderVS{
+				// Parámetros para el shader
+			}
+			fragment_program_ref hollowShaderFS{
+				// Parámetros para el shader
+			}
+			lighting off
+			cull_hardware none // CON ESTO SE SOLUCIONA EL PROBLEMA QUE PROPONE EL EJERCICIO ? PERO ENTIENDO QUE NO ES EFICIENTE
+            cull_software none // esto creo que da igual
+			texture_unit{
+				texture checker.png
+				tex_address_mode clamp
+				// scroll_anim 0.1 0.1
+			}
+			texture_unit{
+				texture BumpyMetal.jpg
+				tex_address_mode clamp
+			}
+		}
+	}
+}

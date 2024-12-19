@@ -114,6 +114,13 @@ material spaceskyBackground{
 		}
 	}
 }
+
+
+
+
+
+
+
 vertex_program SpaceSkyShaderVS glsl
 { 
     source SpaceSkyShaderVS.glsl 
@@ -165,6 +172,15 @@ material zoomSky
     }
 }
 
+
+
+
+
+
+
+
+
+
 vertex_program corrosionShaderVS glsl
 { 
     source corrosionShaderVS.glsl 
@@ -215,6 +231,15 @@ material corrosion_material{
 	}
 
 }
+
+
+
+
+
+
+
+
+
 
 
 vertex_program waterShaderVS glsl

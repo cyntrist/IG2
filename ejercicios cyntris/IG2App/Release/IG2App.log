@@ -1,0 +1,1263 @@
+﻿  IG2App.cpp
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderProgramManager.h(208,17): warning C4251: "Ogre::RTShader::ProgramManager::mCpuProgramsList": "std::set<Ogre::RTShader::Program *,std::less<Ogre::RTShader::Program *>,std::allocator<Ogre::RTShader::Program *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ProgramManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\set(51,7):
+      vea la declaración de 'std::set<Ogre::RTShader::Program *,std::less<Ogre::RTShader::Program *>,std::allocator<Ogre::RTShader::Program *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderProgramManager.h(210,22): warning C4251: "Ogre::RTShader::ProgramManager::mProgramWritersMap": "std::map<Ogre::String,Ogre::RTShader::ProgramWriter *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::ProgramWriter *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ProgramManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::RTShader::ProgramWriter *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::ProgramWriter *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderProgramManager.h(212,25): warning C4251: "Ogre::RTShader::ProgramManager::mProgramProcessorsMap": "std::map<Ogre::String,Ogre::RTShader::ProgramProcessor *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::ProgramProcessor *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ProgramManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::RTShader::ProgramProcessor *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::ProgramProcessor *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderProgramManager.h(214,30): warning C4251: "Ogre::RTShader::ProgramManager::mProgramWriterFactories": "std::vector<Ogre::RTShader::ProgramWriterFactory *,std::allocator<Ogre::RTShader::ProgramWriterFactory *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ProgramManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::ProgramWriterFactory *,std::allocator<Ogre::RTShader::ProgramWriterFactory *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderProgramManager.h(216,20): warning C4251: "Ogre::RTShader::ProgramManager::mVertexShaderMap": "std::map<Ogre::String,Ogre::GpuProgramPtr,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::GpuProgramPtr>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ProgramManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::GpuProgramPtr,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::GpuProgramPtr>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderProgramManager.h(218,20): warning C4251: "Ogre::RTShader::ProgramManager::mFragmentShaderMap": "std::map<Ogre::String,Ogre::GpuProgramPtr,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::GpuProgramPtr>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ProgramManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::GpuProgramPtr,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::GpuProgramPtr>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderProgramManager.h(220,26): warning C4251: "Ogre::RTShader::ProgramManager::mDefaultProgramProcessors": "std::vector<Ogre::RTShader::ProgramProcessor *,std::allocator<Ogre::RTShader::ProgramProcessor *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ProgramManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::ProgramProcessor *,std::allocator<Ogre::RTShader::ProgramProcessor *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderParameter.h(363,12): warning C4251: "Ogre::RTShader::Parameter::mName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::Parameter"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreHardwareBuffer.h(180,45): warning C4251: "Ogre::HardwareBuffer::mShadowBuffer": "std::unique_ptr<Ogre::HardwareBuffer,std::default_delete<Ogre::HardwareBuffer>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::HardwareBuffer"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3335,7):
+      vea la declaración de 'std::unique_ptr<Ogre::HardwareBuffer,std::default_delete<Ogre::HardwareBuffer>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderSubRenderState.h(151,39): warning C4251: "Ogre::RTShader::SubRenderState::mThisAccessor": "Ogre::SharedPtr<Ogre::RTShader::SubRenderStateAccessor>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::SubRenderState"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::RTShader::SubRenderStateAccessor>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderSubRenderState.h(153,31): warning C4251: "Ogre::RTShader::SubRenderState::mOtherAccessor": "Ogre::SharedPtr<Ogre::RTShader::SubRenderStateAccessor>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::SubRenderState"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::RTShader::SubRenderStateAccessor>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderSubRenderState.h(208,31): warning C4251: "Ogre::RTShader::SubRenderStateAccessor::mSubRenderStateInstancesSet": "std::set<Ogre::RTShader::SubRenderState *,std::less<Ogre::RTShader::SubRenderState *>,std::allocator<Ogre::RTShader::SubRenderState *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::SubRenderStateAccessor"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\set(51,7):
+      vea la declaración de 'std::set<Ogre::RTShader::SubRenderState *,std::less<Ogre::RTShader::SubRenderState *>,std::allocator<Ogre::RTShader::SubRenderState *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderSubRenderState.h(311,23): warning C4251: "Ogre::RTShader::SubRenderStateFactory::mSubRenderStateList": "std::set<Ogre::RTShader::SubRenderState *,std::less<Ogre::RTShader::SubRenderState *>,std::allocator<Ogre::RTShader::SubRenderState *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::SubRenderStateFactory"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\set(51,7):
+      vea la declaración de 'std::set<Ogre::RTShader::SubRenderState *,std::less<Ogre::RTShader::SubRenderState *>,std::allocator<Ogre::RTShader::SubRenderState *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderRenderState.h(117,24): warning C4251: "Ogre::RTShader::RenderState::mSubRenderStateList": "std::vector<Ogre::RTShader::SubRenderState *,std::allocator<Ogre::RTShader::SubRenderState *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::RenderState"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::SubRenderState *,std::allocator<Ogre::RTShader::SubRenderState *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(419,19): warning C4251: "Ogre::RTShader::ShaderGenerator::DEFAULT_SCHEME_NAME": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(506,23): warning C4251: "Ogre::RTShader::ShaderGenerator::SGPass::UserKey": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGPass"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(582,23): warning C4251: "Ogre::RTShader::ShaderGenerator::SGTechnique::UserKey": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGTechnique"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(605,20): warning C4251: "Ogre::RTShader::ShaderGenerator::SGTechnique::mPassEntries": "std::vector<Ogre::RTShader::ShaderGenerator::SGPass *,std::allocator<Ogre::RTShader::ShaderGenerator::SGPass *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGTechnique"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::ShaderGenerator::SGPass *,std::allocator<Ogre::RTShader::ShaderGenerator::SGPass *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(607,25): warning C4251: "Ogre::RTShader::ShaderGenerator::SGTechnique::mCustomRenderStates": "std::vector<Ogre::RTShader::RenderState *,std::allocator<Ogre::RTShader::RenderState *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGTechnique"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::RenderState *,std::allocator<Ogre::RTShader::RenderState *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(611,16): warning C4251: "Ogre::RTShader::ShaderGenerator::SGTechnique::mDstTechniqueSchemeName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGTechnique"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(639,16): warning C4251: "Ogre::RTShader::ShaderGenerator::SGMaterial::mName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGMaterial"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(641,16): warning C4251: "Ogre::RTShader::ShaderGenerator::SGMaterial::mGroup": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGMaterial"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(643,25): warning C4251: "Ogre::RTShader::ShaderGenerator::SGMaterial::mTechniqueEntries": "std::vector<Ogre::RTShader::ShaderGenerator::SGTechnique *,std::allocator<Ogre::RTShader::ShaderGenerator::SGTechnique *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGMaterial"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::ShaderGenerator::SGTechnique *,std::allocator<Ogre::RTShader::ShaderGenerator::SGTechnique *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(716,16): warning C4251: "Ogre::RTShader::ShaderGenerator::SGScheme::mName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGScheme"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(718,25): warning C4251: "Ogre::RTShader::ShaderGenerator::SGScheme::mTechniqueEntries": "std::vector<Ogre::RTShader::ShaderGenerator::SGTechnique *,std::allocator<Ogre::RTShader::ShaderGenerator::SGTechnique *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator::SGScheme"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::ShaderGenerator::SGTechnique *,std::allocator<Ogre::RTShader::ShaderGenerator::SGTechnique *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(755,73): warning C4275: se ha utilizado una interfaz no de DLL class 'Ogre::SceneManager::Listener' como base para la interfaz DLL class 'Ogre::RTShader::ShaderGenerator::SGSceneManagerListener'
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSceneManager.h(217,15):
+      vea la declaración de 'Ogre::SceneManager::Listener'
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(755,27):
+      vea la declaración de 'Ogre::RTShader::ShaderGenerator::SGSceneManagerListener'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(801,62): warning C4275: se ha utilizado una interfaz no de DLL class 'Ogre::ScriptTranslatorManager' como base para la interfaz DLL class 'Ogre::RTShader::ShaderGenerator::SGScriptTranslatorManager'
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreScriptTranslator.h(119,11):
+      vea la declaración de 'Ogre::ScriptTranslatorManager'
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(801,27):
+      vea la declaración de 'Ogre::RTShader::ShaderGenerator::SGScriptTranslatorManager'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(938,21): warning C4251: "Ogre::RTShader::ShaderGenerator::mSceneManagerMap": "std::map<Ogre::String,Ogre::SceneManager *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::SceneManager *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::SceneManager *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::SceneManager *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(952,12): warning C4251: "Ogre::RTShader::ShaderGenerator::mShaderLanguage": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(954,12): warning C4251: "Ogre::RTShader::ShaderGenerator::mVertexShaderProfiles": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(956,18): warning C4251: "Ogre::RTShader::ShaderGenerator::mVertexShaderProfilesList": "std::vector<Ogre::String,std::allocator<Ogre::String>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::String,std::allocator<Ogre::String>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(958,12): warning C4251: "Ogre::RTShader::ShaderGenerator::mFragmentShaderProfiles": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(960,18): warning C4251: "Ogre::RTShader::ShaderGenerator::mFragmentShaderProfilesList": "std::vector<Ogre::String,std::allocator<Ogre::String>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::String,std::allocator<Ogre::String>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(962,12): warning C4251: "Ogre::RTShader::ShaderGenerator::mShaderCachePath": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(972,19): warning C4251: "Ogre::RTShader::ShaderGenerator::mMaterialEntriesMap": "std::map<Ogre::RTShader::ShaderGenerator::MatGroupPair,Ogre::RTShader::ShaderGenerator::SGMaterial *,Ogre::RTShader::ShaderGenerator::MatGroupPair_less,std::allocator<std::pair<const Ogre::RTShader::ShaderGenerator::MatGroupPair,Ogre::RTShader::ShaderGenerator::SGMaterial *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::RTShader::ShaderGenerator::MatGroupPair,Ogre::RTShader::ShaderGenerator::SGMaterial *,Ogre::RTShader::ShaderGenerator::MatGroupPair_less,std::allocator<std::pair<const Ogre::RTShader::ShaderGenerator::MatGroupPair,Ogre::RTShader::ShaderGenerator::SGMaterial *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(974,17): warning C4251: "Ogre::RTShader::ShaderGenerator::mSchemeEntriesMap": "std::map<Ogre::String,Ogre::RTShader::ShaderGenerator::SGScheme *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::ShaderGenerator::SGScheme *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::RTShader::ShaderGenerator::SGScheme *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::ShaderGenerator::SGScheme *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(976,20): warning C4251: "Ogre::RTShader::ShaderGenerator::mTechniqueEntriesMap": "std::map<Ogre::RTShader::ShaderGenerator::SGTechnique *,Ogre::RTShader::ShaderGenerator::SGTechnique *,std::less<Ogre::RTShader::ShaderGenerator::SGTechnique *>,std::allocator<std::pair<Ogre::RTShader::ShaderGenerator::SGTechnique *const ,Ogre::RTShader::ShaderGenerator::SGTechnique *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::RTShader::ShaderGenerator::SGTechnique *,Ogre::RTShader::ShaderGenerator::SGTechnique *,std::less<Ogre::RTShader::ShaderGenerator::SGTechnique *>,std::allocator<std::pair<Ogre::RTShader::ShaderGenerator::SGTechnique *const ,Ogre::RTShader::ShaderGenerator::SGTechnique *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(978,30): warning C4251: "Ogre::RTShader::ShaderGenerator::mSubRenderStateFactories": "std::map<Ogre::String,Ogre::RTShader::SubRenderStateFactory *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::SubRenderStateFactory *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::RTShader::SubRenderStateFactory *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::SubRenderStateFactory *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderGenerator.h(980,30): warning C4251: "Ogre::RTShader::ShaderGenerator::mSubRenderStateExFactories": "std::map<Ogre::String,Ogre::RTShader::SubRenderStateFactory *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::SubRenderStateFactory *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::ShaderGenerator"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::RTShader::SubRenderStateFactory *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::RTShader::SubRenderStateFactory *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTransform.h(76,19): warning C4251: "Ogre::RTShader::FFPTransform::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTransform"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(116,19): warning C4251: "Ogre::RTShader::FFPColour::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(127,18): warning C4251: "Ogre::RTShader::FFPColour::mVSInputDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(129,18): warning C4251: "Ogre::RTShader::FFPColour::mVSInputSpecular": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(131,18): warning C4251: "Ogre::RTShader::FFPColour::mVSOutputDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(133,18): warning C4251: "Ogre::RTShader::FFPColour::mVSOutputSpecular": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(135,18): warning C4251: "Ogre::RTShader::FFPColour::mPSInputDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(137,18): warning C4251: "Ogre::RTShader::FFPColour::mPSInputSpecular": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(139,18): warning C4251: "Ogre::RTShader::FFPColour::mPSOutputDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPColour.h(141,18): warning C4251: "Ogre::RTShader::FFPColour::mPSOutputSpecular": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPColour"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(86,19): warning C4251: "Ogre::RTShader::FFPLighting::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(96,29): warning C4251: "Ogre::RTShader::FFPLighting::LightParams::mPosition": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(98,29): warning C4251: "Ogre::RTShader::FFPLighting::LightParams::mDirection": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(100,29): warning C4251: "Ogre::RTShader::FFPLighting::LightParams::mAttenuatParams": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(102,29): warning C4251: "Ogre::RTShader::FFPLighting::LightParams::mSpotParams": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(104,29): warning C4251: "Ogre::RTShader::FFPLighting::LightParams::mDiffuseColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(106,29): warning C4251: "Ogre::RTShader::FFPLighting::LightParams::mSpecularColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(186,21): warning C4251: "Ogre::RTShader::FFPLighting::mLightParamsList": "std::vector<Ogre::RTShader::FFPLighting::LightParams,std::allocator<Ogre::RTShader::FFPLighting::LightParams>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::FFPLighting::LightParams,std::allocator<Ogre::RTShader::FFPLighting::LightParams>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(188,25): warning C4251: "Ogre::RTShader::FFPLighting::mWorldViewMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(190,25): warning C4251: "Ogre::RTShader::FFPLighting::mWorldViewITMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(192,18): warning C4251: "Ogre::RTShader::FFPLighting::mVSInPosition": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(194,18): warning C4251: "Ogre::RTShader::FFPLighting::mVSInNormal": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(196,18): warning C4251: "Ogre::RTShader::FFPLighting::mVSDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(198,18): warning C4251: "Ogre::RTShader::FFPLighting::mVSOutDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(200,18): warning C4251: "Ogre::RTShader::FFPLighting::mVSOutSpecular": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(202,25): warning C4251: "Ogre::RTShader::FFPLighting::mDerivedSceneColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(204,25): warning C4251: "Ogre::RTShader::FFPLighting::mLightAmbientColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(206,25): warning C4251: "Ogre::RTShader::FFPLighting::mDerivedAmbientLightColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(208,25): warning C4251: "Ogre::RTShader::FFPLighting::mSurfaceAmbientColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(210,25): warning C4251: "Ogre::RTShader::FFPLighting::mSurfaceDiffuseColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(212,25): warning C4251: "Ogre::RTShader::FFPLighting::mSurfaceSpecularColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(214,25): warning C4251: "Ogre::RTShader::FFPLighting::mSurfaceEmissiveColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPLighting.h(216,25): warning C4251: "Ogre::RTShader::FFPLighting::mSurfaceShininess": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(87,19): warning C4251: "Ogre::RTShader::FFPTexturing::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(110,29): warning C4251: "Ogre::RTShader::FFPTexturing::TextureUnitParams::mTextureMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing::TextureUnitParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(112,29): warning C4251: "Ogre::RTShader::FFPTexturing::TextureUnitParams::mTextureViewProjImageMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing::TextureUnitParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(114,29): warning C4251: "Ogre::RTShader::FFPTexturing::TextureUnitParams::mTextureSampler": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing::TextureUnitParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(116,22): warning C4251: "Ogre::RTShader::FFPTexturing::TextureUnitParams::mVSInputTexCoord": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing::TextureUnitParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(118,22): warning C4251: "Ogre::RTShader::FFPTexturing::TextureUnitParams::mVSOutputTexCoord": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing::TextureUnitParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(120,22): warning C4251: "Ogre::RTShader::FFPTexturing::TextureUnitParams::mPSInputTexCoord": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing::TextureUnitParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(217,27): warning C4251: "Ogre::RTShader::FFPTexturing::mTextureUnitParamsList": "std::vector<Ogre::RTShader::FFPTexturing::TextureUnitParams,std::allocator<Ogre::RTShader::FFPTexturing::TextureUnitParams>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::FFPTexturing::TextureUnitParams,std::allocator<Ogre::RTShader::FFPTexturing::TextureUnitParams>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(219,25): warning C4251: "Ogre::RTShader::FFPTexturing::mWorldMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(221,25): warning C4251: "Ogre::RTShader::FFPTexturing::mWorldITMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(223,25): warning C4251: "Ogre::RTShader::FFPTexturing::mViewMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(225,18): warning C4251: "Ogre::RTShader::FFPTexturing::mVSInputNormal": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(227,18): warning C4251: "Ogre::RTShader::FFPTexturing::mVSInputPos": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(229,18): warning C4251: "Ogre::RTShader::FFPTexturing::mPSOutDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(231,18): warning C4251: "Ogre::RTShader::FFPTexturing::mPSDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPTexturing.h(233,18): warning C4251: "Ogre::RTShader::FFPTexturing::mPSSpecular": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPTexturing"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(117,19): warning C4251: "Ogre::RTShader::FFPFog::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(151,25): warning C4251: "Ogre::RTShader::FFPFog::mWorldViewProjMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(153,25): warning C4251: "Ogre::RTShader::FFPFog::mFogColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(155,25): warning C4251: "Ogre::RTShader::FFPFog::mFogParams": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(157,18): warning C4251: "Ogre::RTShader::FFPFog::mVSInPos": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(159,18): warning C4251: "Ogre::RTShader::FFPFog::mVSOutFogFactor": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(161,18): warning C4251: "Ogre::RTShader::FFPFog::mPSInFogFactor": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(163,18): warning C4251: "Ogre::RTShader::FFPFog::mVSOutDepth": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(165,18): warning C4251: "Ogre::RTShader::FFPFog::mPSInDepth": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderFFPFog.h(167,18): warning C4251: "Ogre::RTShader::FFPFog::mPSOutDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::FFPFog"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(95,19): warning C4251: "Ogre::RTShader::PerPixelLighting::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(105,29): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mPosition": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(107,29): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mDirection": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(109,29): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mAttenuatParams": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(111,29): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mSpotParams": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(113,29): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mDiffuseColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(115,29): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mSpecularColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(120,22): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mVSOutToLightDir": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(122,22): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mPSInToLightDir": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(124,22): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mVSOutDirection": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(126,22): warning C4251: "Ogre::RTShader::PerPixelLighting::LightParams::mPSInDirection": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting::LightParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(224,21): warning C4251: "Ogre::RTShader::PerPixelLighting::mLightParamsList": "std::vector<Ogre::RTShader::PerPixelLighting::LightParams,std::allocator<Ogre::RTShader::PerPixelLighting::LightParams>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::PerPixelLighting::LightParams,std::allocator<Ogre::RTShader::PerPixelLighting::LightParams>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(226,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mWorldViewMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(228,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mWorldViewITMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(230,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mVSInPosition": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(232,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mVSOutViewPos": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(234,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mPSInViewPos": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(236,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mVSInNormal": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(238,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mVSOutNormal": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(240,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mPSInNormal": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(242,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mPSTempDiffuseColour": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(244,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mPSTempSpecularColour": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(246,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mPSDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(248,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mPSSpecular": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(250,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mPSOutDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(252,18): warning C4251: "Ogre::RTShader::PerPixelLighting::mPSOutSpecular": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(254,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mDerivedSceneColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(256,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mLightAmbientColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(258,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mDerivedAmbientLightColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(260,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mSurfaceAmbientColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(262,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mSurfaceDiffuseColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(264,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mSurfaceSpecularColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(266,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mSurfaceEmissiveColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExPerPixelLighting.h(268,25): warning C4251: "Ogre::RTShader::PerPixelLighting::mSurfaceShininess": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::PerPixelLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(93,19): warning C4251: "Ogre::RTShader::NormalMapLighting::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(212,12): warning C4251: "Ogre::RTShader::NormalMapLighting::mNormalMapTextureName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(230,25): warning C4251: "Ogre::RTShader::NormalMapLighting::mWorldMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(232,25): warning C4251: "Ogre::RTShader::NormalMapLighting::mWorldInvRotMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(234,25): warning C4251: "Ogre::RTShader::NormalMapLighting::mCamPosWorldSpace": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(236,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mVSWorldPosition": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(238,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mVSOutView": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(240,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mPSInView": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(242,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mVSInTangent": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(244,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mVSTBNMatrix": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(246,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mVSLocalDir": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(248,25): warning C4251: "Ogre::RTShader::NormalMapLighting::mNormalMapSampler": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(250,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mPSNormal": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(252,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mVSInTexcoord": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(254,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mVSOutTexcoord": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExNormalMapLighting.h(256,18): warning C4251: "Ogre::RTShader::NormalMapLighting::mPSInTexcoord": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::NormalMapLighting"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(100,19): warning C4251: "Ogre::RTShader::IntegratedPSSM3::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(113,29): warning C4251: "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams::mTextureSampler": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(115,29): warning C4251: "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams::mInvTextureSize": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(117,29): warning C4251: "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams::mWorldViewProjMatrix": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(119,22): warning C4251: "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams::mVSOutLightPosition": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(121,22): warning C4251: "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams::mPSInLightPosition": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(166,29): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mShadowTextureParamsList": "std::vector<Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams,std::allocator<Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams,std::allocator<Ogre::RTShader::IntegratedPSSM3::ShadowTextureParams>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(168,25): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mPSSplitPoints": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(170,18): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mVSInPos": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(172,18): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mVSOutPos": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(174,18): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mVSOutDepth": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(176,18): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mPSInDepth": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(178,18): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mPSLocalShadowFactor": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(180,18): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mPSDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(182,18): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mPSOutDiffuse": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(184,18): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mPSSpecualr": "std::shared_ptr<Ogre::RTShader::Parameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::Parameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExIntegratedPSSM3.h(186,25): warning C4251: "Ogre::RTShader::IntegratedPSSM3::mPSDerivedSceneColour": "std::shared_ptr<Ogre::RTShader::UniformParameter>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::IntegratedPSSM3"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(1560,7):
+      vea la declaración de 'std::shared_ptr<Ogre::RTShader::UniformParameter>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExLayeredBlending.h(153,19): warning C4251: "Ogre::RTShader::LayeredBlending::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::LayeredBlending"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExLayeredBlending.h(190,31): warning C4251: "Ogre::RTShader::LayeredBlending::mTextureBlends": "std::vector<Ogre::RTShader::LayeredBlending::TextureBlend,std::allocator<Ogre::RTShader::LayeredBlending::TextureBlend>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::LayeredBlending"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::LayeredBlending::TextureBlend,std::allocator<Ogre::RTShader::LayeredBlending::TextureBlend>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExHardwareSkinning.h(145,19): warning C4251: "Ogre::RTShader::HardwareSkinning::Type": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::HardwareSkinning"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExHardwareSkinning.h(164,31): warning C4251: "Ogre::RTShader::HardwareSkinning::mLinear": "Ogre::SharedPtr<Ogre::RTShader::LinearSkinning>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::HardwareSkinning"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::RTShader::LinearSkinning>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExHardwareSkinning.h(165,39): warning C4251: "Ogre::RTShader::HardwareSkinning::mDualQuat": "Ogre::SharedPtr<Ogre::RTShader::DualQuaternionSkinning>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::HardwareSkinning"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::RTShader::DualQuaternionSkinning>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExHardwareSkinning.h(166,42): warning C4251: "Ogre::RTShader::HardwareSkinning::mActiveTechnique": "Ogre::SharedPtr<Ogre::RTShader::HardwareSkinningTechnique>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::HardwareSkinning"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::RTShader::HardwareSkinningTechnique>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExHardwareSkinning.h(316,17): warning C4251: "Ogre::RTShader::HardwareSkinningFactory::mCustomShadowCasterMaterialsLinear": "Ogre::SharedPtr<Ogre::Material>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::HardwareSkinningFactory"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Material>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExHardwareSkinning.h(317,17): warning C4251: "Ogre::RTShader::HardwareSkinningFactory::mCustomShadowCasterMaterialsDualQuaternion": "Ogre::SharedPtr<Ogre::Material>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::HardwareSkinningFactory"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Material>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExHardwareSkinning.h(320,17): warning C4251: "Ogre::RTShader::HardwareSkinningFactory::mCustomShadowReceiverMaterialsLinear": "Ogre::SharedPtr<Ogre::Material>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::HardwareSkinningFactory"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Material>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderExHardwareSkinning.h(321,17): warning C4251: "Ogre::RTShader::HardwareSkinningFactory::mCustomShadowReceiverMaterialsDualQuaternion": "Ogre::SharedPtr<Ogre::Material>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::HardwareSkinningFactory"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Material>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderMaterialSerializerListener.h(47,81): warning C4275: se ha utilizado una interfaz no de DLL class 'Ogre::MaterialSerializer::Listener' como base para la interfaz DLL class 'Ogre::RTShader::SGMaterialSerializerListener'
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreMaterialSerializer.h(62,15):
+      vea la declaración de 'Ogre::MaterialSerializer::Listener'
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderMaterialSerializerListener.h(47,23):
+      vea la declaración de 'Ogre::RTShader::SGMaterialSerializerListener'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\RTShaderSystem\OgreShaderMaterialSerializerListener.h(101,16): warning C4251: "Ogre::RTShader::SGMaterialSerializerListener::mSGPassList": "std::vector<Ogre::RTShader::ShaderGenerator::SGPass *,std::allocator<Ogre::RTShader::ShaderGenerator::SGPass *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::RTShader::SGMaterialSerializerListener"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::RTShader::ShaderGenerator::SGPass *,std::allocator<Ogre::RTShader::ShaderGenerator::SGPass *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreSGTechniqueResolverListener.h(47,84): warning C4275: se ha utilizado una interfaz no de DLL class 'Ogre::MaterialManager::Listener' como base para la interfaz DLL class 'OgreBites::SGTechniqueResolverListener'
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreMaterialManager.h(69,15):
+      vea la declaración de 'Ogre::MaterialManager::Listener'
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreSGTechniqueResolverListener.h(47,24):
+      vea la declaración de 'OgreBites::SGTechniqueResolverListener'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlay.h(78,16): warning C4251: "Ogre::Overlay::mName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Overlay"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlay.h(84,30): warning C4251: "Ogre::Overlay::m2DElements": "std::list<Ogre::OverlayContainer *,std::allocator<Ogre::OverlayContainer *>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Overlay"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\list(755,7):
+      vea la declaración de 'std::list<Ogre::OverlayContainer *,std::allocator<Ogre::OverlayContainer *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlay.h(87,16): warning C4251: "Ogre::Overlay::mRotate": "Ogre::Radian" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Overlay"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreMath.h(47,11):
+      vea la declaración de 'Ogre::Radian'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlay.h(101,16): warning C4251: "Ogre::Overlay::mOrigin": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Overlay"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayManager.h(62,20): warning C4251: "Ogre::OverlayManager::mOverlayMap": "std::map<Ogre::String,Ogre::Overlay *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::Overlay *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::Overlay *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::Overlay *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayManager.h(63,22): warning C4251: "Ogre::OverlayManager::mScriptPatterns": "std::vector<Ogre::String,std::allocator<Ogre::String>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::String,std::allocator<Ogre::String>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayManager.h(78,20): warning C4251: "Ogre::OverlayManager::mFactories": "std::map<Ogre::String,Ogre::OverlayElementFactory *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayElementFactory *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::OverlayElementFactory *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayElementFactory *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayManager.h(80,20): warning C4251: "Ogre::OverlayManager::mInstances": "std::map<Ogre::String,Ogre::OverlayElement *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayElement *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::OverlayElement *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayElement *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayManager.h(81,20): warning C4251: "Ogre::OverlayManager::mTemplates": "std::map<Ogre::String,Ogre::OverlayElement *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayElement *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::OverlayElement *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayElement *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayManager.h(84,23): warning C4251: "Ogre::OverlayManager::mLoadedScripts": "std::set<Ogre::String,std::less<Ogre::String>,std::allocator<Ogre::String>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\set(51,7):
+      vea la declaración de 'std::set<Ogre::String,std::less<Ogre::String>,std::allocator<Ogre::String>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayManager.h(86,50): warning C4251: "Ogre::OverlayManager::mTranslatorManager": "std::unique_ptr<Ogre::ScriptTranslatorManager,std::default_delete<Ogre::ScriptTranslatorManager>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\memory(3335,7):
+      vea la declaración de 'std::unique_ptr<Ogre::ScriptTranslatorManager,std::default_delete<Ogre::ScriptTranslatorManager>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayElement.h(127,16): warning C4251: "Ogre::OverlayElement::mName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayElement.h(134,21): warning C4251: "Ogre::OverlayElement::mMaterial": "Ogre::SharedPtr<Ogre::Material>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Material>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayElement.h(137,18): warning C4251: "Ogre::OverlayElement::mClippingRegion": "Ogre::TRect<float>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreCommon.h(576,39):
+      vea la declaración de 'Ogre::TRect<float>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayContainer.h(65,18): warning C4251: "Ogre::OverlayContainer::mChildren": "std::map<Ogre::String,Ogre::OverlayElement *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayElement *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayContainer"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::OverlayElement *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayElement *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreOverlayContainer.h(67,27): warning C4251: "Ogre::OverlayContainer::mChildContainers": "std::map<Ogre::String,Ogre::OverlayContainer *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayContainer *>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::OverlayContainer"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::String,Ogre::OverlayContainer *,std::less<Ogre::String>,std::allocator<std::pair<const Ogre::String,Ogre::OverlayContainer *>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgrePanelOverlayElement.h(140,25): warning C4251: "Ogre::PanelOverlayElement::mRenderOp": "Ogre::RenderOperation" debe tener una interfaz DLL para que la usen los clientes de "Ogre::PanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreRenderOperation.h(45,24):
+      vea la declaración de 'Ogre::RenderOperation'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgrePanelOverlayElement.h(151,23): warning C4251: "Ogre::PanelOverlayElement::msTypeName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::PanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgrePanelOverlayElement.h(154,26): warning C4251: "Ogre::PanelOverlayElement::msCmdTiling": "Ogre::PanelOverlayElement::CmdTiling" debe tener una interfaz DLL para que la usen los clientes de "Ogre::PanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgrePanelOverlayElement.h(111,28):
+      vea la declaración de 'Ogre::PanelOverlayElement::CmdTiling'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgrePanelOverlayElement.h(155,31): warning C4251: "Ogre::PanelOverlayElement::msCmdTransparent": "Ogre::PanelOverlayElement::CmdTransparent" debe tener una interfaz DLL para que la usen los clientes de "Ogre::PanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgrePanelOverlayElement.h(118,28):
+      vea la declaración de 'Ogre::PanelOverlayElement::CmdTransparent'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgrePanelOverlayElement.h(156,28): warning C4251: "Ogre::PanelOverlayElement::msCmdUVCoords": "Ogre::PanelOverlayElement::CmdUVCoords" debe tener una interfaz DLL para que la usen los clientes de "Ogre::PanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgrePanelOverlayElement.h(125,28):
+      vea la declaración de 'Ogre::PanelOverlayElement::CmdUVCoords'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(278,21): warning C4251: "Ogre::BorderPanelOverlayElement::mBorderMaterial": "Ogre::SharedPtr<Ogre::Material>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Material>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(281,25): warning C4251: "Ogre::BorderPanelOverlayElement::mRenderOp2": "Ogre::RenderOperation" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreRenderOperation.h(45,24):
+      vea la declaración de 'Ogre::RenderOperation'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(283,23): warning C4251: "Ogre::BorderPanelOverlayElement::msTypeName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(305,30): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderSize": "Ogre::BorderPanelOverlayElement::CmdBorderSize" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(194,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderSize'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(306,34): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderMaterial": "Ogre::BorderPanelOverlayElement::CmdBorderMaterial" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(201,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderMaterial'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(307,32): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderLeftUV": "Ogre::BorderPanelOverlayElement::CmdBorderLeftUV" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(208,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderLeftUV'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(308,31): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderTopUV": "Ogre::BorderPanelOverlayElement::CmdBorderTopUV" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(215,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderTopUV'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(309,34): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderBottomUV": "Ogre::BorderPanelOverlayElement::CmdBorderBottomUV" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(229,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderBottomUV'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(310,33): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderRightUV": "Ogre::BorderPanelOverlayElement::CmdBorderRightUV" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(222,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderRightUV'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(311,35): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderTopLeftUV": "Ogre::BorderPanelOverlayElement::CmdBorderTopLeftUV" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(236,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderTopLeftUV'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(312,38): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderBottomLeftUV": "Ogre::BorderPanelOverlayElement::CmdBorderBottomLeftUV" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(243,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderBottomLeftUV'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(313,36): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderTopRightUV": "Ogre::BorderPanelOverlayElement::CmdBorderTopRightUV" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(257,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderTopRightUV'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(314,39): warning C4251: "Ogre::BorderPanelOverlayElement::msCmdBorderBottomRightUV": "Ogre::BorderPanelOverlayElement::CmdBorderBottomRightUV" debe tener una interfaz DLL para que la usen los clientes de "Ogre::BorderPanelOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreBorderPanelOverlayElement.h(250,28):
+      vea la declaración de 'Ogre::BorderPanelOverlayElement::CmdBorderBottomRightUV'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreFont.h(123,16): warning C4251: "Ogre::Font::mSource": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Font"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreFont.h(159,22): warning C4251: "Ogre::Font::mCodePointMap": "std::map<Ogre::Font::CodePoint,Ogre::Font::GlyphInfo,std::less<size_t>,std::allocator<std::pair<const Ogre::Font::CodePoint,Ogre::Font::GlyphInfo>>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Font"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\map(72,7):
+      vea la declaración de 'std::map<Ogre::Font::CodePoint,Ogre::Font::GlyphInfo,std::less<size_t>,std::allocator<std::pair<const Ogre::Font::CodePoint,Ogre::Font::GlyphInfo>>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreFont.h(162,21): warning C4251: "Ogre::Font::mMaterial": "Ogre::SharedPtr<Ogre::Material>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Font"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Material>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreFont.h(165,20): warning C4251: "Ogre::Font::mTexture": "Ogre::SharedPtr<Ogre::Texture>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Font"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Texture>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreFont.h(171,28): warning C4251: "Ogre::Font::mCodePointRangeList": "std::vector<Ogre::Font::CodePointRange,std::allocator<Ogre::Font::CodePointRange>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Font"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::Font::CodePointRange,std::allocator<Ogre::Font::CodePointRange>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(223,25): warning C4251: "Ogre::TextAreaOverlayElement::mRenderOp": "Ogre::RenderOperation" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreRenderOperation.h(45,24):
+      vea la declaración de 'Ogre::RenderOperation'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(228,23): warning C4251: "Ogre::TextAreaOverlayElement::msTypeName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(231,30): warning C4251: "Ogre::TextAreaOverlayElement::msCmdCharHeight": "Ogre::TextAreaOverlayElement::CmdCharHeight" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(148,28):
+      vea la declaración de 'Ogre::TextAreaOverlayElement::CmdCharHeight'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(232,30): warning C4251: "Ogre::TextAreaOverlayElement::msCmdSpaceWidth": "Ogre::TextAreaOverlayElement::CmdSpaceWidth" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(158,28):
+      vea la declaración de 'Ogre::TextAreaOverlayElement::CmdSpaceWidth'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(233,28): warning C4251: "Ogre::TextAreaOverlayElement::msCmdFontName": "Ogre::TextAreaOverlayElement::CmdFontName" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(168,28):
+      vea la declaración de 'Ogre::TextAreaOverlayElement::CmdFontName'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(234,26): warning C4251: "Ogre::TextAreaOverlayElement::msCmdColour": "Ogre::TextAreaOverlayElement::CmdColour" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(198,28):
+      vea la declaración de 'Ogre::TextAreaOverlayElement::CmdColour'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(235,29): warning C4251: "Ogre::TextAreaOverlayElement::msCmdColourTop": "Ogre::TextAreaOverlayElement::CmdColourTop" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(178,28):
+      vea la declaración de 'Ogre::TextAreaOverlayElement::CmdColourTop'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(236,32): warning C4251: "Ogre::TextAreaOverlayElement::msCmdColourBottom": "Ogre::TextAreaOverlayElement::CmdColourBottom" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(188,28):
+      vea la declaración de 'Ogre::TextAreaOverlayElement::CmdColourBottom'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(237,29): warning C4251: "Ogre::TextAreaOverlayElement::msCmdAlignment": "Ogre::TextAreaOverlayElement::CmdAlignment" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(208,28):
+      vea la declaración de 'Ogre::TextAreaOverlayElement::CmdAlignment'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Overlay\OgreTextAreaOverlayElement.h(240,17): warning C4251: "Ogre::TextAreaOverlayElement::mFont": "Ogre::SharedPtr<Ogre::Font>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextAreaOverlayElement"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Font>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreTimer.h(41,47): warning C4251: "Ogre::Timer::start": "std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::Timer"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\__msvc_chrono.hpp(200,11):
+      vea la declaración de 'std::chrono::time_point<std::chrono::steady_clock,std::chrono::nanoseconds>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreTrays.h(335,28): warning C4251: "OgreBites::TextBox::mLines": "std::vector<Ogre::String,std::allocator<Ogre::String>>" debe tener una interfaz DLL para que la usen los clientes de "OgreBites::TextBox"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::String,std::allocator<Ogre::String>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreTrays.h(441,55): warning C4251: "OgreBites::SelectMenu::mItemElements": "std::vector<Ogre::BorderPanelOverlayElement *,std::allocator<Ogre::BorderPanelOverlayElement *>>" debe tener una interfaz DLL para que la usen los clientes de "OgreBites::SelectMenu"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::BorderPanelOverlayElement *,std::allocator<Ogre::BorderPanelOverlayElement *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreTrays.h(448,28): warning C4251: "OgreBites::SelectMenu::mItems": "std::vector<Ogre::String,std::allocator<Ogre::String>>" debe tener una interfaz DLL para que la usen los clientes de "OgreBites::SelectMenu"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::String,std::allocator<Ogre::String>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreTrays.h(629,28): warning C4251: "OgreBites::ParamsPanel::mNames": "std::vector<Ogre::String,std::allocator<Ogre::String>>" debe tener una interfaz DLL para que la usen los clientes de "OgreBites::ParamsPanel"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::String,std::allocator<Ogre::String>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreTrays.h(630,28): warning C4251: "OgreBites::ParamsPanel::mValues": "std::vector<Ogre::String,std::allocator<Ogre::String>>" debe tener una interfaz DLL para que la usen los clientes de "OgreBites::ParamsPanel"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<Ogre::String,std::allocator<Ogre::String>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreTrays.h(1165,22): warning C4251: "OgreBites::TrayManager::mName": "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" debe tener una interfaz DLL para que la usen los clientes de "OgreBites::TrayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\xstring(527,7):
+      vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreTrays.h(1173,20): warning C4251: "OgreBites::TrayManager::mWidgets": "std::vector<OgreBites::Widget *,std::allocator<OgreBites::Widget *>>" debe tener una interfaz DLL para que la usen los clientes de "OgreBites::TrayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<OgreBites::Widget *,std::allocator<OgreBites::Widget *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\Bites\OgreTrays.h(1174,20): warning C4251: "OgreBites::TrayManager::mWidgetDeathRow": "std::vector<OgreBites::Widget *,std::allocator<OgreBites::Widget *>>" debe tener una interfaz DLL para que la usen los clientes de "OgreBites::TrayManager"
+  (compilando archivo de origen "IG2App.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\vector(429,7):
+      vea la declaración de 'std::vector<OgreBites::Widget *,std::allocator<OgreBites::Widget *>>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(24,18): warning C4244: '=': conversión de 'int' a 'Ogre::Real'; posible pérdida de datos
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(29,89): warning C4244: 'argumento': conversión de 'double' a 'const Ogre::Real'; posible pérdida de datos
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(29,54): warning C4244: 'argumento': conversión de 'double' a 'const Ogre::Real'; posible pérdida de datos
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(88,31): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(88,27): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(88,23): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(95,24): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(104,34): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(104,30): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(104,26): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(105,35): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(105,31): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\Airplane.h(105,27): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+  (compilando archivo de origen "IG2App.cpp")
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreTextureManager.h(409,20): warning C4251: "Ogre::TextureManager::mWarningTexture": "Ogre::SharedPtr<Ogre::Texture>" debe tener una interfaz DLL para que la usen los clientes de "Ogre::TextureManager"
+  (compilando archivo de origen "IG2App.cpp")
+      E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\OGREsdk\include\OGRE\OgreSharedPtr.h(57,29):
+      vea la declaración de 'Ogre::SharedPtr<Ogre::Texture>'
+  
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(170,48): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(170,43): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(170,38): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(220,32): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(220,27): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(220,22): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(222,33): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(222,28): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(222,23): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(223,48): warning C4244: 'argumento': conversión de 'double' a 'Ogre::Real'; posible pérdida de datos
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(223,77): warning C4244: 'argumento': conversión de 'double' a 'Ogre::Real'; posible pérdida de datos
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(239,34): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(240,38): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(240,32): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(241,38): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(241,32): warning C4305: 'argumento': truncamiento de 'double' a 'Ogre::Real'
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(377,15): warning C4244: 'inicializando': conversión de 'double' a 'Ogre::Real'; posible pérdida de datos
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(395,35): warning C4244: 'argumento': conversión de 'int' a 'const Ogre::Real'; posible pérdida de datos
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(402,44): warning C4244: 'argumento': conversión de 'int' a 'const Ogre::Real'; posible pérdida de datos
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(409,44): warning C4244: 'argumento': conversión de 'int' a 'const Ogre::Real'; posible pérdida de datos
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(416,35): warning C4244: 'argumento': conversión de 'int' a 'const Ogre::Real'; posible pérdida de datos
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(521,82): warning C4244: 'argumento': conversión de 'Ogre::Real' a 'Ogre::uint'; posible pérdida de datos
+E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\IG2App\IG2App.cpp(519,83): warning C4244: 'argumento': conversión de 'Ogre::Real' a 'Ogre::uint'; posible pérdida de datos
+  Generando código
+  2 of 784 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+SDL2main.lib(SDL_windows_main.obj) : warning LNK4099: no se encontró PDB '' con 'SDL2main.lib(SDL_windows_main.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+  IG2App.vcxproj -> E:\Programas\OneDrive - UCM\UCM\3\1C\ig2\ejercicios\ProyectosOGREvc15x86\bin\IG2AppRelease.exe

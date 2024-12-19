@@ -1,0 +1,78 @@
+// material ig2/water {
+//     technique{// first, preferred technique
+//         pass {// first pass
+//             // diffuse 0.5 0.5 0.5
+//             // ambient 0.1 0.2 0.3
+//             // specular 0.8 0.8 0.8 68
+//             texture_unit {
+//                 texture water.jpg
+//                 //colour_op modulate
+//             }
+//         }
+//     }
+// }
+
+material ig2/water {
+	technique{
+		pass{
+			// lighting off
+			 
+            // vertex_program_ref waterShaderVS {}
+            // fragment_program_ref waterShaderFS {}
+
+            texture_unit
+            { 
+                texture water.jpg
+                colour_op modulate
+                scroll_anim -0.1 0.0
+            }
+            texture_unit
+            { 
+                texture chelo.jpg
+                colour_op modulate
+            }
+		}
+	}
+
+}
+
+
+
+material ig2/plane
+{
+    technique 
+	{ 
+		pass 
+		{  
+			texture_unit 
+			{
+				texture RustedMetal.jpg
+				colour_op modulate
+			}
+			texture_unit 
+			{
+				texture flare.png
+				colour_op modulate
+			}
+
+		}
+    }
+}
+
+
+material ig2/sphere
+{
+    technique 
+	{ 
+		pass 
+		{  
+            texture_unit {
+                texture frost.png
+                colour_op modulate
+                env_map spherical
+            }
+
+			diffuse 1.0 0.7 0.2
+		}
+    }
+}
